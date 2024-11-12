@@ -7,6 +7,7 @@ from tqdm import tqdm
 from datetime import datetime
 from datetime import date as dtdate
 from dateutil import parser as dtparser
+from alerts.tasks import telegram_alert_vuln_task
 import copy
 import json
 import traceback
@@ -411,16 +412,17 @@ def sync_vuln_fromcve(cve):
         'impact': cve.impact
     }
     vuln = Vuln.objects.filter(cve=cve).first()
+    need_update = False
     if vuln is None:
         vuln = Vuln(**_vuln_data)
         vuln.save()
+        
     else:
-        has_update = False
         for v in _vuln_data.keys():
             if _vuln_data[v] != getattr(vuln, v):
-                has_update = True
+                need_update = True
                 setattr(vuln, v, _vuln_data[v])
-        if has_update is True:
+        if need_update is True:
             vuln.save()
 
     # Sync Products & Product versions
@@ -462,6 +464,10 @@ def sync_vuln_fromcve(cve):
 
     # Save all
     vuln.save()
+    if need_update:
+        telegram_alert_vuln_task.apply_async(args=[vuln, "update"], queue='alerts', retry=False)
+    else:
+        telegram_alert_vuln_task.apply_async(args=[vuln, "new"], queue='alerts', retry=False)
 
     # sync_exploits_fromvia(vuln.id)
     return vuln

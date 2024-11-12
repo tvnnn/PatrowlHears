@@ -23,6 +23,28 @@ def send_slack_message_task(self, message, apitoken, channel):
     slack.send_slack_message(message, apitoken, channel)
     return True
 
+@shared_task(bind=True, acks_late=True)
+def telegram_alert_vuln_task(self, vuln, type):
+    if type == "new":
+        logger.debug("Entering 'telegram_alert_vuln_task'")
+        from organizations.models import Organization
+        for org in Organization.objects.all():
+            if org.org_settings.alerts_telegram_enabled is True and org.org_settings.alerts_telegram['new_vuln'] is True and org.org_settings.alerts_telegram['bot_token'] != "" and org.org_settings.alerts_telegram['chat_id'] != "":
+                bot_token = org.org_settings.alerts_telegram['bot_token']
+                chat_id = org.org_settings.alerts_telegram['chat_id']
+                affected_products = ", ".join(["*{}* ({})".format(p.name.replace('_', ' ').title(), p.vendor.name.replace('_', ' ').title()) for p in vuln.products.all()])
+                message = (f"**New vulnerability found!**\n"
+                           f"**CVE ID:** {vuln.cveid}\n"
+                           f"**Summary:** {vuln.summary}\n"
+                           f"**CVSSv3 Vector:** {vuln.cvss3_vector}\n"
+                           f"**CVSSv3 Score:** {vuln.cvss3}\n"
+                           f"**Assigner:** {vuln.assigner}\n"
+                           f"**Affected Products:** {affected_products}\n"
+                           f"**Refference:** \n")
+                telegram.send_message(bot_token, chat_id, message)
+        return True
+    else:
+        return True
 
 @shared_task(bind=True, acks_late=True)
 def slack_alert_vuln_task(self, vuln_id, type="new"):

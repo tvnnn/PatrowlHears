@@ -383,18 +383,18 @@ if HEARS_DATASYNC_MODE == 'master':
         #     'schedule': timedelta(days=1)
         # },
         # Alerting by mail
-        'alert_monitored_products_daily': {
-            'task': 'vulns.tasks.email_daily_report_task',
-            'schedule': crontab(minute=0, hour=0)
-        },
-        'alert_monitored_products_weekly': {
-            'task': 'vulns.tasks.email_weekly_report_task',
-            'schedule': crontab(day_of_week='monday')
-        },
-        'alert_monitored_products_monthly': {
-            'task': 'vulns.tasks.email_monthly_report_task',
-            'schedule': crontab(0, 0, day_of_month='1')
-        },
+        # 'alert_monitored_products_daily': {
+        #     'task': 'vulns.tasks.email_daily_report_task',
+        #     'schedule': crontab(minute=0, hour=0)
+        # },
+        # 'alert_monitored_products_weekly': {
+        #     'task': 'vulns.tasks.email_weekly_report_task',
+        #     'schedule': crontab(day_of_week='monday')
+        # },
+        # 'alert_monitored_products_monthly': {
+        #     'task': 'vulns.tasks.email_monthly_report_task',
+        #     'schedule': crontab(0, 0, day_of_month='1')
+        # },
     }
 else:
     CELERY_BEAT_SCHEDULE = {
