@@ -2,6 +2,7 @@ from celery import shared_task
 from django.conf import settings
 from .utils import send_email_message
 from backend_app import slack
+from backend_app import telegram
 from datetime import datetime
 import json
 import requests

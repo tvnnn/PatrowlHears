@@ -87,7 +87,7 @@
             Alert me
           </v-card-title>
           <v-card-text>
-            You have successfuly added your products to your monitoring list. Now, let us set a contact email for receiving alerts. Other alert channels are also available (Slack, TheHive, ...) in the 'Settings' page.
+            You have successfuly added your products to your monitoring list. Now, let us set a contact email for receiving alerts. Other alert channels are also available (Slack, Telegram, TheHive, ...) in the 'Settings' page.
             <v-combobox
               v-model="org_settings.alerts_emails"
               clearable

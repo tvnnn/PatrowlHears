@@ -8,7 +8,7 @@ from rest_framework.decorators import api_view
 from common.utils import organization, get_api_default_permissions
 from .models import AlertingRule
 from .serializers import AlertingRuleSerializer
-from .tasks import send_email_message_task
+from .tasks import send_email_message_task, send_telegram_message_task
 from vulns.models import Vuln
 from datetime import datetime, timedelta
 
@@ -183,3 +183,23 @@ def send_test_email(self):
         retry=False
     )
     return JsonResponse({"status": "success",}, safe=False)
+
+@api_view(['GET'])
+def send_test_telegram(self):
+    from backend_app import telegram
+    org_id = self.session.get('org_id', None)
+    org = organization.get_current_organization(user=self.user, org_id=org_id)
+    if org:
+        bot_token = org.org_settings.alerts_telegram['bot_token']
+        if bot_token is None:
+            return JsonResponse({"status": "error", "reason": "no saved telegram bot_token"}, safe=False)
+        else:
+            chat_id = org.org_settings.alerts_telegram['chat_id']
+            if chat_id is None:
+                return JsonResponse({"status": "error", "reason": "no saved telegram chat_id"}, safe=False)
+            else:
+                message = "*Hello!* This message is _formatted_ with `Markdown`."
+                telegram.send_message(bot_token, chat_id, message)
+                return JsonResponse({"status": "success",}, safe=False)
+    else:
+        return JsonResponse({"status": "error", "reason": "no org"}, safe=False)

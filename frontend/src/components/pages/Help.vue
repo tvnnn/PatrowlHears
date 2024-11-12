@@ -16,7 +16,7 @@
       <p class="subtitle-1">Alerting</p>
       <p class="body-2">
         Alerts could be sent on key events like changes in monitored assets or periodic reporting.
-        Several notification systems could be enabled depending of your configuration, including email, Slack and Feedly. Contacts and endpoints are configured <a href="#/settings">here</a>.
+        Several notification systems could be enabled depending of your configuration, including email, Slack, Telegram and Feedly. Contacts and endpoints are configured <a href="#/settings">here</a>.
       </p>
       <p class="subtitle-1">REST-API</p>
       <p class="body-2">

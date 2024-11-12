@@ -299,6 +299,55 @@
               </v-card>
             </v-col>
           </v-row>
+          <v-row v-if="this.org_settings.show_telegram_settings">
+            <v-col cols="10">
+              <v-card>
+                <v-card-title>
+                  Telegram alerting
+                </v-card-title>
+                <v-card-text>
+                  <v-text-field
+                    v-model="org_settings.bot_token"
+                    label="Telegram Bot Token"
+                    placeholder="Eg: 123456789:ABCdEFGHIjKLmnOpQrStuvWxyz123456789"
+                  ></v-text-field>
+                  <v-text-field
+                    v-model="org_settings.chat_id"
+                    label="Telegram Chat ID"
+                    placeholder="Eg: 123456789"
+                  ></v-text-field>
+                  <v-checkbox
+                    v-model="org_settings.enable_telegram_new_vuln"
+                    label="Enable notifications when detecting new vulnerabilities (monitored assets)"
+                    dense hide-details
+                  ></v-checkbox>
+                  <v-checkbox
+                    v-model="org_settings.enable_telegram_update_vuln"
+                    label="Enable notifications when detecting changes in vulnerabilities (monitored assets)"
+                    dense hide-details
+                  ></v-checkbox>
+                </v-card-text>
+                <v-card-actions>
+                  <v-btn
+                    color="deep-orange"
+                    :loading="loading"
+                    @click.native="updateOrgSettings"
+                    >
+                      <v-icon left dark>mdi-check</v-icon>
+                      Save Changes
+                  </v-btn>
+                  <v-btn
+                    color="deep-orange"
+                    :loading="loading"
+                    @click.native="sendTestTelegram"
+                    >
+                      <v-icon left dark>mdi-cog</v-icon>
+                      Send test message to Telegram
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-col>
+          </v-row>
           <v-row v-if="this.org_settings.show_thehive_settings">
             <v-col cols="10">
               <v-card>
@@ -830,6 +879,11 @@ export default {
       // alerts_slack_apikey: '',
       enable_slack_new_vuln: false,
       enable_slack_update_vuln: false,
+      show_telegram_settings: true,
+      bot_token: '',
+      chat_id: '',
+      enable_telegram_new_vuln: false,
+      enable_telegram_update_vuln: false,
       show_thehive_settings: false,
       alerts_thehive_url: '',
       alerts_thehive_apikey: '',
@@ -861,6 +915,11 @@ export default {
       // alerts_slack_apikey: '',
       enable_slack_new_vuln: false,
       enable_slack_update_vuln: false,
+      show_telegram_settings: true,
+      bot_token: '',
+      chat_id: '',
+      enable_telegram_new_vuln: false,
+      enable_telegram_update_vuln: false,
       show_thehive_settings: false,
       alerts_thehive_url: '',
       alerts_thehive_apikey: '',
@@ -1222,6 +1281,9 @@ export default {
           this.org_settings.alerts_slack_url = res.data['alerts_slack']['url'];
           this.org_settings.enable_slack_new_vuln = res.data['alerts_slack']['new_vuln'];
           this.org_settings.enable_slack_update_vuln = res.data['alerts_slack']['update_vuln'];
+          this.org_settings.bot_token = res.data['alerts_telegram']['bot_token'];
+          this.org_settings.enable_telegram_new_vuln = res.data['alerts_telegram']['new_vuln'];
+          this.org_settings.enable_telegram_update_vuln = res.data['alerts_telegram']['update_vuln'];
         }
       }).catch(e => {
         // console.log(e)
@@ -1255,6 +1317,10 @@ export default {
       // bodyFormData.set('alerts_slack_apikey', this.org_settings.alerts_slack_apikey);
       bodyFormData.set('enable_slack_new_vuln', this.org_settings.enable_slack_new_vuln);
       bodyFormData.set('enable_slack_update_vuln', this.org_settings.enable_slack_update_vuln);
+      bodyFormData.set('bot_token', this.org_settings.bot_token);
+      bodyFormData.set('chat_id', this.org_settings.chat_id);
+      bodyFormData.set('enable_telegram_new_vuln', this.org_settings.enable_telegram_new_vuln);
+      bodyFormData.set('enable_telegram_update_vuln', this.org_settings.enable_telegram_update_vuln);
       bodyFormData.set('alerts_thehive_url', this.org_settings.alerts_thehive_url);
       bodyFormData.set('alerts_thehive_apikey', this.org_settings.alerts_thehive_apikey);
       bodyFormData.set('enable_thehive_new_vuln', this.org_settings.enable_thehive_new_vuln);
@@ -1275,6 +1341,9 @@ export default {
           this.org_settings.enable_monthly_email_report = res.data.enable_monthly_email_report;
 
           this.org_settings.alerts_slack_url = res.data.alerts_slack_url;
+          this.org_settings.bot_token = res.data.bot_token;
+          this.org_settings.chat_id = res.data.chat_id;
+
           // Snack notifications
           this.snack = true;
           this.snackColor = 'success';
@@ -1476,6 +1545,9 @@ export default {
     },
     showManageAlertsSlack(){
       return JSON.parse(this.getUserProfile()).manage_alert_slack;
+    },
+    showManageAlertsTelegram(){
+      return JSON.parse(this.getUserProfile()).manage_alert_telegram;
     }
   }
 };

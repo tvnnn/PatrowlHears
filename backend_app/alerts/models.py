@@ -37,14 +37,15 @@ RULE_SCOPE_ATTRIBUTES = {
 }
 
 RULE_ACTIONS = (
-    ('debug',   'Debug'),
-    ('event',   'PatrowlHears event'),
-    ('logfile', 'Logfile'),
-    ('email',   'Email'),
-    ('thehive', 'TheHive alert'),
-    ('twitter', 'Twitter message'),
-    ('slack',   'Slack message'),
-    ('splunk',   'Splunk message'),
+    ('debug',       'Debug'),
+    ('event',       'PatrowlHears event'),
+    ('logfile',     'Logfile'),
+    ('email',       'Email'),
+    ('thehive',     'TheHive alert'),
+    ('twitter',     'Twitter message'),
+    ('slack',       'Slack message'),
+    ('telegram',    'Telegram message'),
+    ('splunk',      'Splunk message'),
 )
 
 RULE_TYPES = (
