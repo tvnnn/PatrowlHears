@@ -28,6 +28,15 @@ def slack_dict():
         'new_vuln': False,
         'update_vuln': False
     }
+    
+    
+def telegram_dict():
+    return {
+        'bot_token': '',
+        'chat_id': '',
+        'new_vuln': False,
+        'update_vuln': False
+    }
 
 
 def thehive_dict():
@@ -79,6 +88,9 @@ class OrgSettings(models.Model):
 
     alerts_slack_enabled = models.BooleanField(default=True)
     alerts_slack = models.JSONField(default=slack_dict)
+    
+    alerts_telegram_enabled = models.BooleanField(default=True)
+    alerts_telegram = models.JSONField(default=telegram_dict)
 
     alerts_thehive_enabled = models.BooleanField(default=False)
     alerts_thehive = models.JSONField(default=thehive_dict)

@@ -48,6 +48,18 @@ class AllowManageAlertSlack(permissions.BasePermission):
                 request.user.profile['manage_alert_slack'] is True:
             return True
         return False
+    
+    
+class AllowManageAlertTelegram(permissions.BasePermission):
+    def has_permission(self, request, view):
+        """Check if user has permissions to access ManageAlertTelegram apis."""
+        if settings.RESTRICTED_MODE is False or request.user.is_superuser:
+            return True
+        if request.user.is_authenticated and \
+            'manage_alert_telegram' in request.user.profile.keys() and \
+                request.user.profile['manage_alert_telegram'] is True:
+            return True
+        return False
 
 
 class AllowDataSync(permissions.BasePermission):

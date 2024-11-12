@@ -1,0 +1,192 @@
+ 
+ -------------- data3-node@ph v4.4.0 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-144-generic-x86_64-with-glibc2.31 2024-11-12 09:28:28
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         backend_app:0x7f1080e0e850
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     
+- *** --- * --- .> concurrency: 2 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> data             exchange=default(direct) key=default
+                
+
+[tasks]
+  . alerts.tasks.email_instant_report_cvss3_change_task
+  . alerts.tasks.email_instant_report_cvss_change_task
+  . alerts.tasks.email_instant_report_exploitable_task
+  . alerts.tasks.email_instant_report_score_change_task
+  . alerts.tasks.send_email_message_task
+  . alerts.tasks.send_slack_message_task
+  . alerts.tasks.slack_alert_vuln_task
+  . cves.tasks.sync_bulletins_task
+  . cves.tasks.sync_cpes_task
+  . cves.tasks.sync_cve_task
+  . cves.tasks.sync_cves_atyear_task
+  . cves.tasks.sync_cves_fromyear_task
+  . cves.tasks.sync_cves_task
+  . cves.tasks.sync_cwes_task
+  . cves.tasks.sync_vias_task
+  . data.tasks.import_cpe_task
+  . data.tasks.import_cve_task
+  . data.tasks.import_exploit_task
+  . data.tasks.import_feedvuln_task
+  . data.tasks.import_via_task
+  . data.tasks.run_datasync_model_task
+  . data.tasks.run_datasync_models_task
+  . data.tasks.run_datasync_task
+  . vulns.tasks.email_daily_report_task
+  . vulns.tasks.email_monthly_report_task
+  . vulns.tasks.email_weekly_report_task
+  . vulns.tasks.refresh_vuln_product_versions_task
+  . vulns.tasks.refresh_vuln_score_task
+  . vulns.tasks.refresh_vulns_product_versions_task
+  . vulns.tasks.refresh_vulns_score_task
+
+ 
+ -------------- data3-node@ph v4.4.0 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-144-generic-x86_64-with-glibc2.31 2024-11-12 09:47:41
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         backend_app:0x7f73607af820
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     
+- *** --- * --- .> concurrency: 2 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> data             exchange=default(direct) key=default
+                
+
+[tasks]
+  . alerts.tasks.email_instant_report_cvss3_change_task
+  . alerts.tasks.email_instant_report_cvss_change_task
+  . alerts.tasks.email_instant_report_exploitable_task
+  . alerts.tasks.email_instant_report_score_change_task
+  . alerts.tasks.send_email_message_task
+  . alerts.tasks.send_slack_message_task
+  . alerts.tasks.slack_alert_vuln_task
+  . cves.tasks.sync_bulletins_task
+  . cves.tasks.sync_cpes_task
+  . cves.tasks.sync_cve_task
+  . cves.tasks.sync_cves_atyear_task
+  . cves.tasks.sync_cves_fromyear_task
+  . cves.tasks.sync_cves_task
+  . cves.tasks.sync_cwes_task
+  . cves.tasks.sync_vias_task
+  . data.tasks.import_cpe_task
+  . data.tasks.import_cve_task
+  . data.tasks.import_exploit_task
+  . data.tasks.import_feedvuln_task
+  . data.tasks.import_via_task
+  . data.tasks.run_datasync_model_task
+  . data.tasks.run_datasync_models_task
+  . data.tasks.run_datasync_task
+  . vulns.tasks.email_daily_report_task
+  . vulns.tasks.email_monthly_report_task
+  . vulns.tasks.email_weekly_report_task
+  . vulns.tasks.refresh_vuln_product_versions_task
+  . vulns.tasks.refresh_vuln_score_task
+  . vulns.tasks.refresh_vulns_product_versions_task
+  . vulns.tasks.refresh_vulns_score_task
+
+ 
+ -------------- data3-node@ph v4.4.0 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-144-generic-x86_64-with-glibc2.31 2024-11-12 10:15:33
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         backend_app:0x7ff1f61a3820
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     
+- *** --- * --- .> concurrency: 2 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> data             exchange=default(direct) key=default
+                
+
+[tasks]
+  . alerts.tasks.email_instant_report_cvss3_change_task
+  . alerts.tasks.email_instant_report_cvss_change_task
+  . alerts.tasks.email_instant_report_exploitable_task
+  . alerts.tasks.email_instant_report_score_change_task
+  . alerts.tasks.send_email_message_task
+  . alerts.tasks.send_slack_message_task
+  . alerts.tasks.slack_alert_vuln_task
+  . cves.tasks.sync_bulletins_task
+  . cves.tasks.sync_cpes_task
+  . cves.tasks.sync_cve_task
+  . cves.tasks.sync_cves_atyear_task
+  . cves.tasks.sync_cves_fromyear_task
+  . cves.tasks.sync_cves_task
+  . cves.tasks.sync_cwes_task
+  . cves.tasks.sync_vias_task
+  . data.tasks.import_cpe_task
+  . data.tasks.import_cve_task
+  . data.tasks.import_exploit_task
+  . data.tasks.import_feedvuln_task
+  . data.tasks.import_via_task
+  . data.tasks.run_datasync_model_task
+  . data.tasks.run_datasync_models_task
+  . data.tasks.run_datasync_task
+  . vulns.tasks.email_daily_report_task
+  . vulns.tasks.email_monthly_report_task
+  . vulns.tasks.email_weekly_report_task
+  . vulns.tasks.refresh_vuln_product_versions_task
+  . vulns.tasks.refresh_vuln_score_task
+  . vulns.tasks.refresh_vulns_product_versions_task
+  . vulns.tasks.refresh_vulns_score_task
+
+ 
+ -------------- data3-node@ph v4.4.0 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-144-generic-x86_64-with-glibc2.31 2024-11-12 10:20:32
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         backend_app:0x7fca7635f820
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     
+- *** --- * --- .> concurrency: 2 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> data             exchange=default(direct) key=default
+                
+
+[tasks]
+  . alerts.tasks.email_instant_report_cvss3_change_task
+  . alerts.tasks.email_instant_report_cvss_change_task
+  . alerts.tasks.email_instant_report_exploitable_task
+  . alerts.tasks.email_instant_report_score_change_task
+  . alerts.tasks.send_email_message_task
+  . alerts.tasks.send_slack_message_task
+  . alerts.tasks.slack_alert_vuln_task
+  . cves.tasks.sync_bulletins_task
+  . cves.tasks.sync_cpes_task
+  . cves.tasks.sync_cve_task
+  . cves.tasks.sync_cves_atyear_task
+  . cves.tasks.sync_cves_fromyear_task
+  . cves.tasks.sync_cves_task
+  . cves.tasks.sync_cwes_task
+  . cves.tasks.sync_vias_task
+  . data.tasks.import_cpe_task
+  . data.tasks.import_cve_task
+  . data.tasks.import_exploit_task
+  . data.tasks.import_feedvuln_task
+  . data.tasks.import_via_task
+  . data.tasks.run_datasync_model_task
+  . data.tasks.run_datasync_models_task
+  . data.tasks.run_datasync_task
+  . vulns.tasks.email_daily_report_task
+  . vulns.tasks.email_monthly_report_task
+  . vulns.tasks.email_weekly_report_task
+  . vulns.tasks.refresh_vuln_product_versions_task
+  . vulns.tasks.refresh_vuln_score_task
+  . vulns.tasks.refresh_vulns_product_versions_task
+  . vulns.tasks.refresh_vulns_score_task
+

@@ -1,0 +1,67 @@
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-12 09:28:29,158: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-12 09:28:29,217: WARNING/MainProcess] /root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2024-11-12 09:28:29,217: INFO/MainProcess] data1-node@ph ready.
+
+worker: Warm shutdown (MainProcess)
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-12 09:47:42,678: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-12 09:47:42,753: WARNING/MainProcess] /root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2024-11-12 09:47:42,754: INFO/MainProcess] data1-node@ph ready.
+
+worker: Warm shutdown (MainProcess)
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-12 10:15:33,940: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-12 10:15:33,992: WARNING/MainProcess] /root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2024-11-12 10:15:33,992: INFO/MainProcess] data1-node@ph ready.
+
+worker: Warm shutdown (MainProcess)
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-12 10:20:33,516: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-12 10:20:33,560: INFO/MainProcess] data1-node@ph ready.
+
+worker: Warm shutdown (MainProcess)
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-12 10:27:36,536: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-12 10:27:36,594: INFO/MainProcess] data1-node@ph ready.

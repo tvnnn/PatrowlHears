@@ -8,7 +8,7 @@ from rest_framework.decorators import api_view
 from common.utils import organization, get_api_default_permissions
 from .models import AlertingRule
 from .serializers import AlertingRuleSerializer
-from .tasks import send_email_message_task, send_telegram_message_task
+from .tasks import send_email_message_task
 from vulns.models import Vuln
 from datetime import datetime, timedelta
 

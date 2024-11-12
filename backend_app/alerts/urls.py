@@ -9,4 +9,5 @@ urlpatterns = [
     path('products/report-monitored/<int:days>', apis.get_monitored_products_report_by_days, name='get_monitored_products_report_by_days'),
     path('vuln/<vuln_id>/slack', apis.send_vuln_update_slack, name='send_vuln_update_slack'),
     path('email/test', apis.send_test_email, name='send_test_email'),
+    path('telegram/test', apis.send_test_telegram, name='send_test_telegram'),
 ]

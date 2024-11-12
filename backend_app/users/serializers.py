@@ -77,6 +77,8 @@ class OrgSettingsSerializer(serializers.ModelSerializer):
     enable_monthly_email_report = serializers.SerializerMethodField()
     alerts_slack = serializers.SerializerMethodField()
     alerts_slack_enabled = serializers.SerializerMethodField()
+    alerts_telegram = serializers.SerializerMethodField()
+    alerts_telegram_enabled = serializers.SerializerMethodField()
     alerts_thehive = serializers.SerializerMethodField()
     alerts_thehive_enabled = serializers.SerializerMethodField()
     alerts_misp = serializers.SerializerMethodField()
@@ -144,6 +146,22 @@ class OrgSettingsSerializer(serializers.ModelSerializer):
             return {}
         org = organization.get_current_organization(user=instance, org_id=org_id)
         return org.org_settings.alerts_slack_enabled
+    
+    
+    def get_alerts_telegram(self, instance):
+        org_id = self.context.get('request').session.get('org_id', None)
+        if org_id is None:
+            return {}
+        org = organization.get_current_organization(user=instance, org_id=org_id)
+        return org.org_settings.alerts_telegram
+
+    def get_alerts_telegram_enabled(self, instance):
+        org_id = self.context.get('request').session.get('org_id', None)
+        if org_id is None:
+            return {}
+        org = organization.get_current_organization(user=instance, org_id=org_id)
+        return org.org_settings.alerts_telegram_enabled
+    
 
     def get_alerts_thehive(self, instance):
         org_id = self.context.get('request').session.get('org_id', None)

@@ -22,6 +22,7 @@ def user_profile_dict():
         'organization_users': -1,  # -1 = unlimited
         'manage_alert_email': True,
         'manage_alert_slack': True,
+        'manage_alert_telegram': True,
         'api_create_token': True,
         'api_throttle_rate': 'unlimited',    # -1 = unlimited
         'enable_server_datasync': True

@@ -1207,6 +1207,24 @@ export default {
         this.snackText = 'Unable to send test email';
       });
     },
+    sendTestTelegram() {
+      this.$api.get('/api/alerts/telegram/test').then(res => {
+        if (res && res.status === 200 && res.data.status == "success") {
+          // Snack notifications
+          this.snack = true;
+          this.snackColor = 'success';
+          this.snackText = 'Test sent. Check your telegram !';
+        } else {
+          this.snack = true;
+          this.snackColor = 'error';
+          this.snackText = 'Unable to send test email: ' + res.data.reason;
+        }
+      }).catch(e => {
+        this.snack = true;
+        this.snackColor = 'error';
+        this.snackText = 'Unable to send test email';
+      });
+    },
     updateUserToken() {
       var bodyFormData = new FormData();
       this.$api.get('/users/token/renew').then(res => {
@@ -1282,6 +1300,7 @@ export default {
           this.org_settings.enable_slack_new_vuln = res.data['alerts_slack']['new_vuln'];
           this.org_settings.enable_slack_update_vuln = res.data['alerts_slack']['update_vuln'];
           this.org_settings.bot_token = res.data['alerts_telegram']['bot_token'];
+          this.org_settings.chat_id = res.data['alerts_telegram']['chat_id'];
           this.org_settings.enable_telegram_new_vuln = res.data['alerts_telegram']['new_vuln'];
           this.org_settings.enable_telegram_update_vuln = res.data['alerts_telegram']['update_vuln'];
         }

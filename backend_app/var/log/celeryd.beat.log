@@ -1,0 +1,40 @@
+celery beat v4.4.0 (cliffs) is starting.
+__    -    ... __   -        _
+LocalTime -> 2024-11-12 09:28:27
+Configuration ->
+    . broker -> amqp://guest:**@localhost:5672//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> django_celery_beat.schedulers.DatabaseScheduler
+
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 seconds (5s)
+celery beat v4.4.0 (cliffs) is starting.
+__    -    ... __   -        _
+LocalTime -> 2024-11-12 09:47:41
+Configuration ->
+    . broker -> amqp://guest:**@localhost:5672//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> django_celery_beat.schedulers.DatabaseScheduler
+
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 seconds (5s)
+celery beat v4.4.0 (cliffs) is starting.
+__    -    ... __   -        _
+LocalTime -> 2024-11-12 10:15:32
+Configuration ->
+    . broker -> amqp://guest:**@localhost:5672//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> django_celery_beat.schedulers.DatabaseScheduler
+
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 seconds (5s)
+celery beat v4.4.0 (cliffs) is starting.
+__    -    ... __   -        _
+LocalTime -> 2024-11-12 10:20:31
+Configuration ->
+    . broker -> amqp://guest:**@localhost:5672//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> django_celery_beat.schedulers.DatabaseScheduler
+
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 seconds (5s)

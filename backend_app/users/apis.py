@@ -256,6 +256,7 @@ def add_user(self):
             team_org.save()
             team_org.org_settings.alerts_emails_enabled = user.profile['manage_alert_email']
             team_org.org_settings.alerts_slack_enabled = user.profile['manage_alert_slack']
+            team_org.org_settings.alerts_telegram_enabled = user.profile['manage_alert_telegram']
             team_org.org_settings.max_users = int(user.profile['organization_users'])
             team_org.org_settings.save()
             team_org_user = OrganizationUser.objects.create(user=user, organization=team_org, is_admin=True)
@@ -555,6 +556,25 @@ def update_org_settings(self):
     alerts_slack_url = self.data.get('alerts_slack_url', None)
     if alerts_slack_url is not None:
         org.org_settings.alerts_slack['url'] = alerts_slack_url
+        
+
+    # Telegram
+    enable_telegram_new_vuln = self.data.get('enable_telegram_new_vuln', None)
+    if enable_telegram_new_vuln is not None and enable_telegram_new_vuln in ["true", "false"]:
+        org.org_settings.alerts_telegram['new_vuln'] = enable_telegram_new_vuln == "true"
+
+    enable_telegram_update_vuln = self.data.get('enable_telegram_update_vuln', None)
+    if enable_telegram_update_vuln is not None and enable_telegram_update_vuln in ["true", "false"]:
+        org.org_settings.alerts_telegram['update_vuln'] = enable_telegram_update_vuln == "true"
+
+    bot_token = self.data.get('bot_token', None)
+    if bot_token is not None:
+        org.org_settings.alerts_telegram['bot_token'] = bot_token
+        
+    chat_id = self.data.get('chat_id', None)
+    if chat_id is not None:
+        org.org_settings.alerts_telegram['chat_id'] = chat_id
+    
 
     # TheHive
     enable_thehive_new_vuln = self.data.get('enable_thehive_new_vuln', None)
@@ -609,6 +629,10 @@ def update_org_settings(self):
         'enable_slack_new_vuln': org.org_settings.alerts_slack['new_vuln'],
         'enable_slack_update_vuln': org.org_settings.alerts_slack['update_vuln'],
         'alerts_slack_url': org.org_settings.alerts_slack['url'],
+        'enable_telegram_new_vuln': org.org_settings.alerts_telegram['new_vuln'],
+        'enable_telegram_update_vuln': org.org_settings.alerts_telegram['update_vuln'],
+        'bot_token': org.org_settings.alerts_telegram['bot_token'],
+        'chat_id': org.org_settings.alerts_telegram['chat_id'],
         'enable_thehive_new_vuln': org.org_settings.alerts_thehive['new_vuln'],
         'enable_thehive_update_vuln': org.org_settings.alerts_thehive['update_vuln'],
         'alerts_thehive_url': org.org_settings.alerts_thehive['url'],
@@ -751,6 +775,8 @@ def get_org_settings(self, org_id):
         'enable_instant_email_report_cvss_value': org.org_settings.enable_instant_email_report_cvss_value,
         'alerts_slack': org.org_settings.alerts_slack,
         'alerts_slack_enabled': org.org_settings.alerts_slack_enabled,
+        'alerts_telegram': org.org_settings.alerts_telegram,
+        'alerts_telegram_enabled': org.org_settings.alerts_telegram_enabled,
         'alerts_thehive': org.org_settings.alerts_thehive,
         'alerts_thehive_enabled': org.org_settings.alerts_thehive_enabled,
         'alerts_misp': org.org_settings.alerts_misp,
