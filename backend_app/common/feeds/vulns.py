@@ -465,9 +465,9 @@ def sync_vuln_fromcve(cve):
     # Save all
     vuln.save()
     if need_update:
-        telegram_alert_vuln_task.apply_async(args=[vuln, "update"], queue='alerts', retry=False)
+        telegram_alert_vuln_task.apply_async(args=[vuln.id, "update"], queue='alerts', retry=False)
     else:
-        telegram_alert_vuln_task.apply_async(args=[vuln, "new"], queue='alerts', retry=False)
+        telegram_alert_vuln_task.apply_async(args=[vuln.id, "new"], queue='alerts', retry=False)
 
     # sync_exploits_fromvia(vuln.id)
     return vuln

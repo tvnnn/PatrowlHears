@@ -65,3 +65,19 @@ User information: uid=0 euid=0 gid=0 egid=0
   warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
 [2024-11-12 10:27:37,027: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
 [2024-11-12 10:27:37,051: INFO/MainProcess] default-node@ph ready.
+[2024-11-13 00:00:00,123: INFO/MainProcess] Received task: vulns.tasks.email_daily_report_task[e0321960-d0bb-43cd-8737-fa48c744c036]  
+[2024-11-13 00:00:00,223: INFO/ForkPoolWorker-1] Task vulns.tasks.email_daily_report_task[e0321960-d0bb-43cd-8737-fa48c744c036] succeeded in 0.07977535499958321s: None
+[2024-11-13 04:00:00,011: INFO/MainProcess] Received task: celery.backend_cleanup[b29934c8-d4b2-41a1-95af-a297d0f05c75]   expires:[2024-11-13 16:00:00.003198+01:00]
+[2024-11-13 04:00:00,047: INFO/ForkPoolWorker-1] Task celery.backend_cleanup[b29934c8-d4b2-41a1-95af-a297d0f05c75] succeeded in 0.028558111996972002s: None
+
+worker: Warm shutdown (MainProcess)
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:12:55,756: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-13 06:12:55,860: INFO/MainProcess] default-node@ph ready.

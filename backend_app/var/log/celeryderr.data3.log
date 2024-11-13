@@ -65,3 +65,15 @@ User information: uid=0 euid=0 gid=0 egid=0
   warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
 [2024-11-12 10:27:36,740: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
 [2024-11-12 10:27:36,790: INFO/MainProcess] data3-node@ph ready.
+
+worker: Warm shutdown (MainProcess)
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:12:57,559: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-13 06:12:57,617: INFO/MainProcess] data3-node@ph ready.

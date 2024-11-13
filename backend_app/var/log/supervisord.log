@@ -160,3 +160,47 @@
 2024-11-12 09:27:32,840 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
 2024-11-12 09:27:32,840 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
 2024-11-12 09:27:32,840 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-13 05:12:23,236 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-13 05:12:24,116 INFO stopped: celery-hears-beat (exit status 0)
+2024-11-13 05:12:27,122 INFO waiting for celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-13 05:12:27,694 INFO stopped: celery-hears-data3 (exit status 0)
+2024-11-13 05:12:27,783 INFO stopped: celery-hears-default (exit status 0)
+2024-11-13 05:12:27,783 INFO stopped: celery-hears-data1 (exit status 0)
+2024-11-13 05:12:27,844 INFO stopped: celery-hears-alerts (exit status 0)
+2024-11-13 05:12:28,869 INFO stopped: celery-hears-data2 (exit status 0)
+2024-11-13 05:12:42,387 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-13 05:12:42,399 INFO RPC interface 'supervisor' initialized
+2024-11-13 05:12:42,399 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2024-11-13 05:12:42,400 INFO daemonizing the supervisord process
+2024-11-13 05:12:42,401 INFO supervisord started with pid 268812
+2024-11-13 05:12:43,404 INFO spawned: 'celery-hears-beat' with pid 268828
+2024-11-13 05:12:43,407 INFO spawned: 'celery-hears-default' with pid 268829
+2024-11-13 05:12:43,409 INFO spawned: 'celery-hears-alerts' with pid 268830
+2024-11-13 05:12:43,412 INFO spawned: 'celery-hears-data1' with pid 268831
+2024-11-13 05:12:43,414 INFO spawned: 'celery-hears-data2' with pid 268832
+2024-11-13 05:12:43,416 INFO spawned: 'celery-hears-data3' with pid 268833
+2024-11-13 05:12:48,434 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-13 05:12:48,434 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-13 05:12:48,434 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-13 05:12:48,434 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-13 05:12:48,434 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-13 05:12:48,434 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-13 05:12:55,751 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:12:55,778 INFO spawned: 'celery-hears-alerts' with pid 268930
+2024-11-13 05:12:59,360 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:13:00,366 INFO spawned: 'celery-hears-alerts' with pid 268962
+2024-11-13 05:13:02,749 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:13:04,758 INFO spawned: 'celery-hears-alerts' with pid 268968
+2024-11-13 05:13:08,658 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:13:11,669 INFO spawned: 'celery-hears-alerts' with pid 268972
+2024-11-13 05:13:17,036 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-13 05:13:17,037 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:13:18,042 INFO spawned: 'celery-hears-alerts' with pid 268981
+2024-11-13 05:13:21,291 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:13:22,295 INFO spawned: 'celery-hears-alerts' with pid 268983
+2024-11-13 05:13:26,725 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:13:28,729 INFO spawned: 'celery-hears-alerts' with pid 269146
+2024-11-13 05:13:31,587 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:13:34,600 INFO spawned: 'celery-hears-alerts' with pid 269153
+2024-11-13 05:13:38,295 INFO exited: celery-hears-alerts (exit status 1; not expected)
+2024-11-13 05:13:39,296 INFO gave up: celery-hears-alerts entered FATAL state, too many start retries too quickly

@@ -65,3 +65,464 @@ User information: uid=0 euid=0 gid=0 egid=0
   warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
 [2024-11-12 10:27:36,927: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
 [2024-11-12 10:27:36,951: INFO/MainProcess] alerts-node@ph ready.
+
+worker: Warm shutdown (MainProcess)
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:12:53,493: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:12:59,091: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:13:02,454: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:13:08,048: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:13:15,542: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:13:20,871: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:13:25,256: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:13:30,276: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-13 06:13:36,931: CRITICAL/MainProcess] Unrecoverable error: PreconditionFailed(406, "PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none", (50, 10), 'Queue.declare')
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 205, in start
+    self.blueprint.start(self)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bootsteps.py", line 115, in start
+    self.on_start()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 136, in on_start
+    self.purge_messages()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/apps/worker.py", line 172, in purge_messages
+    count = self.app.control.purge(connection=connection)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/control.py", line 207, in purge
+    return self.app.amqp.TaskConsumer(conn).purge()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/amqp.py", line 301, in TaskConsumer
+    return self.Consumer(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 386, in __init__
+    self.revive(self.channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 408, in revive
+    self.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/messaging.py", line 421, in declare
+    queue.declare()
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 609, in declare
+    self._create_queue(nowait=nowait, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 618, in _create_queue
+    self.queue_declare(nowait=nowait, passive=False, channel=channel)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/kombu/entity.py", line 646, in queue_declare
+    ret = channel.queue_declare(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 1148, in queue_declare
+    return queue_declare_ok_t(*self.wait(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 88, in wait
+    self.connection.drain_events(timeout=timeout)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 505, in drain_events
+    while not self.blocking_read(timeout):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 511, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/connection.py", line 517, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/amqp/channel.py", line 279, in _on_close
+    raise error_for_code(
+amqp.exceptions.PreconditionFailed: Queue.declare: (406) PRECONDITION_FAILED - inequivalent arg 'x-max-priority' for queue 'alerts' in vhost '/': received the value '10' of type 'signedint' but current is none
