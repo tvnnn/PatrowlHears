@@ -17,20 +17,20 @@ tar -xzf $tmp_dir/${last_release}.tar.gz -C $tmp_dir
 data_dir=`ls $tmp_dir | grep PatrowlHearsData`
 
 # Prepare vars
-END_YEAR=$(env/bin/python -c 'from datetime import datetime as dt; print(dt.today().strftime("%Y"))')
+END_YEAR=$(/root/.pyenv/versions/3.9.20/bin/python -c 'from datetime import datetime as dt; print(dt.today().strftime("%Y"))')
 
 echo "[+] Import data (full)"
-env/bin/python manage.py importcwes -i ${tmp_dir}/${data_dir}/CWE/data/cwes-base.json
-env/bin/python manage.py importcpes -i ${tmp_dir}/${data_dir}/CPE/data/cpes-base.json
-# env/bin/python manage.py importcves -d ${tmp_dir}/${data_dir}/CVE/data/
+/root/.pyenv/versions/3.9.20/bin/python manage.py importcwes -i ${tmp_dir}/${data_dir}/CWE/data/cwes-base.json
+/root/.pyenv/versions/3.9.20/bin/python manage.py importcpes -i ${tmp_dir}/${data_dir}/CPE/data/cpes-base.json
+# /root/.pyenv/versions/3.9.20/bin/python manage.py importcves -d ${tmp_dir}/${data_dir}/CVE/data/
 for i in $(seq 1999 $END_YEAR); do
   echo "[I] Year: $i"
-  env/bin/python manage.py importcves -d ${tmp_dir}/${data_dir}/CVE/data/ -y $i
+  /root/.pyenv/versions/3.9.20/bin/python manage.py importcves -d ${tmp_dir}/${data_dir}/CVE/data/ -y $i
 done
-env/bin/python manage.py importvias -i ${tmp_dir}/${data_dir}/VIA/data/via-base.json
+/root/.pyenv/versions/3.9.20/bin/python manage.py importvias -i ${tmp_dir}/${data_dir}/VIA/data/via-base.json
 
 echo "[+] Remove tmp dir"
 rm -rf $tmp_dir
 
-current_date=$(env/bin/python -c 'from datetime import datetime as dt; print(dt.today().strftime("%Y-%m-%d"))')
+current_date=$(/root/.pyenv/versions/3.9.20/bin/python -c 'from datetime import datetime as dt; print(dt.today().strftime("%Y-%m-%d"))')
 echo $current_date > var/data/lastupdate.txt

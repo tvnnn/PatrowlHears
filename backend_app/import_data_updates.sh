@@ -23,13 +23,13 @@ lastupdate=""
 echo "[i] Last update: $lastupdate"
 
 echo "[+] Import data (diff from base)"
-env/bin/python manage.py importcwes -i ${tmp_dir}/${data_dir}/CWE/data/cwes-diff.json
-env/bin/python manage.py importcpes -i ${tmp_dir}/${data_dir}/CPE/data/cpes-diff.json
-env/bin/python manage.py importcves -d ${tmp_dir}/${data_dir}/CVE/data/ $lastupdate
-env/bin/python manage.py importvias -i ${tmp_dir}/${data_dir}/VIA/data/via-diff.json
+/root/.pyenv/versions/3.9.20/bin/python manage.py importcwes -i ${tmp_dir}/${data_dir}/CWE/data/cwes-diff.json
+/root/.pyenv/versions/3.9.20/bin/python manage.py importcpes -i ${tmp_dir}/${data_dir}/CPE/data/cpes-diff.json
+/root/.pyenv/versions/3.9.20/bin/python manage.py importcves -d ${tmp_dir}/${data_dir}/CVE/data/ $lastupdate
+/root/.pyenv/versions/3.9.20/bin/python manage.py importvias -i ${tmp_dir}/${data_dir}/VIA/data/via-diff.json
 
 echo "[+] Remove tmp dir"
 rm -rf $tmp_dir
 
-current_date=$(env/bin/python -c 'from datetime import datetime as dt; print(dt.today().strftime("%Y-%m-%d"))')
+current_date=$(/root/.pyenv/versions/3.9.20/bin/python -c 'from datetime import datetime as dt; print(dt.today().strftime("%Y-%m-%d"))')
 echo $current_date > var/data/lastupdate.txt
