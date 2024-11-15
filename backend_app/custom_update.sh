@@ -52,8 +52,7 @@ lastupdate=""
 [ -f var/data/lastupdate.txt ] && lastupdate="-l $(cat var/data/lastupdate.txt)"
 echo "[i] Last update: $lastupdate"
 
-# Paths for checksum files
-mkdir -p var/data/checksums
+
 cwes_checksum_file="var/data/checksums/cwes-diff-checksum.txt"
 cpes_checksum_file="var/data/checksums/cpes-diff-checksum.txt"
 cves_checksum_file="var/data/checksums/cves-diff-checksum.txt"
@@ -62,7 +61,7 @@ vias_checksum_file="var/data/checksums/vias-diff-checksum.txt"
 echo "[+] Import data (diff from base)"
 import_with_checksum "${tmp_dir}/${data_dir}/CWE/data/cwes-diff.json" "$cwes_checksum_file" "/root/.pyenv/versions/3.9.20/bin/python manage.py importcwes -i ${tmp_dir}/${data_dir}/CWE/data/cwes-diff.json"
 import_with_checksum "${tmp_dir}/${data_dir}/CPE/data/cpes-diff.json" "$cpes_checksum_file" "/root/.pyenv/versions/3.9.20/bin/python manage.py importcpes -i ${tmp_dir}/${data_dir}/CPE/data/cpes-diff.json"
-import_with_checksum "${tmp_dir}/${data_dir}/CVE/data/" "$cves_checksum_file" "/root/.pyenv/versions/3.9.20/bin/python manage.py importcves -d ${tmp_dir}/${data_dir}/CVE/data/ $lastupdate"
+/root/.pyenv/versions/3.9.20/bin/python manage.py importcves -d ${tmp_dir}/${data_dir}/CVE/data/ $lastupdate
 import_with_checksum "${tmp_dir}/${data_dir}/VIA/data/via-diff.json" "$vias_checksum_file" "/root/.pyenv/versions/3.9.20/bin/python manage.py importvias -i ${tmp_dir}/${data_dir}/VIA/data/via-diff.json"
 
 echo "[+] Remove tmp dir"
