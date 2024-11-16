@@ -32,27 +32,27 @@ def telegram_alert_vuln_task(self, vuln_id, type):
             from vulns.models import Vuln
             from vulns.utils import _is_vuln_monitored
             vuln = Vuln.objects.filter(id=vuln_id).first()
-            if _is_vuln_monitored(vuln, org):
-                if type == "new":
-                    bot_token = org.org_settings.alerts_telegram['bot_token']
-                    chat_id = org.org_settings.alerts_telegram['chat_id']
-                    affected_products = ", ".join(["*{}* ({})".format(p.name.replace('_', ' ').title(), p.vendor.name.replace('_', ' ').title()) for p in vuln.products.all()])
-                    if vuln.reflinks:
-                        references = "\n".join(f"- {link}" for link in vuln.reflinks)
-                    else:
-                        references = "None"
-                    message = (f"**New vulnerability found!**\n"
-                            f"**CVE ID:** {vuln.cveid}\n"
-                            f"**Summary:** {vuln.summary}\n"
-                            f"**CVSSv3 Vector:** {vuln.cvss3_vector}\n"
-                            f"**CVSSv3 Score:** {vuln.cvss3}\n"
-                            f"**Assigner:** {vuln.assigner}\n"
-                            f"**Affected Products:** {affected_products}\n"
-                            f"**References:** {references}\n")
-                    telegram.send_message(bot_token, chat_id, message)
-                    return True
+            # if _is_vuln_monitored(vuln, org):
+            if type == "new":
+                bot_token = org.org_settings.alerts_telegram['bot_token']
+                chat_id = org.org_settings.alerts_telegram['chat_id']
+                affected_products = ", ".join(["*{}* ({})".format(p.name.replace('_', ' ').title(), p.vendor.name.replace('_', ' ').title()) for p in vuln.products.all()])
+                if vuln.reflinks:
+                    references = "\n".join(f"- {link}" for link in vuln.reflinks)
                 else:
-                    return True
+                    references = "None"
+                message = (f"**New vulnerability found!**\n"
+                        f"**CVE ID:** {vuln.cveid}\n"
+                        f"**Summary:** {vuln.summary}\n"
+                        f"**CVSSv3 Vector:** {vuln.cvss3_vector}\n"
+                        f"**CVSSv3 Score:** {vuln.cvss3}\n"
+                        f"**Assigner:** {vuln.assigner}\n"
+                        f"**Affected Products:** {affected_products}\n"
+                        f"**References:** {references}\n")
+                telegram.send_message(bot_token, chat_id, message)
+                return True
+            else:
+                return True
         else:
             return True
     
