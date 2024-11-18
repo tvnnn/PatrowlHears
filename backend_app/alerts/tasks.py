@@ -3,6 +3,7 @@ from django.conf import settings
 from .utils import send_email_message
 from backend_app import slack
 from backend_app import telegram
+import time
 from datetime import datetime
 import json
 import requests
@@ -41,15 +42,16 @@ def telegram_alert_vuln_task(self, vuln_id, type):
                     references = "\n".join(f"- {link}" for link in vuln.reflinks)
                 else:
                     references = "None"
-                message = (f"**New vulnerability found!**\n"
-                        f"**CVE ID:** {vuln.cveid}\n"
-                        f"**Summary:** {vuln.summary}\n"
-                        f"**CVSSv3 Vector:** {vuln.cvss3_vector}\n"
-                        f"**CVSSv3 Score:** {vuln.cvss3}\n"
-                        f"**Assigner:** {vuln.assigner}\n"
-                        f"**Affected Products:** {affected_products}\n"
-                        f"**References:** {references}\n")
+                message = (f"*New vulnerability found!*\n"
+                        f"*CVE ID:* [{vuln.cveid}](https://www.cve.org/CVERecord?id={vuln.cveid})\n"
+                        f"*Summary:* {vuln.summary}\n"
+                        f"*CVSSv3 Vector:* {vuln.cvss3_vector}\n"
+                        f"*CVSSv3 Score:* {vuln.cvss3}\n"
+                        f"*Assigner:* {vuln.assigner}\n"
+                        f"*Affected Products:* {affected_products}\n"
+                        f"*References:*\n {references}")
                 telegram.send_message(bot_token, chat_id, message)
+                time.sleep(2)
                 return True
             else:
                 return True

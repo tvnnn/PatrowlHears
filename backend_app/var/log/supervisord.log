@@ -270,3 +270,59 @@
 2024-11-13 07:31:18,418 INFO spawned: 'celery-hears-alerts' with pid 304294
 2024-11-13 07:31:20,111 INFO exited: celery-hears-alerts (exit status 1; not expected)
 2024-11-13 07:31:21,112 INFO gave up: celery-hears-alerts entered FATAL state, too many start retries too quickly
+2024-11-16 02:00:05,396 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-16 02:00:08,510 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-16 02:00:11,515 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-16 02:00:14,537 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-16 02:00:15,539 WARN killing 'celery-hears-default' (304129) with SIGKILL
+2024-11-16 02:00:15,540 WARN killing 'celery-hears-data1' (304131) with SIGKILL
+2024-11-16 02:00:15,540 WARN killing 'celery-hears-data2' (304132) with SIGKILL
+2024-11-16 02:00:15,540 WARN killing 'celery-hears-data3' (304133) with SIGKILL
+2024-11-16 02:00:15,554 INFO stopped: celery-hears-data2 (terminated by SIGKILL)
+2024-11-16 02:00:15,556 INFO stopped: celery-hears-default (terminated by SIGKILL)
+2024-11-16 02:00:15,557 INFO stopped: celery-hears-data3 (terminated by SIGKILL)
+2024-11-16 02:00:15,835 INFO stopped: celery-hears-data1 (terminated by SIGKILL)
+2024-11-16 02:00:16,999 INFO stopped: celery-hears-beat (exit status 0)
+2024-11-16 02:00:22,869 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-16 02:00:22,879 INFO RPC interface 'supervisor' initialized
+2024-11-16 02:00:22,879 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2024-11-16 02:00:22,880 INFO daemonizing the supervisord process
+2024-11-16 02:00:22,880 INFO supervisord started with pid 1424520
+2024-11-16 02:00:23,883 INFO spawned: 'celery-hears-beat' with pid 1424531
+2024-11-16 02:00:23,888 INFO spawned: 'celery-hears-default' with pid 1424532
+2024-11-16 02:00:23,891 INFO spawned: 'celery-hears-alerts' with pid 1424533
+2024-11-16 02:00:23,893 INFO spawned: 'celery-hears-data1' with pid 1424534
+2024-11-16 02:00:23,911 INFO spawned: 'celery-hears-data2' with pid 1424535
+2024-11-16 02:00:23,913 INFO spawned: 'celery-hears-data3' with pid 1424536
+2024-11-16 02:00:28,884 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-16 02:00:28,884 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-16 02:00:28,893 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-16 02:00:28,894 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-16 02:00:28,894 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-16 02:00:29,895 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-18 16:15:29,839 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-18 16:15:31,121 INFO stopped: celery-hears-beat (exit status 0)
+2024-11-18 16:15:33,130 INFO waiting for celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-18 16:15:36,134 INFO waiting for celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-18 16:15:37,578 INFO stopped: celery-hears-alerts (exit status 0)
+2024-11-18 16:15:37,960 INFO stopped: celery-hears-default (exit status 0)
+2024-11-18 16:15:38,056 INFO stopped: celery-hears-data2 (exit status 0)
+2024-11-18 16:15:38,056 INFO stopped: celery-hears-data3 (exit status 0)
+2024-11-18 16:15:38,146 INFO stopped: celery-hears-data1 (exit status 0)
+2024-11-18 16:15:38,493 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-18 16:15:38,511 INFO RPC interface 'supervisor' initialized
+2024-11-18 16:15:38,511 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2024-11-18 16:15:38,542 INFO daemonizing the supervisord process
+2024-11-18 16:15:38,571 INFO supervisord started with pid 1739295
+2024-11-18 16:15:39,582 INFO spawned: 'celery-hears-beat' with pid 1739306
+2024-11-18 16:15:39,585 INFO spawned: 'celery-hears-default' with pid 1739307
+2024-11-18 16:15:39,587 INFO spawned: 'celery-hears-alerts' with pid 1739308
+2024-11-18 16:15:39,592 INFO spawned: 'celery-hears-data1' with pid 1739309
+2024-11-18 16:15:39,604 INFO spawned: 'celery-hears-data2' with pid 1739310
+2024-11-18 16:15:39,615 INFO spawned: 'celery-hears-data3' with pid 1739311
+2024-11-18 16:15:44,623 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-18 16:15:44,623 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-18 16:15:44,623 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-18 16:15:44,623 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-18 16:15:44,624 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-18 16:15:44,624 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)

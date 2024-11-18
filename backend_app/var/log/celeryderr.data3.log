@@ -1,0 +1,42 @@
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-16 03:00:37,289: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-16 03:00:37,430: INFO/MainProcess] data3-node@ph ready.
+[2024-11-16 03:05:15,559: INFO/MainProcess] Received task: data.tasks.import_cve_task[0799056f-6eb9-44dd-af5c-ba6d46295dde]  
+[2024-11-16 03:05:15,569: INFO/MainProcess] Received task: data.tasks.import_cve_task[6e276a77-410f-4418-aa03-21eae45779f1]  
+[2024-11-16 03:05:15,585: INFO/MainProcess] Received task: data.tasks.import_cve_task[3f00061f-b89e-4435-aa57-ed7c13396f66]  
+[2024-11-16 03:05:15,597: INFO/MainProcess] Received task: data.tasks.import_cve_task[6011fc07-7fdd-4245-ba52-658de531cb69]  
+[2024-11-16 03:05:16,286: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[0799056f-6eb9-44dd-af5c-ba6d46295dde] succeeded in 0.6870886560063809s: None
+[2024-11-16 03:05:16,299: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[3f00061f-b89e-4435-aa57-ed7c13396f66] succeeded in 0.691910227003973s: None
+[2024-11-16 03:05:16,456: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[6e276a77-410f-4418-aa03-21eae45779f1] succeeded in 0.8528634220128879s: None
+[2024-11-16 03:05:16,543: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[6011fc07-7fdd-4245-ba52-658de531cb69] succeeded in 0.8436710450332612s: None
+[2024-11-16 17:31:33,202: INFO/MainProcess] Received task: data.tasks.import_cve_task[49e2aab7-86ca-4570-a145-92072c51bf0a]  
+[2024-11-16 17:31:33,231: INFO/MainProcess] Received task: data.tasks.import_cve_task[19416114-4db8-4642-86a9-c21e6a12ccf3]  
+[2024-11-16 17:31:33,232: INFO/MainProcess] Received task: data.tasks.import_cve_task[3c0f8fdc-d784-446d-87e5-42f2b3096ed3]  
+[2024-11-16 17:31:33,272: INFO/MainProcess] Received task: data.tasks.import_cve_task[7a4b1e4e-92a4-4291-83c1-53176af8e750]  
+[2024-11-16 17:31:33,273: INFO/MainProcess] Received task: data.tasks.import_cve_task[62f0060a-4d7a-41c7-9f71-193c7c0bce51]  
+[2024-11-16 17:31:33,282: INFO/MainProcess] Received task: data.tasks.import_cve_task[941b5066-aa1e-4597-9671-6bbb48723d18]  
+[2024-11-16 17:31:35,138: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[49e2aab7-86ca-4570-a145-92072c51bf0a] succeeded in 1.6955476949806325s: None
+[2024-11-16 17:31:35,410: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[7a4b1e4e-92a4-4291-83c1-53176af8e750] succeeded in 1.8607417379971594s: None
+[2024-11-16 17:31:35,589: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[3c0f8fdc-d784-446d-87e5-42f2b3096ed3] succeeded in 2.1422724059666507s: None
+[2024-11-16 17:31:35,658: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[19416114-4db8-4642-86a9-c21e6a12ccf3] succeeded in 2.356397399038542s: None
+[2024-11-16 17:31:36,540: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[62f0060a-4d7a-41c7-9f71-193c7c0bce51] succeeded in 3.1061013090074994s: None
+[2024-11-16 17:31:36,591: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[941b5066-aa1e-4597-9671-6bbb48723d18] succeeded in 2.997212184011005s: None
+
+worker: Warm shutdown (MainProcess)
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-18 17:16:00,893: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-18 17:16:01,016: INFO/MainProcess] data3-node@ph ready.
