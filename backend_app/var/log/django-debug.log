@@ -21,3 +21,302 @@ Traceback (most recent call last):
   File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
     vector = "" + vuln.cvss_vector
 TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:41:10,205 django.request ERROR    Internal Server Error: /api/ratings/vector/266186
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:41:23,832 django.request ERROR    Internal Server Error: /api/ratings/vector/1
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:41:39,318 django.request ERROR    Internal Server Error: /api/ratings/vector/265023
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:42:08,503 django.request ERROR    Internal Server Error: /api/ratings/vector/243256
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:42:54,484 django.request ERROR    Internal Server Error: /api/ratings/vector/180369
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:43:01,078 django.request ERROR    Internal Server Error: /api/ratings/vector/266190
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:43:06,745 django.request ERROR    Internal Server Error: /api/ratings/vector/180369
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:43:19,618 django.request ERROR    Internal Server Error: /api/ratings/vector/266189
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:43:41,534 django.request ERROR    Internal Server Error: /api/ratings/vector/261771
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:43:45,114 django.request ERROR    Internal Server Error: /api/ratings/vector/260527
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:43:49,908 django.request ERROR    Internal Server Error: /api/ratings/vector/1
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:43:56,371 django.request ERROR    Internal Server Error: /api/ratings/vector/243256
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str
+2024-11-19 04:48:29,504 django.request ERROR    Internal Server Error: /api/ratings/vector/222796
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/vpratings/apis.py", line 42, in get_vuln_vector
+    vector = "" + vuln.cvss_vector
+TypeError: can only concatenate str (not "NoneType") to str

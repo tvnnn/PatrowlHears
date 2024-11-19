@@ -40,3 +40,47 @@ User information: uid=0 euid=0 gid=0 egid=0
   warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
 [2024-11-18 17:16:00,893: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
 [2024-11-18 17:16:01,016: INFO/MainProcess] data3-node@ph ready.
+[2024-11-18 21:11:57,900: INFO/MainProcess] Received task: data.tasks.import_cve_task[69ac5a82-41d4-4ccb-b80e-80f1e265906f]  
+[2024-11-18 21:11:58,000: INFO/MainProcess] Received task: data.tasks.import_cve_task[178e8dc1-79fb-465d-ae4e-d76667fecc85]  
+[2024-11-18 21:11:58,004: INFO/MainProcess] Received task: data.tasks.import_cve_task[876bc670-8194-4d61-a31a-f9624ff02cb2]  
+[2024-11-18 21:11:58,048: INFO/MainProcess] Received task: data.tasks.import_cve_task[54da76c8-9326-449f-996c-64f5e27e1199]  
+[2024-11-18 21:11:58,048: INFO/MainProcess] Received task: data.tasks.import_cve_task[d12923d2-22aa-4cdd-a5e6-de27f06b6ba8]  
+[2024-11-18 21:11:58,049: INFO/MainProcess] Received task: data.tasks.import_cve_task[c4e15d6a-55f2-4628-9ed1-20ad578dccda]  
+[2024-11-18 21:11:58,078: INFO/MainProcess] Received task: data.tasks.import_cve_task[339bb568-93a6-407e-8df2-941819d24703]  
+[2024-11-18 21:11:58,079: INFO/MainProcess] Received task: data.tasks.import_cve_task[ddda69ac-f3be-462c-a444-e25eac952e62]  
+[2024-11-18 21:11:58,122: INFO/MainProcess] Received task: data.tasks.import_cve_task[9d048da1-4c3a-4af6-946e-8e00810b5d86]  
+[2024-11-18 21:11:58,123: INFO/MainProcess] Received task: data.tasks.import_cve_task[efdf4429-dcdc-437c-b6bf-536a309667d5]  
+[2024-11-18 21:11:58,201: INFO/MainProcess] Received task: data.tasks.import_cve_task[2e62a8fc-5994-4430-8196-0d9fef0d45a5]  
+[2024-11-18 21:11:59,937: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[9d048da1-4c3a-4af6-946e-8e00810b5d86] succeeded in 1.7931853689951822s: None
+[2024-11-18 21:11:59,966: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[339bb568-93a6-407e-8df2-941819d24703] succeeded in 1.8330452759983018s: None
+[2024-11-18 21:12:00,094: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[c4e15d6a-55f2-4628-9ed1-20ad578dccda] succeeded in 1.9613047019811347s: None
+[2024-11-18 21:12:00,113: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[d12923d2-22aa-4cdd-a5e6-de27f06b6ba8] succeeded in 1.9867624300532043s: None
+[2024-11-18 21:12:00,260: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[54da76c8-9326-449f-996c-64f5e27e1199] succeeded in 2.1341318269260228s: None
+[2024-11-18 21:12:00,290: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[ddda69ac-f3be-462c-a444-e25eac952e62] succeeded in 2.1500065829604864s: None
+[2024-11-18 21:12:00,299: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[efdf4429-dcdc-437c-b6bf-536a309667d5] succeeded in 2.1581479189917445s: None
+[2024-11-18 21:12:00,299: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[876bc670-8194-4d61-a31a-f9624ff02cb2] succeeded in 2.258652967051603s: None
+[2024-11-18 21:12:00,353: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[69ac5a82-41d4-4ccb-b80e-80f1e265906f] succeeded in 2.3188441019738093s: None
+[2024-11-18 21:12:00,414: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[178e8dc1-79fb-465d-ae4e-d76667fecc85] succeeded in 2.377813001978211s: None
+[2024-11-18 21:12:00,440: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[2e62a8fc-5994-4430-8196-0d9fef0d45a5] succeeded in 0.45506719092372805s: None
+[2024-11-18 21:12:00,750: INFO/MainProcess] Received task: data.tasks.import_cve_task[4fcf9596-f6e1-4f9f-9f79-5d1dc63107b8]  
+[2024-11-18 21:12:00,774: INFO/MainProcess] Received task: data.tasks.import_cve_task[62d357df-507f-4688-830c-3e8390e1a10b]  
+[2024-11-18 21:12:00,810: INFO/MainProcess] Received task: data.tasks.import_cve_task[f0863c0a-938e-479e-88a5-a46b93b24d5a]  
+[2024-11-18 21:12:00,896: INFO/MainProcess] Received task: data.tasks.import_cve_task[aaf78c9c-2970-47a6-b52c-19d6b2853797]  
+[2024-11-18 21:12:00,970: INFO/MainProcess] Received task: data.tasks.import_cve_task[579def3c-1d65-4abb-b702-07acc0c2b14c]  
+[2024-11-18 21:12:01,051: INFO/MainProcess] Received task: data.tasks.import_cve_task[f81d5577-bca3-48c1-a14b-8535bf5a3658]  
+[2024-11-18 21:12:01,072: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[4fcf9596-f6e1-4f9f-9f79-5d1dc63107b8] succeeded in 0.32091781101189554s: None
+[2024-11-18 21:12:01,231: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[62d357df-507f-4688-830c-3e8390e1a10b] succeeded in 0.4515755570027977s: None
+[2024-11-18 21:12:01,283: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[f0863c0a-938e-479e-88a5-a46b93b24d5a] succeeded in 0.4666589580010623s: None
+[2024-11-18 21:12:01,287: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[aaf78c9c-2970-47a6-b52c-19d6b2853797] succeeded in 0.390039868070744s: None
+[2024-11-18 21:12:01,381: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[f81d5577-bca3-48c1-a14b-8535bf5a3658] succeeded in 0.32848558702971786s: None
+[2024-11-18 21:12:01,395: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[579def3c-1d65-4abb-b702-07acc0c2b14c] succeeded in 0.4240192750003189s: None
+[2024-11-19 04:27:30,010: INFO/MainProcess] Received task: data.tasks.import_cve_task[8ac5098b-f7c4-4841-a3b0-614d7bcab606]  
+[2024-11-19 04:27:30,021: INFO/MainProcess] Received task: data.tasks.import_cve_task[769489da-99f6-411d-b865-2187bf74c867]  
+[2024-11-19 04:27:30,028: INFO/MainProcess] Received task: data.tasks.import_cve_task[ea74cb29-fef7-4293-83c7-702ae8483a02]  
+[2024-11-19 04:27:30,050: INFO/MainProcess] Received task: data.tasks.import_cve_task[55f88c99-3b22-4f4a-888a-9410154f1cfd]  
+[2024-11-19 04:27:30,051: INFO/MainProcess] Received task: data.tasks.import_cve_task[d73b4fc4-d16d-47c6-9d3b-8defb8f49db5]  
+[2024-11-19 04:27:30,847: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[8ac5098b-f7c4-4841-a3b0-614d7bcab606] succeeded in 0.8014310059370473s: None
+[2024-11-19 04:27:30,860: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[769489da-99f6-411d-b865-2187bf74c867] succeeded in 0.7933946060948074s: None
+[2024-11-19 04:27:30,935: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[55f88c99-3b22-4f4a-888a-9410154f1cfd] succeeded in 0.8502960470505059s: None
+[2024-11-19 04:27:30,946: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[d73b4fc4-d16d-47c6-9d3b-8defb8f49db5] succeeded in 0.8464163090102375s: None
+[2024-11-19 04:27:30,956: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[ea74cb29-fef7-4293-83c7-702ae8483a02] succeeded in 0.8942346420371905s: None

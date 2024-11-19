@@ -58,6 +58,11 @@ def import_cpe_task(self, vector, title, product, vendor):
     return import_cpe(vector, title, product, vendor)
 
 
+# @shared_task(bind=True, acks_late=False, ignore_result=False)
+# def import_cpe_task(self, data):
+    return import_cpe(data)
+
+
 @shared_task(bind=True, acks_late=False, ignore_result=False)
 def import_cve_task(self, data):
     return import_cve(data)

@@ -52,7 +52,8 @@ lastupdate=""
 [ -f var/data/lastupdate.txt ] && lastupdate="-l $(cat var/data/lastupdate.txt)"
 echo "[i] Last update: $lastupdate"
 
-
+# Paths for checksum files
+mkdir -p var/data/checksums
 cwes_checksum_file="var/data/checksums/cwes-diff-checksum.txt"
 cpes_checksum_file="var/data/checksums/cpes-diff-checksum.txt"
 cves_checksum_file="var/data/checksums/cves-diff-checksum.txt"

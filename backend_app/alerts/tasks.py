@@ -38,6 +38,7 @@ def telegram_alert_vuln_task(self, vuln_id, type):
                 bot_token = org.org_settings.alerts_telegram['bot_token']
                 chat_id = org.org_settings.alerts_telegram['chat_id']
                 affected_products = ", ".join(["*{}* ({})".format(p.name.replace('_', ' ').title(), p.vendor.name.replace('_', ' ').title()) for p in vuln.products.all()])
+                product = affected_products if affected_products else "None"
                 if vuln.reflinks:
                     references = "\n".join(f"- {link}" for link in vuln.reflinks)
                 else:
@@ -48,8 +49,8 @@ def telegram_alert_vuln_task(self, vuln_id, type):
                         f"*CVSSv3 Vector:* {vuln.cvss3_vector}\n"
                         f"*CVSSv3 Score:* {vuln.cvss3}\n"
                         f"*Assigner:* {vuln.assigner}\n"
-                        f"*Affected Products:* {affected_products}\n"
-                        f"*References:*\n {references}")
+                        f"*Affected Products:* {product}\n"
+                        f"*References:*\n{references}")
                 telegram.send_message(bot_token, chat_id, message)
                 time.sleep(2)
                 return True
