@@ -30,3 +30,12 @@ def send_tweet_message(message=""):
     # TWEET_CHARACTER_LIMIT = 280
     twitter_api.PostUpdate(status=message)
     logger.info('Tweet posted:', message)
+
+def escape_markdown(text):
+    """
+    Escape special characters for Telegram formatting.
+    """
+    special_chars = r"`*_~["
+    for char in special_chars:
+        text = text.replace(char, f"\{char}")
+    return text

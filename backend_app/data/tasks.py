@@ -1,5 +1,6 @@
 from celery import shared_task
 from django.apps import apps
+from cves.models import Vendor, Product, CPE
 from .utils import _run_datasync, _run_datasync_model
 from common.utils.constants import DATASYNC_MODELS
 from common.feeds.metadata import import_exploit
@@ -62,6 +63,27 @@ def import_cpe_task(self, vector, title, product, vendor):
 # def import_cpe_task(self, data):
     return import_cpe(data)
 
+@shared_task(bind=True, acks_late=False, ignore_result=False)
+def import_cpe_batch_task(cpe_data_batch):
+    cpe_objects = []
+    for cpe_vector, details, product_id, vendor_id in cpe_data_batch:
+        try:
+            product = Product.objects.get(id=product_id)
+            vendor = Vendor.objects.get(id=vendor_id)
+            if not CPE.objects.filter(vector=cpe_vector).exists():
+                cpe_objects.append(CPE(
+                    vector=cpe_vector,
+                    data=details,
+                    product=product,
+                    vendor=vendor
+                ))
+        except (Product.DoesNotExist, Vendor.DoesNotExist):
+            continue
+
+    if cpe_objects:
+        CPE.objects.bulk_create(cpe_objects)
+
+    return True
 
 @shared_task(bind=True, acks_late=False, ignore_result=False)
 def import_cve_task(self, data):

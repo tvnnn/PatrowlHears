@@ -1,0 +1,130 @@
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-19 09:58:25,484: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-19 09:58:25,535: INFO/MainProcess] alerts-node@ph ready.
+[2024-11-20 03:25:09,251: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6fe6d7a3-c5e1-4154-8096-857149f0db31]  
+[2024-11-20 03:25:09,361: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ee98f4bd-e5fd-4431-947c-df4952a33d9b]  
+[2024-11-20 03:25:09,375: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b11d779e-9b9f-4476-bd2b-145c0a3c5dcb]  
+[2024-11-20 03:25:09,384: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2b9ff262-eb77-4862-be88-448fc5bb840d]  
+[2024-11-20 03:25:09,393: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3d34977b-91f4-424c-9fb0-2684b041e308]  
+[2024-11-20 03:25:09,454: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fcaf05b5-85c8-4df3-90cf-0afe3dc5b0d2]  
+[2024-11-20 03:25:09,541: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[295a7447-ad15-4e0e-adbd-8e2b535b955d]  
+[2024-11-20 03:25:09,645: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4b8e827e-9f28-47ba-a9b3-5fefbc59d95d]  
+[2024-11-20 03:25:09,785: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ee98f4bd-e5fd-4431-947c-df4952a33d9b] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
+    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'NoneType' object has no attribute 'replace'
+[2024-11-20 03:25:09,836: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b11d779e-9b9f-4476-bd2b-145c0a3c5dcb] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
+    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'NoneType' object has no attribute 'replace'
+[2024-11-20 03:25:09,835: ERROR/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[6fe6d7a3-c5e1-4154-8096-857149f0db31] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
+    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'NoneType' object has no attribute 'replace'
+[2024-11-20 03:25:09,859: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3356a5ca-b7c3-4f6d-b724-1adc49791a88]  
+[2024-11-20 03:25:09,886: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[2b9ff262-eb77-4862-be88-448fc5bb840d] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
+    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'NoneType' object has no attribute 'replace'
+[2024-11-20 03:25:09,908: ERROR/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3d34977b-91f4-424c-9fb0-2684b041e308] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
+    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'NoneType' object has no attribute 'replace'
+[2024-11-20 03:25:09,937: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4ed53e4d-8c83-44b8-bd05-831dc84623be]  
+[2024-11-20 03:25:09,944: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[fcaf05b5-85c8-4df3-90cf-0afe3dc5b0d2] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
+    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'float' object has no attribute 'replace'
+[2024-11-20 03:25:09,949: ERROR/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[295a7447-ad15-4e0e-adbd-8e2b535b955d] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
+    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'float' object has no attribute 'replace'
+[2024-11-20 03:25:09,991: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4b8e827e-9f28-47ba-a9b3-5fefbc59d95d] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
+    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'float' object has no attribute 'replace'
+[2024-11-20 03:25:10,008: ERROR/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3356a5ca-b7c3-4f6d-b724-1adc49791a88] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
+    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'float' object has no attribute 'replace'
+[2024-11-20 03:25:10,042: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4ed53e4d-8c83-44b8-bd05-831dc84623be] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
+    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
+  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
+    text = text.replace(char, f"\{char}")
+AttributeError: 'float' object has no attribute 'replace'

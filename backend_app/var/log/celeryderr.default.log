@@ -1,0 +1,14 @@
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-19 09:58:25,854: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-19 09:58:25,966: INFO/MainProcess] default-node@ph ready.
+[2024-11-20 00:00:00,207: INFO/MainProcess] Received task: vulns.tasks.email_daily_report_task[9b4aafe7-0967-4ecf-8582-7a42509040b1]  
+[2024-11-20 00:00:00,310: INFO/ForkPoolWorker-1] Task vulns.tasks.email_daily_report_task[9b4aafe7-0967-4ecf-8582-7a42509040b1] succeeded in 0.09053192700230284s: None
+[2024-11-20 04:00:00,012: INFO/MainProcess] Received task: celery.backend_cleanup[35d3ae9d-e3a4-4545-8788-54b8fd6cafde]   expires:[2024-11-20 16:00:00.006825+01:00]
+[2024-11-20 04:00:00,206: INFO/ForkPoolWorker-1] Task celery.backend_cleanup[35d3ae9d-e3a4-4545-8788-54b8fd6cafde] succeeded in 0.18263521199696697s: None

@@ -371,17 +371,15 @@ def import_cpes(data):
 
 
 def import_cpe(vector, title, product, vendor):
-    # if CPE.objects.filter(vector=vector).exists() is False:
     try:
-        CPE.objects.get_or_create(
+        cpe = CPE(
             vector=vector,
             title=title,
-            product_id=product,
-            vendor_id=vendor
+            product=product,
+            vendor=vendor
         )
-        # print("New CPE added: {}".format(vector))
+        cpe.save()
     except Exception as e:
-        # print(e)
         logger.error(e)
         return False
     return True

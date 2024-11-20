@@ -2,6 +2,7 @@ import requests
 import logging
 logger = logging.getLogger(__name__)
 
+
 def send_message(bot_token, chat_id, message):
     try:
         url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
