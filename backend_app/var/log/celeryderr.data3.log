@@ -1,35 +1,17 @@
-/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
-absolutely not recommended!
-
-Please specify a different user using the --uid option.
-
-User information: uid=0 euid=0 gid=0 egid=0
-
-  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
-[2024-11-16 03:00:37,289: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
-[2024-11-16 03:00:37,430: INFO/MainProcess] data3-node@ph ready.
-[2024-11-16 03:05:15,559: INFO/MainProcess] Received task: data.tasks.import_cve_task[0799056f-6eb9-44dd-af5c-ba6d46295dde]  
-[2024-11-16 03:05:15,569: INFO/MainProcess] Received task: data.tasks.import_cve_task[6e276a77-410f-4418-aa03-21eae45779f1]  
-[2024-11-16 03:05:15,585: INFO/MainProcess] Received task: data.tasks.import_cve_task[3f00061f-b89e-4435-aa57-ed7c13396f66]  
-[2024-11-16 03:05:15,597: INFO/MainProcess] Received task: data.tasks.import_cve_task[6011fc07-7fdd-4245-ba52-658de531cb69]  
-[2024-11-16 03:05:16,286: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[0799056f-6eb9-44dd-af5c-ba6d46295dde] succeeded in 0.6870886560063809s: None
-[2024-11-16 03:05:16,299: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[3f00061f-b89e-4435-aa57-ed7c13396f66] succeeded in 0.691910227003973s: None
-[2024-11-16 03:05:16,456: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[6e276a77-410f-4418-aa03-21eae45779f1] succeeded in 0.8528634220128879s: None
-[2024-11-16 03:05:16,543: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[6011fc07-7fdd-4245-ba52-658de531cb69] succeeded in 0.8436710450332612s: None
-[2024-11-16 17:31:33,202: INFO/MainProcess] Received task: data.tasks.import_cve_task[49e2aab7-86ca-4570-a145-92072c51bf0a]  
-[2024-11-16 17:31:33,231: INFO/MainProcess] Received task: data.tasks.import_cve_task[19416114-4db8-4642-86a9-c21e6a12ccf3]  
-[2024-11-16 17:31:33,232: INFO/MainProcess] Received task: data.tasks.import_cve_task[3c0f8fdc-d784-446d-87e5-42f2b3096ed3]  
-[2024-11-16 17:31:33,272: INFO/MainProcess] Received task: data.tasks.import_cve_task[7a4b1e4e-92a4-4291-83c1-53176af8e750]  
-[2024-11-16 17:31:33,273: INFO/MainProcess] Received task: data.tasks.import_cve_task[62f0060a-4d7a-41c7-9f71-193c7c0bce51]  
-[2024-11-16 17:31:33,282: INFO/MainProcess] Received task: data.tasks.import_cve_task[941b5066-aa1e-4597-9671-6bbb48723d18]  
-[2024-11-16 17:31:35,138: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[49e2aab7-86ca-4570-a145-92072c51bf0a] succeeded in 1.6955476949806325s: None
-[2024-11-16 17:31:35,410: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[7a4b1e4e-92a4-4291-83c1-53176af8e750] succeeded in 1.8607417379971594s: None
-[2024-11-16 17:31:35,589: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[3c0f8fdc-d784-446d-87e5-42f2b3096ed3] succeeded in 2.1422724059666507s: None
-[2024-11-16 17:31:35,658: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[19416114-4db8-4642-86a9-c21e6a12ccf3] succeeded in 2.356397399038542s: None
-[2024-11-16 17:31:36,540: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[62f0060a-4d7a-41c7-9f71-193c7c0bce51] succeeded in 3.1061013090074994s: None
-[2024-11-16 17:31:36,591: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[941b5066-aa1e-4597-9671-6bbb48723d18] succeeded in 2.997212184011005s: None
 
 worker: Warm shutdown (MainProcess)
+[2024-11-21 05:39:46,625: WARNING/MainProcess] Traceback (most recent call last):
+[2024-11-21 05:39:46,626: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+[2024-11-21 05:39:46,626: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+[2024-11-21 05:39:46,626: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 133, in _remove_temp_dir
+    rmtree(tempdir)
+[2024-11-21 05:39:46,626: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/shutil.py", line 724, in rmtree
+    onerror(os.lstat, path, sys.exc_info())
+[2024-11-21 05:39:46,626: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/shutil.py", line 722, in rmtree
+    orig_st = os.lstat(path)
+[2024-11-21 05:39:46,626: WARNING/MainProcess] FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pymp-vc9qrge1'
 /root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
 absolutely not recommended!
 
@@ -38,806 +20,40 @@ Please specify a different user using the --uid option.
 User information: uid=0 euid=0 gid=0 egid=0
 
   warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
-[2024-11-18 17:16:00,893: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
-[2024-11-18 17:16:01,016: INFO/MainProcess] data3-node@ph ready.
-[2024-11-18 21:11:57,900: INFO/MainProcess] Received task: data.tasks.import_cve_task[69ac5a82-41d4-4ccb-b80e-80f1e265906f]  
-[2024-11-18 21:11:58,000: INFO/MainProcess] Received task: data.tasks.import_cve_task[178e8dc1-79fb-465d-ae4e-d76667fecc85]  
-[2024-11-18 21:11:58,004: INFO/MainProcess] Received task: data.tasks.import_cve_task[876bc670-8194-4d61-a31a-f9624ff02cb2]  
-[2024-11-18 21:11:58,048: INFO/MainProcess] Received task: data.tasks.import_cve_task[54da76c8-9326-449f-996c-64f5e27e1199]  
-[2024-11-18 21:11:58,048: INFO/MainProcess] Received task: data.tasks.import_cve_task[d12923d2-22aa-4cdd-a5e6-de27f06b6ba8]  
-[2024-11-18 21:11:58,049: INFO/MainProcess] Received task: data.tasks.import_cve_task[c4e15d6a-55f2-4628-9ed1-20ad578dccda]  
-[2024-11-18 21:11:58,078: INFO/MainProcess] Received task: data.tasks.import_cve_task[339bb568-93a6-407e-8df2-941819d24703]  
-[2024-11-18 21:11:58,079: INFO/MainProcess] Received task: data.tasks.import_cve_task[ddda69ac-f3be-462c-a444-e25eac952e62]  
-[2024-11-18 21:11:58,122: INFO/MainProcess] Received task: data.tasks.import_cve_task[9d048da1-4c3a-4af6-946e-8e00810b5d86]  
-[2024-11-18 21:11:58,123: INFO/MainProcess] Received task: data.tasks.import_cve_task[efdf4429-dcdc-437c-b6bf-536a309667d5]  
-[2024-11-18 21:11:58,201: INFO/MainProcess] Received task: data.tasks.import_cve_task[2e62a8fc-5994-4430-8196-0d9fef0d45a5]  
-[2024-11-18 21:11:59,937: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[9d048da1-4c3a-4af6-946e-8e00810b5d86] succeeded in 1.7931853689951822s: None
-[2024-11-18 21:11:59,966: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[339bb568-93a6-407e-8df2-941819d24703] succeeded in 1.8330452759983018s: None
-[2024-11-18 21:12:00,094: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[c4e15d6a-55f2-4628-9ed1-20ad578dccda] succeeded in 1.9613047019811347s: None
-[2024-11-18 21:12:00,113: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[d12923d2-22aa-4cdd-a5e6-de27f06b6ba8] succeeded in 1.9867624300532043s: None
-[2024-11-18 21:12:00,260: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[54da76c8-9326-449f-996c-64f5e27e1199] succeeded in 2.1341318269260228s: None
-[2024-11-18 21:12:00,290: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[ddda69ac-f3be-462c-a444-e25eac952e62] succeeded in 2.1500065829604864s: None
-[2024-11-18 21:12:00,299: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[efdf4429-dcdc-437c-b6bf-536a309667d5] succeeded in 2.1581479189917445s: None
-[2024-11-18 21:12:00,299: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[876bc670-8194-4d61-a31a-f9624ff02cb2] succeeded in 2.258652967051603s: None
-[2024-11-18 21:12:00,353: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[69ac5a82-41d4-4ccb-b80e-80f1e265906f] succeeded in 2.3188441019738093s: None
-[2024-11-18 21:12:00,414: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[178e8dc1-79fb-465d-ae4e-d76667fecc85] succeeded in 2.377813001978211s: None
-[2024-11-18 21:12:00,440: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[2e62a8fc-5994-4430-8196-0d9fef0d45a5] succeeded in 0.45506719092372805s: None
-[2024-11-18 21:12:00,750: INFO/MainProcess] Received task: data.tasks.import_cve_task[4fcf9596-f6e1-4f9f-9f79-5d1dc63107b8]  
-[2024-11-18 21:12:00,774: INFO/MainProcess] Received task: data.tasks.import_cve_task[62d357df-507f-4688-830c-3e8390e1a10b]  
-[2024-11-18 21:12:00,810: INFO/MainProcess] Received task: data.tasks.import_cve_task[f0863c0a-938e-479e-88a5-a46b93b24d5a]  
-[2024-11-18 21:12:00,896: INFO/MainProcess] Received task: data.tasks.import_cve_task[aaf78c9c-2970-47a6-b52c-19d6b2853797]  
-[2024-11-18 21:12:00,970: INFO/MainProcess] Received task: data.tasks.import_cve_task[579def3c-1d65-4abb-b702-07acc0c2b14c]  
-[2024-11-18 21:12:01,051: INFO/MainProcess] Received task: data.tasks.import_cve_task[f81d5577-bca3-48c1-a14b-8535bf5a3658]  
-[2024-11-18 21:12:01,072: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[4fcf9596-f6e1-4f9f-9f79-5d1dc63107b8] succeeded in 0.32091781101189554s: None
-[2024-11-18 21:12:01,231: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[62d357df-507f-4688-830c-3e8390e1a10b] succeeded in 0.4515755570027977s: None
-[2024-11-18 21:12:01,283: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[f0863c0a-938e-479e-88a5-a46b93b24d5a] succeeded in 0.4666589580010623s: None
-[2024-11-18 21:12:01,287: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[aaf78c9c-2970-47a6-b52c-19d6b2853797] succeeded in 0.390039868070744s: None
-[2024-11-18 21:12:01,381: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[f81d5577-bca3-48c1-a14b-8535bf5a3658] succeeded in 0.32848558702971786s: None
-[2024-11-18 21:12:01,395: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[579def3c-1d65-4abb-b702-07acc0c2b14c] succeeded in 0.4240192750003189s: None
-[2024-11-19 04:27:30,010: INFO/MainProcess] Received task: data.tasks.import_cve_task[8ac5098b-f7c4-4841-a3b0-614d7bcab606]  
-[2024-11-19 04:27:30,021: INFO/MainProcess] Received task: data.tasks.import_cve_task[769489da-99f6-411d-b865-2187bf74c867]  
-[2024-11-19 04:27:30,028: INFO/MainProcess] Received task: data.tasks.import_cve_task[ea74cb29-fef7-4293-83c7-702ae8483a02]  
-[2024-11-19 04:27:30,050: INFO/MainProcess] Received task: data.tasks.import_cve_task[55f88c99-3b22-4f4a-888a-9410154f1cfd]  
-[2024-11-19 04:27:30,051: INFO/MainProcess] Received task: data.tasks.import_cve_task[d73b4fc4-d16d-47c6-9d3b-8defb8f49db5]  
-[2024-11-19 04:27:30,847: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[8ac5098b-f7c4-4841-a3b0-614d7bcab606] succeeded in 0.8014310059370473s: None
-[2024-11-19 04:27:30,860: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[769489da-99f6-411d-b865-2187bf74c867] succeeded in 0.7933946060948074s: None
-[2024-11-19 04:27:30,935: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[55f88c99-3b22-4f4a-888a-9410154f1cfd] succeeded in 0.8502960470505059s: None
-[2024-11-19 04:27:30,946: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[d73b4fc4-d16d-47c6-9d3b-8defb8f49db5] succeeded in 0.8464163090102375s: None
-[2024-11-19 04:27:30,956: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[ea74cb29-fef7-4293-83c7-702ae8483a02] succeeded in 0.8942346420371905s: None
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/bin/celery", line 8, in <module>
-    sys.exit(main())
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/__main__.py", line 16, in main
-    _main()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 322, in main
-    cmd.execute_from_commandline(argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
-    super(CeleryCommand, self).execute_from_commandline(argv)))
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
-    return self.handle_argv(self.prog_name, argv[1:])
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 487, in handle_argv
-    return self.execute(command, argv)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/celery.py", line 415, in execute
-    return cls(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 223, in run_from_argv
-    return self(*args, **options)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/base.py", line 253, in __call__
-    ret = self.run(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/bin/worker.py", line 253, in run
-    worker = self.app.Worker(
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/worker/worker.py", line 96, in __init__
-    self.app.loader.init_worker()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 114, in init_worker
-    self.import_default_modules()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/loaders/base.py", line 108, in import_default_modules
-    raise response
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/utils/dispatch/signal.py", line 288, in send
-    response = receiver(signal=self, sender=sender, **named)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 84, in on_import_modules
-    self.worker_fixup.validate_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 122, in validate_models
-    self.django_setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/fixups/django.py", line 118, in django_setup
-    django.setup()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/__init__.py", line 24, in setup
-    apps.populate(settings.INSTALLED_APPS)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/registry.py", line 114, in populate
-    app_config.import_models()
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/django/apps/config.py", line 211, in import_models
-    self.models_module = import_module(models_module_name)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/root/PatrowlHears/backend_app/users/models.py", line 6, in <module>
-    from vulns.models import Vuln
-  File "/root/PatrowlHears/backend_app/vulns/models.py", line 8, in <module>
-    from alerts.models import AlertingRule
-  File "/root/PatrowlHears/backend_app/alerts/models.py", line 6, in <module>
-    from .tasks import send_email_message_task
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 4, in <module>
-    from backend_app import slack, telegram, escape_markdown
-ImportError: cannot import name 'escape_markdown' from 'backend_app' (/root/PatrowlHears/backend_app/backend_app/__init__.py)
+[2024-11-21 05:40:06,945: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-21 05:40:07,000: INFO/MainProcess] data3-node@ph ready.
+[2024-11-21 05:45:05,802: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[f12506bf-d175-415a-a0cf-8a36716ca0bb]  
+[2024-11-21 05:45:05,820: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[6315820a-2b27-4106-8040-43d4376d78cf]  
+[2024-11-21 05:45:05,856: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[2d6fe4ef-c646-4e8e-a946-f701cff81552]  
+[2024-11-21 05:45:05,885: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[e0245226-5c1f-4b80-b251-6d31b6d98f05]  
+[2024-11-21 05:45:06,231: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[ee9d17cf-0dac-4afd-9fe0-44fa37a83fef]  
+[2024-11-21 05:45:06,315: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[b15349b6-8aeb-41bb-9213-1ab1c2dab3bf]  
+[2024-11-21 05:45:06,542: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[b1415975-c027-49c7-9261-778eaae415a7]  
+[2024-11-21 05:45:06,634: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[6a9a7351-060a-4ede-acd9-44b57be46072]  
+[2024-11-21 05:45:06,941: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[eac56a69-bdca-42e5-8cb6-41f55591c592]  
+[2024-11-21 05:45:07,172: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[3cde56ae-4a4f-4fed-bede-52269d96631c]  
+[2024-11-21 05:45:07,338: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[a36f5bbc-ca9f-4db4-8321-b357a359ce5e]  
+[2024-11-21 05:45:07,529: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[63815f9c-ed2d-4d0f-9b73-58d4761abb92]  
+[2024-11-21 05:45:07,641: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[6795294c-8791-4032-86e6-0df2091fa32b]  
+[2024-11-21 05:45:07,690: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[683f6a86-126f-44a8-ab20-ce8243a9be9d]  
+[2024-11-21 05:45:07,692: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[a51faa9c-0bf1-4b46-ba16-a8babc5bb3c6]  
+[2024-11-21 05:45:07,719: INFO/MainProcess] Received task: data.tasks.import_cpe_batch_task[27cc4c82-7101-4bd5-9691-bb5c854f2bc3]  
+[2024-11-21 05:45:51,372: INFO/ForkPoolWorker-7] Task data.tasks.import_cpe_batch_task[f12506bf-d175-415a-a0cf-8a36716ca0bb] succeeded in 45.55517695701565s: True
+[2024-11-21 05:46:07,189: INFO/ForkPoolWorker-9] Task data.tasks.import_cpe_batch_task[e0245226-5c1f-4b80-b251-6d31b6d98f05] succeeded in 61.29924636898795s: True
+[2024-11-21 05:46:07,292: INFO/ForkPoolWorker-1] Task data.tasks.import_cpe_batch_task[2d6fe4ef-c646-4e8e-a946-f701cff81552] succeeded in 61.43528650602093s: True
+[2024-11-21 05:46:07,879: INFO/ForkPoolWorker-5] Task data.tasks.import_cpe_batch_task[eac56a69-bdca-42e5-8cb6-41f55591c592] succeeded in 60.934887613984756s: True
+[2024-11-21 05:46:15,207: INFO/ForkPoolWorker-8] Task data.tasks.import_cpe_batch_task[6315820a-2b27-4106-8040-43d4376d78cf] succeeded in 69.3865531370102s: True
+[2024-11-21 05:46:30,616: INFO/ForkPoolWorker-10] Task data.tasks.import_cpe_batch_task[b15349b6-8aeb-41bb-9213-1ab1c2dab3bf] succeeded in 84.22693398199044s: True
+[2024-11-21 05:46:31,360: INFO/ForkPoolWorker-2] Task data.tasks.import_cpe_batch_task[ee9d17cf-0dac-4afd-9fe0-44fa37a83fef] succeeded in 85.02029677902465s: True
+[2024-11-21 05:46:31,616: INFO/ForkPoolWorker-4] Task data.tasks.import_cpe_batch_task[6a9a7351-060a-4ede-acd9-44b57be46072] succeeded in 84.97974086800241s: True
+[2024-11-21 05:46:31,855: INFO/ForkPoolWorker-3] Task data.tasks.import_cpe_batch_task[b1415975-c027-49c7-9261-778eaae415a7] succeeded in 85.30118267700891s: True
+[2024-11-21 05:46:32,531: INFO/ForkPoolWorker-6] Task data.tasks.import_cpe_batch_task[3cde56ae-4a4f-4fed-bede-52269d96631c] succeeded in 85.35274606497842s: True
+[2024-11-21 05:46:36,693: INFO/ForkPoolWorker-1] Task data.tasks.import_cpe_batch_task[6795294c-8791-4032-86e6-0df2091fa32b] succeeded in 29.396249222016195s: True
+[2024-11-21 05:46:38,121: INFO/ForkPoolWorker-9] Task data.tasks.import_cpe_batch_task[63815f9c-ed2d-4d0f-9b73-58d4761abb92] succeeded in 30.919657014979748s: True
+[2024-11-21 05:46:44,041: INFO/ForkPoolWorker-8] Task data.tasks.import_cpe_batch_task[a51faa9c-0bf1-4b46-ba16-a8babc5bb3c6] succeeded in 28.83168022299651s: True
+[2024-11-21 05:46:46,142: INFO/ForkPoolWorker-7] Task data.tasks.import_cpe_batch_task[a36f5bbc-ca9f-4db4-8321-b357a359ce5e] succeeded in 54.76605335099157s: True
+[2024-11-21 05:46:51,303: INFO/ForkPoolWorker-5] Task data.tasks.import_cpe_batch_task[683f6a86-126f-44a8-ab20-ce8243a9be9d] succeeded in 43.41863257999648s: True
+[2024-11-21 05:46:56,905: INFO/ForkPoolWorker-10] Task data.tasks.import_cpe_batch_task[27cc4c82-7101-4bd5-9691-bb5c854f2bc3] succeeded in 26.287368975987192s: True
 /root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
 absolutely not recommended!
 
@@ -846,11 +62,299 @@ Please specify a different user using the --uid option.
 User information: uid=0 euid=0 gid=0 egid=0
 
   warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
-[2024-11-19 09:58:27,338: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
-[2024-11-19 09:58:27,377: INFO/MainProcess] data3-node@ph ready.
-[2024-11-20 03:25:08,255: INFO/MainProcess] Received task: data.tasks.import_cve_task[e00cb101-1d6c-44c4-9b63-8c12c7e16d5c]  
-[2024-11-20 03:25:08,272: INFO/MainProcess] Received task: data.tasks.import_cve_task[fe463483-efa7-444b-88e4-9a89c7d54487]  
-[2024-11-20 03:25:08,273: INFO/MainProcess] Received task: data.tasks.import_cve_task[d2161b4d-ed5a-4d58-a3e8-f7856287ea3d]  
-[2024-11-20 03:25:09,275: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[fe463483-efa7-444b-88e4-9a89c7d54487] succeeded in 0.9830440569930943s: None
-[2024-11-20 03:25:09,494: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[e00cb101-1d6c-44c4-9b63-8c12c7e16d5c] succeeded in 1.198203106992878s: None
-[2024-11-20 03:25:09,558: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[d2161b4d-ed5a-4d58-a3e8-f7856287ea3d] succeeded in 1.270242678001523s: None
+[2024-11-21 18:33:57,204: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-21 18:33:57,245: INFO/MainProcess] data3-node@ph ready.
+[2024-11-22 12:50:25,797: INFO/MainProcess] Received task: data.tasks.import_cve_task[219c2624-0d45-4178-bcd5-e620b14c6788]  
+[2024-11-22 12:50:25,821: INFO/MainProcess] Received task: data.tasks.import_cve_task[c0d18d59-44e8-403b-b347-16df58743a4e]  
+[2024-11-22 12:50:25,827: INFO/MainProcess] Received task: data.tasks.import_cve_task[c972f19c-ffce-40f9-991e-e7028146f142]  
+[2024-11-22 12:50:25,848: INFO/MainProcess] Received task: data.tasks.import_cve_task[d476cdc7-ed46-4935-8aaf-48c59a0eff40]  
+[2024-11-22 12:50:25,854: INFO/MainProcess] Received task: data.tasks.import_cve_task[5ab9dc5a-45a1-43ec-9455-4f6bca264e59]  
+[2024-11-22 12:50:25,856: INFO/MainProcess] Received task: data.tasks.import_cve_task[79d2cadb-57e2-4f8f-adef-07712988d6a5]  
+[2024-11-22 12:50:25,875: INFO/MainProcess] Received task: data.tasks.import_cve_task[6af408a8-c650-4953-b3f6-287769b88a5b]  
+[2024-11-22 12:50:25,879: INFO/MainProcess] Received task: data.tasks.import_cve_task[fb11e2dd-769b-4211-894e-af91dda8a24d]  
+[2024-11-22 12:50:25,884: INFO/MainProcess] Received task: data.tasks.import_cve_task[7d8f4bd2-b917-4a73-baf2-0faa354109fc]  
+[2024-11-22 12:50:25,932: INFO/MainProcess] Received task: data.tasks.import_cve_task[0f9a9566-4424-4df7-9310-79b7afb5f370]  
+[2024-11-22 12:50:28,877: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[fb11e2dd-769b-4211-894e-af91dda8a24d] succeeded in 2.957220183001482s: None
+[2024-11-22 12:50:28,879: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[219c2624-0d45-4178-bcd5-e620b14c6788] succeeded in 3.026252857001964s: None
+[2024-11-22 12:50:28,928: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[d476cdc7-ed46-4935-8aaf-48c59a0eff40] succeeded in 3.0245565280056326s: None
+[2024-11-22 12:50:28,952: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[6af408a8-c650-4953-b3f6-287769b88a5b] succeeded in 2.9998909720015945s: None
+[2024-11-22 12:50:28,995: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[c0d18d59-44e8-403b-b347-16df58743a4e] succeeded in 3.133825715005514s: None
+[2024-11-22 12:50:29,134: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[7d8f4bd2-b917-4a73-baf2-0faa354109fc] succeeded in 3.175124618996051s: None
+[2024-11-22 12:50:29,188: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[0f9a9566-4424-4df7-9310-79b7afb5f370] succeeded in 3.2487788690050365s: None
+[2024-11-22 12:50:29,230: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[5ab9dc5a-45a1-43ec-9455-4f6bca264e59] succeeded in 3.309508577993256s: None
+[2024-11-22 12:50:29,248: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[c972f19c-ffce-40f9-991e-e7028146f142] succeeded in 3.3918286070111208s: None
+[2024-11-22 12:50:29,380: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[79d2cadb-57e2-4f8f-adef-07712988d6a5] succeeded in 3.4401277200086042s: None
+[2024-11-22 12:50:29,927: INFO/MainProcess] Received task: data.tasks.import_cve_task[ae5a573e-7681-4585-b1fc-b6a11a9deabe]  
+[2024-11-22 12:50:29,932: INFO/MainProcess] Received task: data.tasks.import_cve_task[d92a726b-bc9a-4d09-ae8d-d92ae525cb43]  
+[2024-11-22 12:50:29,938: INFO/MainProcess] Received task: data.tasks.import_cve_task[474e0355-6036-4177-b07b-940a8e6b62e9]  
+[2024-11-22 12:50:29,960: INFO/MainProcess] Received task: data.tasks.import_cve_task[d2a4bd18-4a48-457f-8178-aaa74f0bef18]  
+[2024-11-22 12:50:29,972: INFO/MainProcess] Received task: data.tasks.import_cve_task[db16d41b-e58a-41c9-a5fa-19c76dc9736c]  
+[2024-11-22 12:50:30,029: INFO/MainProcess] Received task: data.tasks.import_cve_task[acd82fb5-57c5-43ba-b5d5-ad5777aa3dfe]  
+[2024-11-22 12:50:30,067: INFO/MainProcess] Received task: data.tasks.import_cve_task[498bd4e0-ae95-4499-964f-6a7801a6f15f]  
+[2024-11-22 12:50:30,170: INFO/MainProcess] Received task: data.tasks.import_cve_task[30bc515b-4d1f-4208-b115-f441067555c3]  
+[2024-11-22 12:50:30,170: INFO/MainProcess] Received task: data.tasks.import_cve_task[476154c9-c806-4c3f-a53b-fcad847b882c]  
+[2024-11-22 12:50:30,171: INFO/MainProcess] Received task: data.tasks.import_cve_task[bdc69438-4be1-41a4-83a9-5f3bb585bb36]  
+[2024-11-22 12:50:30,451: INFO/MainProcess] Received task: data.tasks.import_cve_task[c6f727b9-4411-4ee4-83ab-d3de8b161643]  
+[2024-11-22 12:50:30,579: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[d2a4bd18-4a48-457f-8178-aaa74f0bef18] succeeded in 0.6180571190052433s: None
+[2024-11-22 12:50:30,729: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[476154c9-c806-4c3f-a53b-fcad847b882c] succeeded in 0.5355397690000245s: None
+[2024-11-22 12:50:30,754: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[d92a726b-bc9a-4d09-ae8d-d92ae525cb43] succeeded in 0.8212747500074329s: None
+[2024-11-22 12:50:30,767: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[474e0355-6036-4177-b07b-940a8e6b62e9] succeeded in 0.8278067040082533s: None
+[2024-11-22 12:50:30,864: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[ae5a573e-7681-4585-b1fc-b6a11a9deabe] succeeded in 0.9363523280044319s: None
+[2024-11-22 12:50:30,943: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[db16d41b-e58a-41c9-a5fa-19c76dc9736c] succeeded in 0.9700744220026536s: None
+[2024-11-22 12:50:30,979: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[c6f727b9-4411-4ee4-83ab-d3de8b161643] succeeded in 0.3896007580042351s: None
+[2024-11-22 12:50:30,986: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[acd82fb5-57c5-43ba-b5d5-ad5777aa3dfe] succeeded in 0.9509281229984481s: None
+[2024-11-22 12:50:31,095: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[498bd4e0-ae95-4499-964f-6a7801a6f15f] succeeded in 1.0222595630038995s: None
+[2024-11-22 12:50:31,115: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[30bc515b-4d1f-4208-b115-f441067555c3] succeeded in 0.9377282329951413s: None
+[2024-11-22 12:50:31,128: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[bdc69438-4be1-41a4-83a9-5f3bb585bb36] succeeded in 0.9495050530094886s: None
+[2024-11-22 12:50:31,224: INFO/MainProcess] Received task: data.tasks.import_cve_task[2b755699-9de1-415c-a370-6f7028b99fc1]  
+[2024-11-22 12:50:31,238: INFO/MainProcess] Received task: data.tasks.import_cve_task[c760825c-1c00-4c20-98ff-d9ca9d499f68]  
+[2024-11-22 12:50:31,280: INFO/MainProcess] Received task: data.tasks.import_cve_task[d388ffbe-a606-427f-af3b-2aa1992c17f5]  
+[2024-11-22 12:50:31,287: INFO/MainProcess] Received task: data.tasks.import_cve_task[7002884b-76b9-4c79-b302-944994321187]  
+[2024-11-22 12:50:31,305: INFO/MainProcess] Received task: data.tasks.import_cve_task[d575c013-520f-46c6-a20b-dacfd4ffd7ec]  
+[2024-11-22 12:50:31,429: INFO/MainProcess] Received task: data.tasks.import_cve_task[00bce024-0474-4c51-8c01-b60168831edf]  
+[2024-11-22 12:50:31,520: INFO/MainProcess] Received task: data.tasks.import_cve_task[f3704767-6e41-4767-88d5-77d0a57493df]  
+[2024-11-22 12:50:31,579: INFO/MainProcess] Received task: data.tasks.import_cve_task[6787b7ac-734a-48fe-a0e6-78f49b6122f2]  
+[2024-11-22 12:50:31,682: INFO/MainProcess] Received task: data.tasks.import_cve_task[29725760-02c6-497d-b76d-28db42baaae4]  
+[2024-11-22 12:50:31,806: INFO/MainProcess] Received task: data.tasks.import_cve_task[0a4002f4-1a3c-4365-bd26-574a25612547]  
+[2024-11-22 12:50:31,868: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[d575c013-520f-46c6-a20b-dacfd4ffd7ec] succeeded in 0.5622746269946219s: None
+[2024-11-22 12:50:31,930: INFO/MainProcess] Received task: data.tasks.import_cve_task[e8798f71-c2c1-4f5e-9a10-ae29605a85d5]  
+[2024-11-22 12:50:32,001: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[2b755699-9de1-415c-a370-6f7028b99fc1] succeeded in 0.7754394289950142s: None
+[2024-11-22 12:50:32,095: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[7002884b-76b9-4c79-b302-944994321187] succeeded in 0.8006859620072646s: None
+[2024-11-22 12:50:32,143: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[d388ffbe-a606-427f-af3b-2aa1992c17f5] succeeded in 0.86255320100463s: None
+[2024-11-22 12:50:32,214: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[00bce024-0474-4c51-8c01-b60168831edf] succeeded in 0.7845732669957215s: None
+[2024-11-22 12:50:32,293: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[f3704767-6e41-4767-88d5-77d0a57493df] succeeded in 0.772181117994478s: None
+[2024-11-22 12:50:32,294: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[6787b7ac-734a-48fe-a0e6-78f49b6122f2] succeeded in 0.7141157329897396s: None
+[2024-11-22 12:50:32,357: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[29725760-02c6-497d-b76d-28db42baaae4] succeeded in 0.6737877949926769s: None
+[2024-11-22 12:50:32,368: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[0a4002f4-1a3c-4365-bd26-574a25612547] succeeded in 0.5607252570043784s: None
+[2024-11-22 12:50:32,389: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[e8798f71-c2c1-4f5e-9a10-ae29605a85d5] succeeded in 0.4574203530064551s: None
+[2024-11-22 12:50:32,429: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[c760825c-1c00-4c20-98ff-d9ca9d499f68] succeeded in 1.1897169889998622s: None
+[2024-11-22 12:50:32,596: INFO/MainProcess] Received task: data.tasks.import_cve_task[c2d856be-5c6f-4fb6-aabd-8198f54afacb]  
+[2024-11-22 12:50:32,626: INFO/MainProcess] Received task: data.tasks.import_cve_task[34e7fe13-c8f4-4a25-8a8b-b4ba76ae11b7]  
+[2024-11-22 12:50:32,632: INFO/MainProcess] Received task: data.tasks.import_cve_task[f92f43cf-edc0-48eb-9033-2c8aabdfde81]  
+[2024-11-22 12:50:32,675: INFO/MainProcess] Received task: data.tasks.import_cve_task[c3390116-6284-437f-b7ed-9b37392913d7]  
+[2024-11-22 12:50:32,752: INFO/MainProcess] Received task: data.tasks.import_cve_task[7b590ff4-5c80-4d90-8a53-b718faac5163]  
+[2024-11-22 12:50:32,829: INFO/MainProcess] Received task: data.tasks.import_cve_task[0dc445da-ce5e-4b82-b724-9ed61af8661f]  
+[2024-11-22 12:50:32,954: INFO/MainProcess] Received task: data.tasks.import_cve_task[efac822b-ba76-4a80-8c34-0130deea59f9]  
+[2024-11-22 12:50:33,042: INFO/MainProcess] Received task: data.tasks.import_cve_task[579e2371-37e3-4821-8500-f47ef933b49e]  
+[2024-11-22 12:50:33,173: INFO/MainProcess] Received task: data.tasks.import_cve_task[f2590873-fdf3-4ab8-9380-ddee39762d08]  
+[2024-11-22 12:50:33,324: INFO/MainProcess] Received task: data.tasks.import_cve_task[85607863-02b5-499b-a34f-203585e0ec12]  
+[2024-11-22 12:50:33,357: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[c2d856be-5c6f-4fb6-aabd-8198f54afacb] succeeded in 0.760159940997255s: None
+[2024-11-22 12:50:33,446: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[f92f43cf-edc0-48eb-9033-2c8aabdfde81] succeeded in 0.8119314960058546s: None
+[2024-11-22 12:50:33,511: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[7b590ff4-5c80-4d90-8a53-b718faac5163] succeeded in 0.7579901569988579s: None
+[2024-11-22 12:50:33,533: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[c3390116-6284-437f-b7ed-9b37392913d7] succeeded in 0.8507646679936443s: None
+[2024-11-22 12:50:33,584: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[34e7fe13-c8f4-4a25-8a8b-b4ba76ae11b7] succeeded in 0.9478459279926028s: None
+[2024-11-22 12:50:33,637: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[0dc445da-ce5e-4b82-b724-9ed61af8661f] succeeded in 0.8040701470017666s: None
+[2024-11-22 12:50:33,655: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[579e2371-37e3-4821-8500-f47ef933b49e] succeeded in 0.6109473660035292s: None
+[2024-11-22 12:50:33,665: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[efac822b-ba76-4a80-8c34-0130deea59f9] succeeded in 0.7095929749921197s: None
+[2024-11-22 12:50:33,736: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[f2590873-fdf3-4ab8-9380-ddee39762d08] succeeded in 0.5618098369886866s: None
+[2024-11-22 12:50:33,772: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[85607863-02b5-499b-a34f-203585e0ec12] succeeded in 0.44621465798991267s: None
+[2024-11-22 12:50:34,081: INFO/MainProcess] Received task: data.tasks.import_cve_task[0a527f55-05ac-4259-8485-a463cd82a731]  
+[2024-11-22 12:50:34,094: INFO/MainProcess] Received task: data.tasks.import_cve_task[d5183bf2-22a7-4ae2-bfa0-7e8ca810d8f6]  
+[2024-11-22 12:50:34,129: INFO/MainProcess] Received task: data.tasks.import_cve_task[8336c254-cc37-4498-916a-d1cabbe4af49]  
+[2024-11-22 12:50:34,129: INFO/MainProcess] Received task: data.tasks.import_cve_task[1e675f66-9472-44ca-9a2c-1955625f2df1]  
+[2024-11-22 12:50:34,187: INFO/MainProcess] Received task: data.tasks.import_cve_task[079fcc97-81c2-4f9e-9f63-48295ac06a58]  
+[2024-11-22 12:50:34,222: INFO/MainProcess] Received task: data.tasks.import_cve_task[2b8b8be0-85da-45ee-9e0c-009d9c1895fb]  
+[2024-11-22 12:50:34,266: INFO/MainProcess] Received task: data.tasks.import_cve_task[47978eeb-01e9-4a22-bab4-c9ba9acf8de2]  
+[2024-11-22 12:50:34,371: INFO/MainProcess] Received task: data.tasks.import_cve_task[5931a955-a77c-4a6a-98bf-d96a611ba11b]  
+[2024-11-22 12:50:34,509: INFO/MainProcess] Received task: data.tasks.import_cve_task[059ebc90-e65b-4f64-9900-e33669c50d14]  
+[2024-11-22 12:50:34,560: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[0a527f55-05ac-4259-8485-a463cd82a731] succeeded in 0.4779010670026764s: None
+[2024-11-22 12:50:34,586: INFO/MainProcess] Received task: data.tasks.import_cve_task[82e5160f-c52a-4ac8-8fd1-a5301c422f6e]  
+[2024-11-22 12:50:34,718: INFO/MainProcess] Received task: data.tasks.import_cve_task[69bf8e18-f493-4f33-8e4f-f2b3eea8f4e4]  
+[2024-11-22 12:50:34,755: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[1e675f66-9472-44ca-9a2c-1955625f2df1] succeeded in 0.6226810030057095s: None
+[2024-11-22 12:50:34,870: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[2b8b8be0-85da-45ee-9e0c-009d9c1895fb] succeeded in 0.6436794549954357s: None
+[2024-11-22 12:50:34,876: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[8336c254-cc37-4498-916a-d1cabbe4af49] succeeded in 0.7420912560046418s: None
+[2024-11-22 12:50:34,908: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[d5183bf2-22a7-4ae2-bfa0-7e8ca810d8f6] succeeded in 0.8134424830059288s: None
+[2024-11-22 12:50:34,912: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[079fcc97-81c2-4f9e-9f63-48295ac06a58] succeeded in 0.7172802979912376s: None
+[2024-11-22 12:50:34,968: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[059ebc90-e65b-4f64-9900-e33669c50d14] succeeded in 0.4575435910082888s: None
+[2024-11-22 12:50:34,978: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[47978eeb-01e9-4a22-bab4-c9ba9acf8de2] succeeded in 0.711467231012648s: None
+[2024-11-22 12:50:35,005: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[5931a955-a77c-4a6a-98bf-d96a611ba11b] succeeded in 0.6331544549902901s: None
+[2024-11-22 12:50:35,086: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[69bf8e18-f493-4f33-8e4f-f2b3eea8f4e4] succeeded in 0.3660803029924864s: None
+[2024-11-22 12:50:35,086: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[82e5160f-c52a-4ac8-8fd1-a5301c422f6e] succeeded in 0.4954524389904691s: None
+[2024-11-22 12:50:35,128: INFO/MainProcess] Received task: data.tasks.import_cve_task[cd9e248f-2909-4475-bc68-267daffc2843]  
+[2024-11-22 12:50:35,145: INFO/MainProcess] Received task: data.tasks.import_cve_task[887fa404-7382-4759-b34f-dd25231291c7]  
+[2024-11-22 12:50:35,178: INFO/MainProcess] Received task: data.tasks.import_cve_task[b833c40f-c0f1-4900-9464-9ee1f2936d66]  
+[2024-11-22 12:50:35,201: INFO/MainProcess] Received task: data.tasks.import_cve_task[992faaf5-74e7-4b15-9ed9-688105ac6af8]  
+[2024-11-22 12:50:35,252: INFO/MainProcess] Received task: data.tasks.import_cve_task[0661a9e3-b3ba-4e78-946a-9506db90dacb]  
+[2024-11-22 12:50:35,531: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[cd9e248f-2909-4475-bc68-267daffc2843] succeeded in 0.3916218140075216s: None
+[2024-11-22 12:50:35,637: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[0661a9e3-b3ba-4e78-946a-9506db90dacb] succeeded in 0.38363038199895527s: None
+[2024-11-22 12:50:35,653: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[992faaf5-74e7-4b15-9ed9-688105ac6af8] succeeded in 0.45049352700880263s: None
+[2024-11-22 12:50:35,726: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[887fa404-7382-4759-b34f-dd25231291c7] succeeded in 0.5791805500048213s: None
+[2024-11-22 12:50:35,737: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[b833c40f-c0f1-4900-9464-9ee1f2936d66] succeeded in 0.5538938359968597s: None
+[2024-11-24 17:16:26,631: INFO/MainProcess] Received task: data.tasks.import_cve_task[5d704eb1-a9da-43d6-ba2f-ee9bd05b1985]  
+[2024-11-24 17:16:26,645: INFO/MainProcess] Received task: data.tasks.import_cve_task[0c261280-b622-453c-9102-d32de2c7f9ff]  
+[2024-11-24 17:16:26,649: INFO/MainProcess] Received task: data.tasks.import_cve_task[f631c5c4-c38b-4322-a67a-a081d4cd1188]  
+[2024-11-24 17:16:26,695: INFO/MainProcess] Received task: data.tasks.import_cve_task[a30feb42-4787-4e5c-8bd5-27a7bc28f509]  
+[2024-11-24 17:16:26,696: INFO/MainProcess] Received task: data.tasks.import_cve_task[8a807ebe-530c-437f-9669-d182b75daa31]  
+[2024-11-24 17:16:26,697: INFO/MainProcess] Received task: data.tasks.import_cve_task[61cbe1cc-0168-4e43-846c-04242ffa8378]  
+[2024-11-24 17:16:26,773: INFO/MainProcess] Received task: data.tasks.import_cve_task[49232e8d-7b7b-4c06-9ae8-8705529a62bd]  
+[2024-11-24 17:16:26,806: INFO/MainProcess] Received task: data.tasks.import_cve_task[2684610f-082a-4ed2-988f-0c5fd6d78a9e]  
+[2024-11-24 17:16:26,807: INFO/MainProcess] Received task: data.tasks.import_cve_task[096d8947-2f39-46fc-95c4-3cbb1fabc116]  
+[2024-11-24 17:16:26,808: INFO/MainProcess] Received task: data.tasks.import_cve_task[0d49db6b-b3ad-48a0-829a-0f44d7300bac]  
+[2024-11-24 17:16:26,904: INFO/MainProcess] Received task: data.tasks.import_cve_task[970ca761-ad0e-495d-871d-a54b739997c2]  
+[2024-11-24 17:16:28,423: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[a30feb42-4787-4e5c-8bd5-27a7bc28f509] succeeded in 1.6037200799910352s: None
+[2024-11-24 17:16:28,437: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[5d704eb1-a9da-43d6-ba2f-ee9bd05b1985] succeeded in 1.7775292999867816s: None
+[2024-11-24 17:16:28,417: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[0c261280-b622-453c-9102-d32de2c7f9ff] succeeded in 1.737770197010832s: None
+[2024-11-24 17:16:28,522: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[49232e8d-7b7b-4c06-9ae8-8705529a62bd] succeeded in 1.6900658849917818s: None
+[2024-11-24 17:16:28,563: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[f631c5c4-c38b-4322-a67a-a081d4cd1188] succeeded in 1.8692307089804672s: None
+[2024-11-24 17:16:28,567: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[2684610f-082a-4ed2-988f-0c5fd6d78a9e] succeeded in 1.7311122490209527s: None
+[2024-11-24 17:16:28,580: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[096d8947-2f39-46fc-95c4-3cbb1fabc116] succeeded in 1.694168465997791s: None
+[2024-11-24 17:16:28,595: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[61cbe1cc-0168-4e43-846c-04242ffa8378] succeeded in 1.7716608860064298s: None
+[2024-11-24 17:16:28,638: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[0d49db6b-b3ad-48a0-829a-0f44d7300bac] succeeded in 1.7387199770018924s: None
+[2024-11-24 17:16:28,716: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[970ca761-ad0e-495d-871d-a54b739997c2] succeeded in 0.24904619800508954s: None
+[2024-11-24 17:16:28,843: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[8a807ebe-530c-437f-9669-d182b75daa31] succeeded in 2.0265064139966853s: None
+[2024-11-24 17:16:29,033: INFO/MainProcess] Received task: data.tasks.import_cve_task[57e4648b-5ba9-4b5b-b507-c167fb9122f5]  
+[2024-11-24 17:16:29,072: INFO/MainProcess] Received task: data.tasks.import_cve_task[5ab07291-956f-4662-8914-ffa6dd65b0d9]  
+[2024-11-24 17:16:29,077: INFO/MainProcess] Received task: data.tasks.import_cve_task[67fc5c57-63a2-4494-8e89-a85892075e2a]  
+[2024-11-24 17:16:29,171: INFO/MainProcess] Received task: data.tasks.import_cve_task[a8bf41bd-1018-4141-9edc-e40fcc1cab4d]  
+[2024-11-24 17:16:29,244: INFO/MainProcess] Received task: data.tasks.import_cve_task[7743251a-6506-4bc1-82da-67a775b40daf]  
+[2024-11-24 17:16:29,331: INFO/MainProcess] Received task: data.tasks.import_cve_task[8d8c74ee-0ae5-415e-a8c0-629e0dde4ff7]  
+[2024-11-24 17:16:29,401: INFO/MainProcess] Received task: data.tasks.import_cve_task[fa87ce4f-b011-4f07-b4d1-6937d289f2f9]  
+[2024-11-24 17:16:29,490: INFO/MainProcess] Received task: data.tasks.import_cve_task[bb948aaf-5e67-4d3f-a405-b672450b5730]  
+[2024-11-24 17:16:29,510: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[5ab07291-956f-4662-8914-ffa6dd65b0d9] succeeded in 0.4312696889974177s: None
+[2024-11-24 17:16:29,517: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[57e4648b-5ba9-4b5b-b507-c167fb9122f5] succeeded in 0.48235214001033455s: None
+[2024-11-24 17:16:29,530: INFO/MainProcess] Received task: data.tasks.import_cve_task[87af78ea-9576-4ec3-b132-6426f7c9cb1b]  
+[2024-11-24 17:16:29,602: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[a8bf41bd-1018-4141-9edc-e40fcc1cab4d] succeeded in 0.4301666439860128s: None
+[2024-11-24 17:16:29,648: INFO/MainProcess] Received task: data.tasks.import_cve_task[2c238da7-07e9-4579-95cf-aba1dc94b8ca]  
+[2024-11-24 17:16:29,706: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[67fc5c57-63a2-4494-8e89-a85892075e2a] succeeded in 0.6257846300140955s: None
+[2024-11-24 17:16:29,789: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[7743251a-6506-4bc1-82da-67a775b40daf] succeeded in 0.5446615289838519s: None
+[2024-11-24 17:16:29,972: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[8d8c74ee-0ae5-415e-a8c0-629e0dde4ff7] succeeded in 0.6408576600078959s: None
+[2024-11-24 17:16:29,977: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[bb948aaf-5e67-4d3f-a405-b672450b5730] succeeded in 0.4862595699960366s: None
+[2024-11-24 17:16:29,985: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[87af78ea-9576-4ec3-b132-6426f7c9cb1b] succeeded in 0.4527337639883626s: None
+[2024-11-24 17:16:30,030: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[fa87ce4f-b011-4f07-b4d1-6937d289f2f9] succeeded in 0.6276702129980549s: None
+[2024-11-24 17:16:30,037: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[2c238da7-07e9-4579-95cf-aba1dc94b8ca] succeeded in 0.38912530601373874s: None
+[2024-11-24 17:16:30,810: INFO/MainProcess] Received task: data.tasks.import_cve_task[3ab8da96-e28b-4a9c-92fa-d49567d3586b]  
+[2024-11-24 17:16:30,827: INFO/MainProcess] Received task: data.tasks.import_cve_task[408bac01-da79-4224-8226-f9464466bd26]  
+[2024-11-24 17:16:30,830: INFO/MainProcess] Received task: data.tasks.import_cve_task[0f650f4d-8a3c-487a-81df-6084df585681]  
+[2024-11-24 17:16:30,830: INFO/MainProcess] Received task: data.tasks.import_cve_task[365026a1-ea1b-4994-b968-419e5484d456]  
+[2024-11-24 17:16:30,850: INFO/MainProcess] Received task: data.tasks.import_cve_task[d968eb2f-ae46-4039-b845-22168a75f7fc]  
+[2024-11-24 17:16:30,869: INFO/MainProcess] Received task: data.tasks.import_cve_task[0ef08b3a-dc11-4783-8cbc-933a41735643]  
+[2024-11-24 17:16:30,903: INFO/MainProcess] Received task: data.tasks.import_cve_task[2a9a894e-7193-4959-b214-6ad617e81e8d]  
+[2024-11-24 17:16:30,960: INFO/MainProcess] Received task: data.tasks.import_cve_task[02b89cd4-cd46-4595-9b59-a3901854b039]  
+[2024-11-24 17:16:30,976: INFO/MainProcess] Received task: data.tasks.import_cve_task[d3eb4fb0-8cbf-49e8-b745-7211a9358859]  
+[2024-11-24 17:16:30,991: INFO/MainProcess] Received task: data.tasks.import_cve_task[9f1160ae-e746-4471-87a3-eb8133d0e555]  
+[2024-11-24 17:16:31,213: INFO/MainProcess] Received task: data.tasks.import_cve_task[4ba420fc-2414-432f-83a9-24ac7258f8bc]  
+[2024-11-24 17:16:31,509: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[3ab8da96-e28b-4a9c-92fa-d49567d3586b] succeeded in 0.6979071629757527s: None
+[2024-11-24 17:16:31,583: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[0ef08b3a-dc11-4783-8cbc-933a41735643] succeeded in 0.6851463399943896s: None
+[2024-11-24 17:16:31,594: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[0f650f4d-8a3c-487a-81df-6084df585681] succeeded in 0.7483155180234462s: None
+[2024-11-24 17:16:31,629: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[02b89cd4-cd46-4595-9b59-a3901854b039] succeeded in 0.6648362939886283s: None
+[2024-11-24 17:16:31,636: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[365026a1-ea1b-4994-b968-419e5484d456] succeeded in 0.7856193479965441s: None
+[2024-11-24 17:16:31,670: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[2a9a894e-7193-4959-b214-6ad617e81e8d] succeeded in 0.7562024820072111s: None
+[2024-11-24 17:16:31,735: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[408bac01-da79-4224-8226-f9464466bd26] succeeded in 0.9037631920073181s: None
+[2024-11-24 17:16:31,741: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[d3eb4fb0-8cbf-49e8-b745-7211a9358859] succeeded in 0.7542802430107258s: None
+[2024-11-24 17:16:31,823: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[9f1160ae-e746-4471-87a3-eb8133d0e555] succeeded in 0.8146563270129263s: None
+[2024-11-24 17:16:31,918: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[d968eb2f-ae46-4039-b845-22168a75f7fc] succeeded in 1.0316428919904865s: None
+[2024-11-24 17:16:31,951: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[4ba420fc-2414-432f-83a9-24ac7258f8bc] succeeded in 0.4208928119915072s: None
+[2024-11-24 17:16:32,428: INFO/MainProcess] Received task: data.tasks.import_cve_task[8039ead3-4a53-45c3-99c9-3dba0c86ff7b]  
+[2024-11-24 17:16:32,445: INFO/MainProcess] Received task: data.tasks.import_cve_task[c985ab6b-3425-482c-b69f-9238fe8ba12a]  
+[2024-11-24 17:16:32,455: INFO/MainProcess] Received task: data.tasks.import_cve_task[66d9d5e8-a00e-4c0d-98a5-6b24cf6b7b29]  
+[2024-11-24 17:16:32,456: INFO/MainProcess] Received task: data.tasks.import_cve_task[6b8e430f-cc30-4ac8-9c10-216c57ceb22c]  
+[2024-11-24 17:16:32,510: INFO/MainProcess] Received task: data.tasks.import_cve_task[7187d0da-cc1f-48e7-b300-9e60c06ec1b9]  
+[2024-11-24 17:16:32,528: INFO/MainProcess] Received task: data.tasks.import_cve_task[64000310-774e-4a38-9f78-a05c3a9bba21]  
+[2024-11-24 17:16:32,559: INFO/MainProcess] Received task: data.tasks.import_cve_task[db3f250d-4280-416e-983a-da6e405b17aa]  
+[2024-11-24 17:16:32,771: INFO/MainProcess] Received task: data.tasks.import_cve_task[3b5dc19e-fdd6-4343-96ce-578f96cd9226]  
+[2024-11-24 17:16:32,838: INFO/MainProcess] Received task: data.tasks.import_cve_task[79eb3dc0-31d1-41a4-a959-e0b353cac537]  
+[2024-11-24 17:16:32,972: INFO/MainProcess] Received task: data.tasks.import_cve_task[5f3e236c-eb39-450a-b80d-8ba62d6e8ee8]  
+[2024-11-24 17:16:33,087: INFO/MainProcess] Received task: data.tasks.import_cve_task[956dbfc9-7446-4581-8fb0-1bd9b92767d6]  
+[2024-11-24 17:16:33,101: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[8039ead3-4a53-45c3-99c9-3dba0c86ff7b] succeeded in 0.6720045910042245s: None
+[2024-11-24 17:16:33,147: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[c985ab6b-3425-482c-b69f-9238fe8ba12a] succeeded in 0.7016588019905612s: None
+[2024-11-24 17:16:33,247: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[db3f250d-4280-416e-983a-da6e405b17aa] succeeded in 0.6752782210242003s: None
+[2024-11-24 17:16:33,304: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[6b8e430f-cc30-4ac8-9c10-216c57ceb22c] succeeded in 0.830479076015763s: None
+[2024-11-24 17:16:33,359: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[3b5dc19e-fdd6-4343-96ce-578f96cd9226] succeeded in 0.5872365749964956s: None
+[2024-11-24 17:16:33,381: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[64000310-774e-4a38-9f78-a05c3a9bba21] succeeded in 0.8526399050024338s: None
+[2024-11-24 17:16:33,406: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[79eb3dc0-31d1-41a4-a959-e0b353cac537] succeeded in 0.5665043470216915s: None
+[2024-11-24 17:16:33,469: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[5f3e236c-eb39-450a-b80d-8ba62d6e8ee8] succeeded in 0.49624649301404133s: None
+[2024-11-24 17:16:33,523: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[956dbfc9-7446-4581-8fb0-1bd9b92767d6] succeeded in 0.3903714470216073s: None
+[2024-11-24 17:16:33,596: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[7187d0da-cc1f-48e7-b300-9e60c06ec1b9] succeeded in 1.0841623409942258s: None
+[2024-11-24 17:16:33,686: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[66d9d5e8-a00e-4c0d-98a5-6b24cf6b7b29] succeeded in 1.2148420180019457s: None
+[2024-11-24 17:16:33,857: INFO/MainProcess] Received task: data.tasks.import_cve_task[e8887b00-ca10-498a-8043-35c8cd893a96]  
+[2024-11-24 17:16:33,869: INFO/MainProcess] Received task: data.tasks.import_cve_task[da593f10-3ad5-4637-8263-4e8257f421b1]  
+[2024-11-24 17:16:33,884: INFO/MainProcess] Received task: data.tasks.import_cve_task[844fc5f7-d789-473b-a592-71b336e891b2]  
+[2024-11-24 17:16:33,912: INFO/MainProcess] Received task: data.tasks.import_cve_task[d9ff0f4d-5583-4bf5-92f5-84b492d303ad]  
+[2024-11-24 17:16:33,947: INFO/MainProcess] Received task: data.tasks.import_cve_task[76d7357a-15ee-4a39-8e9b-527f6723f8e7]  
+[2024-11-24 17:16:34,090: INFO/MainProcess] Received task: data.tasks.import_cve_task[6bd997dd-e241-4f07-9338-004466e86e4c]  
+[2024-11-24 17:16:34,235: INFO/MainProcess] Received task: data.tasks.import_cve_task[40a10de1-9167-4132-a2b4-8cd9ba32edd1]  
+[2024-11-24 17:16:34,344: INFO/MainProcess] Received task: data.tasks.import_cve_task[68f6e502-03c5-4f79-85f2-b14dd30cc5e8]  
+[2024-11-24 17:16:34,371: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[da593f10-3ad5-4637-8263-4e8257f421b1] succeeded in 0.49989562199334614s: None
+[2024-11-24 17:16:34,418: INFO/MainProcess] Received task: data.tasks.import_cve_task[df5c0b92-9c5c-4737-971c-4351cdf09132]  
+[2024-11-24 17:16:34,513: INFO/MainProcess] Received task: data.tasks.import_cve_task[310ab70a-7355-44ea-b314-33e0705798cb]  
+[2024-11-24 17:16:34,626: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[76d7357a-15ee-4a39-8e9b-527f6723f8e7] succeeded in 0.6757679180009291s: None
+[2024-11-24 17:16:34,713: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[d9ff0f4d-5583-4bf5-92f5-84b492d303ad] succeeded in 0.8000259770196863s: None
+[2024-11-24 17:16:34,714: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[e8887b00-ca10-498a-8043-35c8cd893a96] succeeded in 0.8556154149991926s: None
+[2024-11-24 17:16:34,721: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[844fc5f7-d789-473b-a592-71b336e891b2] succeeded in 0.8326561150024645s: None
+[2024-11-24 17:16:34,789: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[40a10de1-9167-4132-a2b4-8cd9ba32edd1] succeeded in 0.5500952579895966s: None
+[2024-11-24 17:16:34,802: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[6bd997dd-e241-4f07-9338-004466e86e4c] succeeded in 0.7116010439931415s: None
+[2024-11-24 17:16:34,921: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[68f6e502-03c5-4f79-85f2-b14dd30cc5e8] succeeded in 0.5765565100009553s: None
+[2024-11-24 17:16:34,935: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[df5c0b92-9c5c-4737-971c-4351cdf09132] succeeded in 0.5140158379799686s: None
+[2024-11-24 17:16:34,996: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[310ab70a-7355-44ea-b314-33e0705798cb] succeeded in 0.4824287199880928s: None
+[2024-11-24 17:16:35,251: INFO/MainProcess] Received task: data.tasks.import_cve_task[3376a28c-7767-4cca-951d-1e7a8f16be44]  
+[2024-11-24 17:16:35,263: INFO/MainProcess] Received task: data.tasks.import_cve_task[5801b016-07ad-4f4a-afbe-8e5b8f15b961]  
+[2024-11-24 17:16:35,277: INFO/MainProcess] Received task: data.tasks.import_cve_task[c82930df-a035-4179-a8b0-b7102adc2590]  
+[2024-11-24 17:16:35,338: INFO/MainProcess] Received task: data.tasks.import_cve_task[55a0e6db-0be7-4424-bbb0-1e07eeecf6e0]  
+[2024-11-24 17:16:35,365: INFO/MainProcess] Received task: data.tasks.import_cve_task[c2c26ca2-f7f2-4b7a-ab22-87216a59b5f3]  
+[2024-11-24 17:16:35,461: INFO/MainProcess] Received task: data.tasks.import_cve_task[3a0e76c8-1c24-4191-9626-2ec77c8e7dd3]  
+[2024-11-24 17:16:35,513: INFO/MainProcess] Received task: data.tasks.import_cve_task[56d4ec59-7b77-41fe-b404-2da833a88523]  
+[2024-11-24 17:16:35,656: INFO/MainProcess] Received task: data.tasks.import_cve_task[ce872a12-2e7b-4fc2-ae3b-c906363bf94b]  
+[2024-11-24 17:16:35,723: INFO/MainProcess] Received task: data.tasks.import_cve_task[594b0bc5-af0e-43ce-98aa-1babe3ed05eb]  
+[2024-11-24 17:16:35,845: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[5801b016-07ad-4f4a-afbe-8e5b8f15b961] succeeded in 0.5786076500080526s: None
+[2024-11-24 17:16:35,873: INFO/MainProcess] Received task: data.tasks.import_cve_task[8a26bad4-b959-4237-a050-f166e598e7b1]  
+[2024-11-24 17:16:35,882: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[c2c26ca2-f7f2-4b7a-ab22-87216a59b5f3] succeeded in 0.5149739070038777s: None
+[2024-11-24 17:16:35,929: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[55a0e6db-0be7-4424-bbb0-1e07eeecf6e0] succeeded in 0.5898791500076186s: None
+[2024-11-24 17:16:35,942: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[3376a28c-7767-4cca-951d-1e7a8f16be44] succeeded in 0.6898151699861046s: None
+[2024-11-24 17:16:35,960: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[c82930df-a035-4179-a8b0-b7102adc2590] succeeded in 0.6798264159879182s: None
+[2024-11-24 17:16:35,984: INFO/MainProcess] Received task: data.tasks.import_cve_task[88ade156-d8a7-4808-aff0-96913bb1d9fe]  
+[2024-11-24 17:16:36,093: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[56d4ec59-7b77-41fe-b404-2da833a88523] succeeded in 0.579265155014582s: None
+[2024-11-24 17:16:36,145: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[3a0e76c8-1c24-4191-9626-2ec77c8e7dd3] succeeded in 0.6839203060080763s: None
+[2024-11-24 17:16:36,291: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[594b0bc5-af0e-43ce-98aa-1babe3ed05eb] succeeded in 0.5668535979930311s: None
+[2024-11-24 17:16:36,295: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[88ade156-d8a7-4808-aff0-96913bb1d9fe] succeeded in 0.3079982560011558s: None
+[2024-11-24 17:16:36,404: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[8a26bad4-b959-4237-a050-f166e598e7b1] succeeded in 0.5300269380095415s: None
+[2024-11-24 17:16:36,442: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[ce872a12-2e7b-4fc2-ae3b-c906363bf94b] succeeded in 0.7830247500096448s: None
+[2024-11-24 17:16:36,888: INFO/MainProcess] Received task: data.tasks.import_cve_task[b9cab5fe-c00b-497d-99c9-0935506a6faf]  
+[2024-11-24 17:16:36,893: INFO/MainProcess] Received task: data.tasks.import_cve_task[7a663c92-aaaa-4594-b395-4af759e5eda1]  
+[2024-11-24 17:16:36,907: INFO/MainProcess] Received task: data.tasks.import_cve_task[8ec77d85-d499-4ee1-82bf-a58a91b06aa6]  
+[2024-11-24 17:16:36,944: INFO/MainProcess] Received task: data.tasks.import_cve_task[addc9ad1-c8fc-4d21-a914-adf9487dac0c]  
+[2024-11-24 17:16:36,984: INFO/MainProcess] Received task: data.tasks.import_cve_task[60009d5b-eb0e-478f-8f8d-56ad6f7f3a5d]  
+[2024-11-24 17:16:37,030: INFO/MainProcess] Received task: data.tasks.import_cve_task[f01b2ab6-cd00-4130-a292-915656b8c4f8]  
+[2024-11-24 17:16:37,145: INFO/MainProcess] Received task: data.tasks.import_cve_task[8e76a5da-04d1-4890-b698-6b24253e71b7]  
+[2024-11-24 17:16:37,281: INFO/MainProcess] Received task: data.tasks.import_cve_task[1c413116-99fa-4f87-971c-13556c276a06]  
+[2024-11-24 17:16:37,451: INFO/MainProcess] Received task: data.tasks.import_cve_task[bbd3d73d-9a20-402d-acd7-f2fcb51e5ef5]  
+[2024-11-24 17:16:37,536: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[60009d5b-eb0e-478f-8f8d-56ad6f7f3a5d] succeeded in 0.5504759310279042s: None
+[2024-11-24 17:16:37,555: INFO/MainProcess] Received task: data.tasks.import_cve_task[816823b4-6c38-45d0-8f76-c35fa2b54067]  
+[2024-11-24 17:16:37,639: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[7a663c92-aaaa-4594-b395-4af759e5eda1] succeeded in 0.7443621679849457s: None
+[2024-11-24 17:16:37,644: INFO/MainProcess] Received task: data.tasks.import_cve_task[e5f3521e-2ef3-4f52-98a9-1b792b3234d6]  
+[2024-11-24 17:16:37,674: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[addc9ad1-c8fc-4d21-a914-adf9487dac0c] succeeded in 0.7285736780031584s: None
+[2024-11-24 17:16:37,785: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[b9cab5fe-c00b-497d-99c9-0935506a6faf] succeeded in 0.8955204109952319s: None
+[2024-11-24 17:16:37,816: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[8ec77d85-d499-4ee1-82bf-a58a91b06aa6] succeeded in 0.9027499299845658s: None
+[2024-11-24 17:16:37,887: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[f01b2ab6-cd00-4130-a292-915656b8c4f8] succeeded in 0.8554455970006529s: None
+[2024-11-24 17:16:37,976: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[1c413116-99fa-4f87-971c-13556c276a06] succeeded in 0.6943897960009053s: None
+[2024-11-24 17:16:38,030: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[e5f3521e-2ef3-4f52-98a9-1b792b3234d6] succeeded in 0.37350780700217s: None
+[2024-11-24 17:16:38,058: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[8e76a5da-04d1-4890-b698-6b24253e71b7] succeeded in 0.9122440239880234s: None
+[2024-11-24 17:16:38,074: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[816823b4-6c38-45d0-8f76-c35fa2b54067] succeeded in 0.506160222023027s: None
+[2024-11-24 17:16:38,100: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[bbd3d73d-9a20-402d-acd7-f2fcb51e5ef5] succeeded in 0.6480776520038489s: None
+[2024-11-24 17:16:38,326: INFO/MainProcess] Received task: data.tasks.import_cve_task[b5d48a16-60f7-44ed-aceb-56474e7e5a33]  
+[2024-11-24 17:16:38,346: INFO/MainProcess] Received task: data.tasks.import_cve_task[98e5aa43-91cd-459b-a2cd-5eb8373ca695]  
+[2024-11-24 17:16:38,367: INFO/MainProcess] Received task: data.tasks.import_cve_task[e1df3a19-5de7-4cf2-bd39-8a6130d844f6]  
+[2024-11-24 17:16:38,377: INFO/MainProcess] Received task: data.tasks.import_cve_task[90ff9196-6fae-40df-87ca-bb4705edf056]  
+[2024-11-24 17:16:38,409: INFO/MainProcess] Received task: data.tasks.import_cve_task[833237cf-469b-4b82-b4c1-6c684fa4e70e]  
+[2024-11-24 17:16:38,425: INFO/MainProcess] Received task: data.tasks.import_cve_task[da992ea2-15e8-4635-9cd7-a977d48973be]  
+[2024-11-24 17:16:38,550: INFO/MainProcess] Received task: data.tasks.import_cve_task[58291cee-d8af-4ab9-8126-4e5eb51590f2]  
+[2024-11-24 17:16:38,613: INFO/MainProcess] Received task: data.tasks.import_cve_task[b3b0575d-21ba-428d-95c5-30f60158abb7]  
+[2024-11-24 17:16:38,672: INFO/MainProcess] Received task: data.tasks.import_cve_task[ba5fdc70-9208-462f-9e15-a30c448ac7c7]  
+[2024-11-24 17:16:38,794: INFO/MainProcess] Received task: data.tasks.import_cve_task[b96b6785-03e8-438d-8a16-00b669be9937]  
+[2024-11-24 17:16:39,188: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[e1df3a19-5de7-4cf2-bd39-8a6130d844f6] succeeded in 0.8180777539964765s: None
+[2024-11-24 17:16:39,327: INFO/ForkPoolWorker-5] Task data.tasks.import_cve_task[ba5fdc70-9208-462f-9e15-a30c448ac7c7] succeeded in 0.6524345530197024s: None
+[2024-11-24 17:16:39,331: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[98e5aa43-91cd-459b-a2cd-5eb8373ca695] succeeded in 0.9821538399846759s: None
+[2024-11-24 17:16:39,337: INFO/ForkPoolWorker-2] Task data.tasks.import_cve_task[833237cf-469b-4b82-b4c1-6c684fa4e70e] succeeded in 0.9227257009770256s: None
+[2024-11-24 17:16:39,449: INFO/ForkPoolWorker-6] Task data.tasks.import_cve_task[b96b6785-03e8-438d-8a16-00b669be9937] succeeded in 0.6539737280108966s: None
+[2024-11-24 17:16:39,480: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[b5d48a16-60f7-44ed-aceb-56474e7e5a33] succeeded in 1.1534116719849408s: None
+[2024-11-24 17:16:39,482: INFO/ForkPoolWorker-4] Task data.tasks.import_cve_task[b3b0575d-21ba-428d-95c5-30f60158abb7] succeeded in 0.8633728400163818s: None
+[2024-11-24 17:16:39,665: INFO/ForkPoolWorker-10] Task data.tasks.import_cve_task[da992ea2-15e8-4635-9cd7-a977d48973be] succeeded in 1.2368659350031521s: None
+[2024-11-24 17:16:39,688: INFO/ForkPoolWorker-3] Task data.tasks.import_cve_task[58291cee-d8af-4ab9-8126-4e5eb51590f2] succeeded in 1.136782020010287s: None
+[2024-11-24 17:16:39,705: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[90ff9196-6fae-40df-87ca-bb4705edf056] succeeded in 1.3260183990059886s: None
+[2024-11-24 17:16:40,161: INFO/MainProcess] Received task: data.tasks.import_cve_task[528bd080-d4a8-4449-9523-54d9fd89ab56]  
+[2024-11-24 17:16:40,177: INFO/MainProcess] Received task: data.tasks.import_cve_task[79553791-bd48-4b73-adca-6a75905213b0]  
+[2024-11-24 17:16:40,186: INFO/MainProcess] Received task: data.tasks.import_cve_task[dd427e54-5314-44ea-a4f8-28da9cfe5245]  
+[2024-11-24 17:16:40,186: INFO/MainProcess] Received task: data.tasks.import_cve_task[ec538639-b829-4fd6-b269-90d6a44364dc]  
+[2024-11-24 17:16:40,468: INFO/ForkPoolWorker-7] Task data.tasks.import_cve_task[528bd080-d4a8-4449-9523-54d9fd89ab56] succeeded in 0.30585609399713576s: None
+[2024-11-24 17:16:40,485: INFO/ForkPoolWorker-1] Task data.tasks.import_cve_task[dd427e54-5314-44ea-a4f8-28da9cfe5245] succeeded in 0.2881789130042307s: None
+[2024-11-24 17:16:40,489: INFO/ForkPoolWorker-9] Task data.tasks.import_cve_task[ec538639-b829-4fd6-b269-90d6a44364dc] succeeded in 0.29482350300531834s: None
+[2024-11-24 17:16:40,566: INFO/ForkPoolWorker-8] Task data.tasks.import_cve_task[79553791-bd48-4b73-adca-6a75905213b0] succeeded in 0.3676087979984004s: None

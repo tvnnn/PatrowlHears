@@ -64,7 +64,7 @@ def import_cpe_task(self, vector, title, product, vendor):
     return import_cpe(data)
 
 @shared_task(bind=True, acks_late=False, ignore_result=False)
-def import_cpe_batch_task(cpe_data_batch):
+def import_cpe_batch_task(self, cpe_data_batch):
     cpe_objects = []
     for cpe_vector, details, product_id, vendor_id in cpe_data_batch:
         try:
@@ -73,7 +73,7 @@ def import_cpe_batch_task(cpe_data_batch):
             if not CPE.objects.filter(vector=cpe_vector).exists():
                 cpe_objects.append(CPE(
                     vector=cpe_vector,
-                    data=details,
+                    title=details,
                     product=product,
                     vendor=vendor
                 ))

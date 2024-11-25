@@ -1,556 +1,68 @@
-2024-11-12 08:21:20,359 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:21:20,367 INFO RPC interface 'supervisor' initialized
-2024-11-12 08:21:20,368 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-12 08:21:20,369 INFO daemonizing the supervisord process
-2024-11-12 08:21:20,370 INFO supervisord started with pid 149146
-2024-11-12 08:21:21,372 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:21,372 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:21,372 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:21,373 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:21,373 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:21,373 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:22,374 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:22,374 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:22,375 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:22,375 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:22,375 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:22,375 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:24,378 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:24,378 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:24,378 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:24,379 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:24,379 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:24,379 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:27,383 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:27,384 INFO gave up: celery-hears-beat entered FATAL state, too many start retries too quickly
-2024-11-12 08:21:27,384 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:27,384 INFO gave up: celery-hears-default entered FATAL state, too many start retries too quickly
-2024-11-12 08:21:27,384 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:27,384 INFO gave up: celery-hears-alerts entered FATAL state, too many start retries too quickly
-2024-11-12 08:21:27,384 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:27,384 INFO gave up: celery-hears-data1 entered FATAL state, too many start retries too quickly
-2024-11-12 08:21:27,385 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:27,385 INFO gave up: celery-hears-data2 entered FATAL state, too many start retries too quickly
-2024-11-12 08:21:27,385 INFO spawnerr: can't find command 'env/bin/celery'
-2024-11-12 08:21:27,385 INFO gave up: celery-hears-data3 entered FATAL state, too many start retries too quickly
-2024-11-12 08:23:14,406 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:24:17,418 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:25:17,168 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:25:40,211 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:25:44,971 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:25:59,089 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:27:08,789 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:27:11,308 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:27:12,249 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:27:12,817 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:27:13,359 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:27:14,206 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:28:19,499 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:28:19,503 INFO RPC interface 'supervisor' initialized
-2024-11-12 08:28:19,503 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-12 08:28:19,505 INFO daemonizing the supervisord process
-2024-11-12 08:28:19,506 INFO supervisord started with pid 151048
-2024-11-12 08:28:20,509 INFO spawned: 'celery-hears-beat' with pid 151051
-2024-11-12 08:28:20,513 INFO spawned: 'celery-hears-default' with pid 151052
-2024-11-12 08:28:20,515 INFO spawned: 'celery-hears-alerts' with pid 151053
-2024-11-12 08:28:20,516 INFO spawned: 'celery-hears-data1' with pid 151054
-2024-11-12 08:28:20,523 INFO spawned: 'celery-hears-data2' with pid 151055
-2024-11-12 08:28:20,525 INFO spawned: 'celery-hears-data3' with pid 151056
-2024-11-12 08:28:25,544 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:28:25,544 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:28:25,544 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:28:25,544 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:28:25,545 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:28:25,545 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:45:54,797 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:47:26,808 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-12 08:47:28,128 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-12 08:47:29,635 INFO stopped: celery-hears-data2 (exit status 0)
-2024-11-12 08:47:29,643 INFO stopped: celery-hears-data1 (exit status 0)
-2024-11-12 08:47:29,643 INFO stopped: celery-hears-data3 (exit status 0)
-2024-11-12 08:47:29,657 INFO stopped: celery-hears-default (exit status 0)
-2024-11-12 08:47:30,660 INFO stopped: celery-hears-alerts (exit status 0)
-2024-11-12 08:47:31,553 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 08:47:31,560 INFO RPC interface 'supervisor' initialized
-2024-11-12 08:47:31,560 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-12 08:47:31,563 INFO daemonizing the supervisord process
-2024-11-12 08:47:31,564 INFO supervisord started with pid 155346
-2024-11-12 08:47:32,567 INFO spawned: 'celery-hears-beat' with pid 155357
-2024-11-12 08:47:32,570 INFO spawned: 'celery-hears-default' with pid 155358
-2024-11-12 08:47:32,574 INFO spawned: 'celery-hears-alerts' with pid 155359
-2024-11-12 08:47:32,580 INFO spawned: 'celery-hears-data1' with pid 155360
-2024-11-12 08:47:32,596 INFO spawned: 'celery-hears-data2' with pid 155361
-2024-11-12 08:47:32,598 INFO spawned: 'celery-hears-data3' with pid 155362
-2024-11-12 08:47:37,606 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:47:37,606 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:47:37,606 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:47:37,606 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:47:37,606 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 08:47:37,606 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:13:05,408 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-12 09:13:05,789 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-12 09:13:07,794 INFO stopped: celery-hears-data1 (exit status 0)
-2024-11-12 09:13:07,794 INFO stopped: celery-hears-data3 (exit status 0)
-2024-11-12 09:13:07,821 INFO stopped: celery-hears-default (exit status 0)
-2024-11-12 09:13:07,821 INFO stopped: celery-hears-alerts (exit status 0)
-2024-11-12 09:13:07,872 INFO stopped: celery-hears-data2 (exit status 0)
-2024-11-12 09:15:22,599 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 09:15:22,609 INFO RPC interface 'supervisor' initialized
-2024-11-12 09:15:22,609 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-12 09:15:22,610 INFO daemonizing the supervisord process
-2024-11-12 09:15:22,611 INFO supervisord started with pid 161532
-2024-11-12 09:15:23,614 INFO spawned: 'celery-hears-beat' with pid 161534
-2024-11-12 09:15:23,617 INFO spawned: 'celery-hears-default' with pid 161535
-2024-11-12 09:15:23,621 INFO spawned: 'celery-hears-alerts' with pid 161536
-2024-11-12 09:15:23,625 INFO spawned: 'celery-hears-data1' with pid 161537
-2024-11-12 09:15:23,631 INFO spawned: 'celery-hears-data2' with pid 161538
-2024-11-12 09:15:23,642 INFO spawned: 'celery-hears-data3' with pid 161539
-2024-11-12 09:15:28,651 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:15:28,651 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:15:28,651 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:15:28,651 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:15:28,651 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:15:28,651 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:20:09,583 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 09:20:19,423 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-12 09:20:20,733 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-12 09:20:21,931 INFO stopped: celery-hears-default (exit status 0)
-2024-11-12 09:20:21,954 INFO stopped: celery-hears-data1 (exit status 0)
-2024-11-12 09:20:21,973 INFO stopped: celery-hears-data2 (exit status 0)
-2024-11-12 09:20:21,974 INFO stopped: celery-hears-alerts (exit status 0)
-2024-11-12 09:20:21,974 INFO stopped: celery-hears-data3 (exit status 0)
-2024-11-12 09:20:23,550 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 09:20:23,554 INFO RPC interface 'supervisor' initialized
-2024-11-12 09:20:23,554 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-12 09:20:23,556 INFO daemonizing the supervisord process
-2024-11-12 09:20:23,557 INFO supervisord started with pid 162837
-2024-11-12 09:20:24,560 INFO spawned: 'celery-hears-beat' with pid 162842
-2024-11-12 09:20:24,564 INFO spawned: 'celery-hears-default' with pid 162843
-2024-11-12 09:20:24,567 INFO spawned: 'celery-hears-alerts' with pid 162844
-2024-11-12 09:20:24,568 INFO spawned: 'celery-hears-data1' with pid 162845
-2024-11-12 09:20:24,571 INFO spawned: 'celery-hears-data2' with pid 162846
-2024-11-12 09:20:24,574 INFO spawned: 'celery-hears-data3' with pid 162847
-2024-11-12 09:20:30,279 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:20:30,279 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:20:30,279 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:20:30,280 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:20:30,280 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:20:30,280 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:26:32,581 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-12 09:26:32,956 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-12 09:26:35,483 INFO stopped: celery-hears-alerts (exit status 0)
-2024-11-12 09:26:35,493 INFO stopped: celery-hears-data1 (exit status 0)
-2024-11-12 09:26:35,493 INFO stopped: celery-hears-data2 (exit status 0)
-2024-11-12 09:26:35,531 INFO stopped: celery-hears-default (exit status 0)
-2024-11-12 09:26:36,538 INFO stopped: celery-hears-data3 (exit status 0)
-2024-11-12 09:27:26,503 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-12 09:27:26,512 INFO RPC interface 'supervisor' initialized
-2024-11-12 09:27:26,512 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-12 09:27:26,515 INFO daemonizing the supervisord process
-2024-11-12 09:27:26,516 INFO supervisord started with pid 164868
-2024-11-12 09:27:27,519 INFO spawned: 'celery-hears-beat' with pid 164879
-2024-11-12 09:27:27,521 INFO spawned: 'celery-hears-default' with pid 164880
-2024-11-12 09:27:27,524 INFO spawned: 'celery-hears-alerts' with pid 164881
-2024-11-12 09:27:27,529 INFO spawned: 'celery-hears-data1' with pid 164882
-2024-11-12 09:27:27,531 INFO spawned: 'celery-hears-data2' with pid 164883
-2024-11-12 09:27:27,533 INFO spawned: 'celery-hears-data3' with pid 164884
-2024-11-12 09:27:32,838 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:27:32,840 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:27:32,840 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:27:32,840 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:27:32,840 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-12 09:27:32,840 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:12:23,236 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-13 05:12:24,116 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-13 05:12:27,122 INFO waiting for celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-13 05:12:27,694 INFO stopped: celery-hears-data3 (exit status 0)
-2024-11-13 05:12:27,783 INFO stopped: celery-hears-default (exit status 0)
-2024-11-13 05:12:27,783 INFO stopped: celery-hears-data1 (exit status 0)
-2024-11-13 05:12:27,844 INFO stopped: celery-hears-alerts (exit status 0)
-2024-11-13 05:12:28,869 INFO stopped: celery-hears-data2 (exit status 0)
-2024-11-13 05:12:42,387 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-13 05:12:42,399 INFO RPC interface 'supervisor' initialized
-2024-11-13 05:12:42,399 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-13 05:12:42,400 INFO daemonizing the supervisord process
-2024-11-13 05:12:42,401 INFO supervisord started with pid 268812
-2024-11-13 05:12:43,404 INFO spawned: 'celery-hears-beat' with pid 268828
-2024-11-13 05:12:43,407 INFO spawned: 'celery-hears-default' with pid 268829
-2024-11-13 05:12:43,409 INFO spawned: 'celery-hears-alerts' with pid 268830
-2024-11-13 05:12:43,412 INFO spawned: 'celery-hears-data1' with pid 268831
-2024-11-13 05:12:43,414 INFO spawned: 'celery-hears-data2' with pid 268832
-2024-11-13 05:12:43,416 INFO spawned: 'celery-hears-data3' with pid 268833
-2024-11-13 05:12:48,434 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:12:48,434 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:12:48,434 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:12:48,434 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:12:48,434 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:12:48,434 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:12:55,751 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:12:55,778 INFO spawned: 'celery-hears-alerts' with pid 268930
-2024-11-13 05:12:59,360 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:13:00,366 INFO spawned: 'celery-hears-alerts' with pid 268962
-2024-11-13 05:13:02,749 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:13:04,758 INFO spawned: 'celery-hears-alerts' with pid 268968
-2024-11-13 05:13:08,658 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:13:11,669 INFO spawned: 'celery-hears-alerts' with pid 268972
-2024-11-13 05:13:17,036 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:13:17,037 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:13:18,042 INFO spawned: 'celery-hears-alerts' with pid 268981
-2024-11-13 05:13:21,291 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:13:22,295 INFO spawned: 'celery-hears-alerts' with pid 268983
-2024-11-13 05:13:26,725 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:13:28,729 INFO spawned: 'celery-hears-alerts' with pid 269146
-2024-11-13 05:13:31,587 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:13:34,600 INFO spawned: 'celery-hears-alerts' with pid 269153
-2024-11-13 05:13:38,295 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:13:39,296 INFO gave up: celery-hears-alerts entered FATAL state, too many start retries too quickly
-2024-11-13 05:35:55,421 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-13 05:35:55,825 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-13 05:35:58,017 INFO stopped: celery-hears-data2 (exit status 0)
-2024-11-13 05:35:58,022 INFO stopped: celery-hears-default (exit status 0)
-2024-11-13 05:35:58,069 INFO stopped: celery-hears-data1 (exit status 0)
-2024-11-13 05:35:58,069 INFO stopped: celery-hears-data3 (exit status 0)
-2024-11-13 05:36:16,084 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-13 05:36:16,092 INFO RPC interface 'supervisor' initialized
-2024-11-13 05:36:16,092 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-13 05:36:16,093 INFO daemonizing the supervisord process
-2024-11-13 05:36:16,094 INFO supervisord started with pid 271751
-2024-11-13 05:36:17,098 INFO spawned: 'celery-hears-beat' with pid 271762
-2024-11-13 05:36:17,102 INFO spawned: 'celery-hears-default' with pid 271763
-2024-11-13 05:36:17,104 INFO spawned: 'celery-hears-alerts' with pid 271764
-2024-11-13 05:36:17,106 INFO spawned: 'celery-hears-data1' with pid 271765
-2024-11-13 05:36:17,109 INFO spawned: 'celery-hears-data2' with pid 271766
-2024-11-13 05:36:17,123 INFO spawned: 'celery-hears-data3' with pid 271767
-2024-11-13 05:36:23,013 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:36:23,013 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:36:23,013 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:36:23,013 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:36:23,013 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:36:23,013 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 05:36:28,300 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:36:28,387 INFO spawned: 'celery-hears-alerts' with pid 271854
-2024-11-13 05:36:32,304 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:36:33,349 INFO spawned: 'celery-hears-alerts' with pid 271919
-2024-11-13 05:36:36,406 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:36:38,426 INFO spawned: 'celery-hears-alerts' with pid 271925
-2024-11-13 05:36:42,966 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:36:45,972 INFO spawned: 'celery-hears-alerts' with pid 271933
-2024-11-13 05:36:48,025 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 05:36:49,027 INFO gave up: celery-hears-alerts entered FATAL state, too many start retries too quickly
-2024-11-13 07:30:54,174 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-13 07:30:54,461 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-13 07:30:56,414 INFO stopped: celery-hears-data3 (exit status 0)
-2024-11-13 07:30:56,429 INFO stopped: celery-hears-data2 (exit status 0)
-2024-11-13 07:30:56,457 INFO stopped: celery-hears-data1 (exit status 0)
-2024-11-13 07:30:57,469 INFO stopped: celery-hears-default (exit status 0)
-2024-11-13 07:30:59,615 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-13 07:30:59,623 INFO RPC interface 'supervisor' initialized
-2024-11-13 07:30:59,624 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-13 07:30:59,625 INFO daemonizing the supervisord process
-2024-11-13 07:30:59,626 INFO supervisord started with pid 304117
-2024-11-13 07:31:00,629 INFO spawned: 'celery-hears-beat' with pid 304128
-2024-11-13 07:31:00,631 INFO spawned: 'celery-hears-default' with pid 304129
-2024-11-13 07:31:00,634 INFO spawned: 'celery-hears-alerts' with pid 304130
-2024-11-13 07:31:00,636 INFO spawned: 'celery-hears-data1' with pid 304131
-2024-11-13 07:31:00,638 INFO spawned: 'celery-hears-data2' with pid 304132
-2024-11-13 07:31:00,650 INFO spawned: 'celery-hears-data3' with pid 304133
-2024-11-13 07:31:06,004 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 07:31:06,004 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 07:31:06,004 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 07:31:06,004 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 07:31:06,004 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 07:31:06,004 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-13 07:31:07,610 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 07:31:07,696 INFO spawned: 'celery-hears-alerts' with pid 304205
-2024-11-13 07:31:09,380 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 07:31:10,383 INFO spawned: 'celery-hears-alerts' with pid 304229
-2024-11-13 07:31:11,809 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 07:31:13,813 INFO spawned: 'celery-hears-alerts' with pid 304269
-2024-11-13 07:31:15,412 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 07:31:18,418 INFO spawned: 'celery-hears-alerts' with pid 304294
-2024-11-13 07:31:20,111 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-13 07:31:21,112 INFO gave up: celery-hears-alerts entered FATAL state, too many start retries too quickly
-2024-11-16 02:00:05,396 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-16 02:00:08,510 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-16 02:00:11,515 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-16 02:00:14,537 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-16 02:00:15,539 WARN killing 'celery-hears-default' (304129) with SIGKILL
-2024-11-16 02:00:15,540 WARN killing 'celery-hears-data1' (304131) with SIGKILL
-2024-11-16 02:00:15,540 WARN killing 'celery-hears-data2' (304132) with SIGKILL
-2024-11-16 02:00:15,540 WARN killing 'celery-hears-data3' (304133) with SIGKILL
-2024-11-16 02:00:15,554 INFO stopped: celery-hears-data2 (terminated by SIGKILL)
-2024-11-16 02:00:15,556 INFO stopped: celery-hears-default (terminated by SIGKILL)
-2024-11-16 02:00:15,557 INFO stopped: celery-hears-data3 (terminated by SIGKILL)
-2024-11-16 02:00:15,835 INFO stopped: celery-hears-data1 (terminated by SIGKILL)
-2024-11-16 02:00:16,999 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-16 02:00:22,869 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-16 02:00:22,879 INFO RPC interface 'supervisor' initialized
-2024-11-16 02:00:22,879 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-16 02:00:22,880 INFO daemonizing the supervisord process
-2024-11-16 02:00:22,880 INFO supervisord started with pid 1424520
-2024-11-16 02:00:23,883 INFO spawned: 'celery-hears-beat' with pid 1424531
-2024-11-16 02:00:23,888 INFO spawned: 'celery-hears-default' with pid 1424532
-2024-11-16 02:00:23,891 INFO spawned: 'celery-hears-alerts' with pid 1424533
-2024-11-16 02:00:23,893 INFO spawned: 'celery-hears-data1' with pid 1424534
-2024-11-16 02:00:23,911 INFO spawned: 'celery-hears-data2' with pid 1424535
-2024-11-16 02:00:23,913 INFO spawned: 'celery-hears-data3' with pid 1424536
-2024-11-16 02:00:28,884 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-16 02:00:28,884 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-16 02:00:28,893 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-16 02:00:28,894 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-16 02:00:28,894 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-16 02:00:29,895 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-18 16:15:29,839 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-18 16:15:31,121 INFO stopped: celery-hears-beat (exit status 0)
-2024-11-18 16:15:33,130 INFO waiting for celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-18 16:15:36,134 INFO waiting for celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-18 16:15:37,578 INFO stopped: celery-hears-alerts (exit status 0)
-2024-11-18 16:15:37,960 INFO stopped: celery-hears-default (exit status 0)
-2024-11-18 16:15:38,056 INFO stopped: celery-hears-data2 (exit status 0)
-2024-11-18 16:15:38,056 INFO stopped: celery-hears-data3 (exit status 0)
-2024-11-18 16:15:38,146 INFO stopped: celery-hears-data1 (exit status 0)
-2024-11-18 16:15:38,493 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-18 16:15:38,511 INFO RPC interface 'supervisor' initialized
-2024-11-18 16:15:38,511 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-18 16:15:38,542 INFO daemonizing the supervisord process
-2024-11-18 16:15:38,571 INFO supervisord started with pid 1739295
-2024-11-18 16:15:39,582 INFO spawned: 'celery-hears-beat' with pid 1739306
-2024-11-18 16:15:39,585 INFO spawned: 'celery-hears-default' with pid 1739307
-2024-11-18 16:15:39,587 INFO spawned: 'celery-hears-alerts' with pid 1739308
-2024-11-18 16:15:39,592 INFO spawned: 'celery-hears-data1' with pid 1739309
-2024-11-18 16:15:39,604 INFO spawned: 'celery-hears-data2' with pid 1739310
-2024-11-18 16:15:39,615 INFO spawned: 'celery-hears-data3' with pid 1739311
-2024-11-18 16:15:44,623 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-18 16:15:44,623 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-18 16:15:44,623 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-18 16:15:44,623 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-18 16:15:44,624 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-18 16:15:44,624 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:52:38,388 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-19 08:52:38,397 INFO RPC interface 'supervisor' initialized
-2024-11-19 08:52:38,398 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-19 08:52:38,399 INFO daemonizing the supervisord process
-2024-11-19 08:52:38,400 INFO supervisord started with pid 22114
-2024-11-19 08:52:39,403 INFO spawned: 'celery-hears-beat' with pid 22125
-2024-11-19 08:52:39,406 INFO spawned: 'celery-hears-default' with pid 22126
-2024-11-19 08:52:39,408 INFO spawned: 'celery-hears-alerts' with pid 22127
-2024-11-19 08:52:39,410 INFO spawned: 'celery-hears-data1' with pid 22128
-2024-11-19 08:52:39,413 INFO spawned: 'celery-hears-data2' with pid 22129
-2024-11-19 08:52:39,426 INFO spawned: 'celery-hears-data3' with pid 22130
-2024-11-19 08:52:44,698 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:52:44,698 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:52:44,698 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:52:44,698 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:52:44,698 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:52:44,698 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:52:44,698 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:52:44,700 INFO spawned: 'celery-hears-data3' with pid 22153
-2024-11-19 08:52:44,706 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:52:44,709 INFO spawned: 'celery-hears-alerts' with pid 22154
-2024-11-19 08:52:44,709 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:52:44,712 INFO spawned: 'celery-hears-data1' with pid 22155
-2024-11-19 08:52:44,721 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:52:44,732 INFO spawned: 'celery-hears-data2' with pid 22156
-2024-11-19 08:52:44,737 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:52:44,739 INFO spawned: 'celery-hears-default' with pid 22157
-2024-11-19 08:52:44,740 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:52:45,092 INFO spawned: 'celery-hears-beat' with pid 22158
-2024-11-19 08:52:49,395 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:52:49,415 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:52:49,465 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:52:49,526 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:52:49,652 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:52:49,652 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:52:50,655 INFO spawned: 'celery-hears-beat' with pid 22212
-2024-11-19 08:52:50,657 INFO spawned: 'celery-hears-default' with pid 22213
-2024-11-19 08:52:50,659 INFO spawned: 'celery-hears-alerts' with pid 22214
-2024-11-19 08:52:50,661 INFO spawned: 'celery-hears-data1' with pid 22215
-2024-11-19 08:52:50,664 INFO spawned: 'celery-hears-data2' with pid 22216
-2024-11-19 08:52:50,670 INFO spawned: 'celery-hears-data3' with pid 22217
-2024-11-19 08:52:55,103 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:52:55,112 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:52:55,128 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:52:55,176 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:52:55,177 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:52:56,185 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:52:56,185 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:52:57,187 INFO spawned: 'celery-hears-beat' with pid 22239
-2024-11-19 08:52:57,189 INFO spawned: 'celery-hears-default' with pid 22240
-2024-11-19 08:52:57,191 INFO spawned: 'celery-hears-alerts' with pid 22241
-2024-11-19 08:52:57,194 INFO spawned: 'celery-hears-data1' with pid 22242
-2024-11-19 08:52:57,197 INFO spawned: 'celery-hears-data2' with pid 22243
-2024-11-19 08:52:57,199 INFO spawned: 'celery-hears-data3' with pid 22244
-2024-11-19 08:53:01,250 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:53:01,306 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:53:01,320 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:53:01,327 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:53:01,338 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:53:01,338 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:53:02,341 INFO spawned: 'celery-hears-alerts' with pid 22262
-2024-11-19 08:53:04,420 INFO spawned: 'celery-hears-beat' with pid 22266
-2024-11-19 08:53:04,422 INFO spawned: 'celery-hears-default' with pid 22267
-2024-11-19 08:53:04,425 INFO spawned: 'celery-hears-data1' with pid 22268
-2024-11-19 08:53:04,428 INFO spawned: 'celery-hears-data2' with pid 22269
-2024-11-19 08:53:04,438 INFO spawned: 'celery-hears-data3' with pid 22270
-2024-11-19 08:53:04,439 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:53:06,444 INFO spawned: 'celery-hears-alerts' with pid 22276
-2024-11-19 08:53:08,280 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:53:08,289 INFO gave up: celery-hears-data2 entered FATAL state, too many start retries too quickly
-2024-11-19 08:53:08,322 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:53:08,324 INFO gave up: celery-hears-default entered FATAL state, too many start retries too quickly
-2024-11-19 08:53:08,324 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:53:08,368 INFO gave up: celery-hears-data1 entered FATAL state, too many start retries too quickly
-2024-11-19 08:53:08,368 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:53:08,368 INFO gave up: celery-hears-beat entered FATAL state, too many start retries too quickly
-2024-11-19 08:53:08,860 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:53:08,861 INFO gave up: celery-hears-data3 entered FATAL state, too many start retries too quickly
-2024-11-19 08:53:09,003 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:53:12,009 INFO spawned: 'celery-hears-alerts' with pid 22326
-2024-11-19 08:53:13,794 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:53:14,796 INFO gave up: celery-hears-alerts entered FATAL state, too many start retries too quickly
-2024-11-19 08:53:54,152 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-19 08:53:54,157 INFO RPC interface 'supervisor' initialized
-2024-11-19 08:53:54,158 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-19 08:53:54,159 INFO daemonizing the supervisord process
-2024-11-19 08:53:54,160 INFO supervisord started with pid 22482
-2024-11-19 08:53:55,163 INFO spawned: 'celery-hears-beat' with pid 22495
-2024-11-19 08:53:55,165 INFO spawned: 'celery-hears-default' with pid 22496
-2024-11-19 08:53:55,167 INFO spawned: 'celery-hears-alerts' with pid 22497
-2024-11-19 08:53:55,169 INFO spawned: 'celery-hears-data1' with pid 22498
-2024-11-19 08:53:55,171 INFO spawned: 'celery-hears-data2' with pid 22499
-2024-11-19 08:53:55,176 INFO spawned: 'celery-hears-data3' with pid 22500
-2024-11-19 08:53:57,645 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
-2024-11-19 08:53:57,648 INFO stopped: celery-hears-data3 (terminated by SIGTERM)
-2024-11-19 08:53:57,653 INFO stopped: celery-hears-data2 (terminated by SIGTERM)
-2024-11-19 08:53:57,658 INFO stopped: celery-hears-beat (terminated by SIGTERM)
-2024-11-19 08:53:57,658 INFO stopped: celery-hears-data1 (terminated by SIGTERM)
-2024-11-19 08:53:57,663 INFO stopped: celery-hears-default (terminated by SIGTERM)
-2024-11-19 08:53:57,663 INFO stopped: celery-hears-alerts (terminated by SIGTERM)
-2024-11-19 08:54:06,990 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-19 08:54:06,996 INFO RPC interface 'supervisor' initialized
-2024-11-19 08:54:06,997 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-19 08:54:06,998 INFO daemonizing the supervisord process
-2024-11-19 08:54:06,999 INFO supervisord started with pid 22550
-2024-11-19 08:54:08,002 INFO spawned: 'celery-hears-beat' with pid 22561
-2024-11-19 08:54:08,004 INFO spawned: 'celery-hears-default' with pid 22562
-2024-11-19 08:54:08,006 INFO spawned: 'celery-hears-alerts' with pid 22563
-2024-11-19 08:54:08,009 INFO spawned: 'celery-hears-data1' with pid 22564
-2024-11-19 08:54:08,021 INFO spawned: 'celery-hears-data2' with pid 22565
-2024-11-19 08:54:08,023 INFO spawned: 'celery-hears-data3' with pid 22566
-2024-11-19 08:54:12,258 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:54:12,309 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:54:12,309 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:54:12,407 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:54:12,407 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:54:13,082 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:54:13,082 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:54:13,084 INFO spawned: 'celery-hears-data3' with pid 22619
-2024-11-19 08:54:14,029 INFO spawned: 'celery-hears-beat' with pid 22631
-2024-11-19 08:54:14,031 INFO spawned: 'celery-hears-default' with pid 22632
-2024-11-19 08:54:14,034 INFO spawned: 'celery-hears-alerts' with pid 22633
-2024-11-19 08:54:14,039 INFO spawned: 'celery-hears-data1' with pid 22634
-2024-11-19 08:54:14,054 INFO spawned: 'celery-hears-data2' with pid 22635
-2024-11-19 08:54:14,931 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:54:15,947 INFO spawned: 'celery-hears-data3' with pid 22653
-2024-11-19 08:54:18,171 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:54:18,191 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:54:18,280 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:54:18,282 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:54:18,282 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:54:18,860 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:54:20,585 INFO spawned: 'celery-hears-beat' with pid 22688
-2024-11-19 08:54:20,587 INFO spawned: 'celery-hears-default' with pid 22689
-2024-11-19 08:54:20,589 INFO spawned: 'celery-hears-alerts' with pid 22690
-2024-11-19 08:54:20,591 INFO spawned: 'celery-hears-data1' with pid 22691
-2024-11-19 08:54:20,599 INFO spawned: 'celery-hears-data2' with pid 22692
-2024-11-19 08:54:21,569 INFO spawned: 'celery-hears-data3' with pid 22696
-2024-11-19 08:54:25,647 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:54:25,647 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:54:25,647 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:54:25,647 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:54:25,647 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:54:25,678 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:54:25,678 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:54:25,687 INFO spawned: 'celery-hears-beat' with pid 22725
-2024-11-19 08:54:25,690 INFO spawned: 'celery-hears-default' with pid 22726
-2024-11-19 08:54:25,805 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:54:25,807 INFO spawned: 'celery-hears-data1' with pid 22727
-2024-11-19 08:54:25,925 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:54:25,973 INFO spawned: 'celery-hears-alerts' with pid 22731
-2024-11-19 08:54:26,157 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:54:26,159 INFO spawned: 'celery-hears-data2' with pid 22732
-2024-11-19 08:54:26,746 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:54:27,496 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:54:27,502 INFO spawned: 'celery-hears-data3' with pid 22752
-2024-11-19 08:54:30,035 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:54:30,135 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:54:30,251 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:54:30,257 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:54:30,528 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:54:30,710 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:54:31,714 INFO spawned: 'celery-hears-beat' with pid 22785
-2024-11-19 08:54:31,717 INFO spawned: 'celery-hears-default' with pid 22786
-2024-11-19 08:54:31,719 INFO spawned: 'celery-hears-alerts' with pid 22787
-2024-11-19 08:54:31,721 INFO spawned: 'celery-hears-data1' with pid 22788
-2024-11-19 08:54:31,723 INFO spawned: 'celery-hears-data2' with pid 22789
-2024-11-19 08:54:31,733 INFO spawned: 'celery-hears-data3' with pid 22790
-2024-11-19 08:54:36,412 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:54:36,434 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:54:36,439 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:54:36,439 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:54:36,451 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:54:36,451 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:54:39,049 INFO spawned: 'celery-hears-beat' with pid 22876
-2024-11-19 08:54:39,051 INFO spawned: 'celery-hears-default' with pid 22877
-2024-11-19 08:54:39,053 INFO spawned: 'celery-hears-alerts' with pid 22878
-2024-11-19 08:54:39,055 INFO spawned: 'celery-hears-data1' with pid 22879
-2024-11-19 08:54:39,059 INFO spawned: 'celery-hears-data2' with pid 22880
-2024-11-19 08:54:39,061 INFO spawned: 'celery-hears-data3' with pid 22881
-2024-11-19 08:54:43,775 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:54:43,789 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:54:43,815 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:54:43,815 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:54:43,816 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:54:44,821 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:54:44,821 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:54:45,824 INFO spawned: 'celery-hears-beat' with pid 22920
-2024-11-19 08:54:46,828 INFO spawned: 'celery-hears-default' with pid 22940
-2024-11-19 08:54:46,831 INFO spawned: 'celery-hears-alerts' with pid 22941
-2024-11-19 08:54:46,839 INFO spawned: 'celery-hears-data1' with pid 22942
-2024-11-19 08:54:46,843 INFO spawned: 'celery-hears-data2' with pid 22943
-2024-11-19 08:54:46,862 INFO spawned: 'celery-hears-data3' with pid 22944
-2024-11-19 08:54:49,067 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:54:50,126 INFO spawned: 'celery-hears-beat' with pid 22949
-2024-11-19 08:54:50,675 INFO exited: celery-hears-alerts (exit status 1; not expected)
-2024-11-19 08:54:50,685 INFO gave up: celery-hears-alerts entered FATAL state, too many start retries too quickly
-2024-11-19 08:54:50,694 INFO exited: celery-hears-default (exit status 1; not expected)
-2024-11-19 08:54:50,694 INFO exited: celery-hears-data2 (exit status 1; not expected)
-2024-11-19 08:54:50,699 INFO gave up: celery-hears-default entered FATAL state, too many start retries too quickly
-2024-11-19 08:54:50,699 INFO gave up: celery-hears-data2 entered FATAL state, too many start retries too quickly
-2024-11-19 08:54:50,713 INFO exited: celery-hears-data1 (exit status 1; not expected)
-2024-11-19 08:54:50,714 INFO exited: celery-hears-data3 (exit status 1; not expected)
-2024-11-19 08:54:51,715 INFO gave up: celery-hears-data1 entered FATAL state, too many start retries too quickly
-2024-11-19 08:54:51,715 INFO gave up: celery-hears-data3 entered FATAL state, too many start retries too quickly
-2024-11-19 08:54:53,144 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:54:55,148 INFO spawned: 'celery-hears-beat' with pid 22957
-2024-11-19 08:54:57,072 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:55:00,078 INFO spawned: 'celery-hears-beat' with pid 22962
-2024-11-19 08:55:01,132 INFO exited: celery-hears-beat (exit status 1; not expected)
-2024-11-19 08:55:02,133 INFO gave up: celery-hears-beat entered FATAL state, too many start retries too quickly
-2024-11-19 08:58:19,280 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-2024-11-19 08:58:19,284 INFO RPC interface 'supervisor' initialized
-2024-11-19 08:58:19,284 CRIT Server 'inet_http_server' running without any HTTP authentication checking
-2024-11-19 08:58:19,285 INFO daemonizing the supervisord process
-2024-11-19 08:58:19,286 INFO supervisord started with pid 23505
-2024-11-19 08:58:20,288 INFO spawned: 'celery-hears-beat' with pid 23516
-2024-11-19 08:58:20,290 INFO spawned: 'celery-hears-default' with pid 23517
-2024-11-19 08:58:20,292 INFO spawned: 'celery-hears-alerts' with pid 23518
-2024-11-19 08:58:20,293 INFO spawned: 'celery-hears-data1' with pid 23519
-2024-11-19 08:58:20,295 INFO spawned: 'celery-hears-data2' with pid 23520
-2024-11-19 08:58:20,297 INFO spawned: 'celery-hears-data3' with pid 23521
-2024-11-19 08:58:25,487 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:58:25,487 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:58:25,487 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:58:25,487 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:58:25,487 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
-2024-11-19 08:58:25,487 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:20:11,015 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-21 04:20:14,494 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-21 04:20:16,259 INFO stopped: celery-hears-beat (exit status 0)
+2024-11-21 04:20:17,235 INFO stopped: celery-hears-data3 (exit status 0)
+2024-11-21 04:20:17,311 INFO stopped: celery-hears-data2 (exit status 0)
+2024-11-21 04:20:17,368 INFO stopped: celery-hears-data1 (exit status 0)
+2024-11-21 04:20:17,461 INFO stopped: celery-hears-default (exit status 0)
+2024-11-21 04:20:17,526 INFO waiting for celery-hears-alerts to die
+2024-11-21 04:20:18,528 INFO stopped: celery-hears-alerts (exit status 0)
+2024-11-21 04:20:26,271 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-21 04:20:26,279 INFO RPC interface 'supervisor' initialized
+2024-11-21 04:20:26,279 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2024-11-21 04:20:26,281 INFO daemonizing the supervisord process
+2024-11-21 04:20:26,282 INFO supervisord started with pid 302536
+2024-11-21 04:20:27,285 INFO spawned: 'celery-hears-beat' with pid 302549
+2024-11-21 04:20:27,286 INFO spawned: 'celery-hears-default' with pid 302550
+2024-11-21 04:20:27,288 INFO spawned: 'celery-hears-alerts' with pid 302551
+2024-11-21 04:20:27,290 INFO spawned: 'celery-hears-data1' with pid 302552
+2024-11-21 04:20:27,292 INFO spawned: 'celery-hears-data2' with pid 302553
+2024-11-21 04:20:27,295 INFO spawned: 'celery-hears-data3' with pid 302554
+2024-11-21 04:20:32,993 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:20:32,993 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:20:32,993 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:20:32,993 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:20:32,993 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:20:32,993 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:39:45,004 INFO waiting for celery-hears-beat, celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-21 04:39:46,774 INFO stopped: celery-hears-beat (exit status 0)
+2024-11-21 04:39:48,780 INFO waiting for celery-hears-default, celery-hears-alerts, celery-hears-data1, celery-hears-data2, celery-hears-data3 to die
+2024-11-21 04:39:49,452 INFO stopped: celery-hears-data2 (exit status 0)
+2024-11-21 04:39:49,527 INFO stopped: celery-hears-alerts (exit status 0)
+2024-11-21 04:39:49,527 INFO stopped: celery-hears-data3 (exit status 0)
+2024-11-21 04:39:49,544 INFO stopped: celery-hears-data1 (exit status 0)
+2024-11-21 04:39:49,698 INFO stopped: celery-hears-default (exit status 0)
+2024-11-21 04:39:56,510 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-21 04:39:56,522 INFO RPC interface 'supervisor' initialized
+2024-11-21 04:39:56,522 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2024-11-21 04:39:56,524 INFO daemonizing the supervisord process
+2024-11-21 04:39:56,525 INFO supervisord started with pid 307734
+2024-11-21 04:39:57,528 INFO spawned: 'celery-hears-beat' with pid 307736
+2024-11-21 04:39:57,530 INFO spawned: 'celery-hears-default' with pid 307737
+2024-11-21 04:39:57,536 INFO spawned: 'celery-hears-alerts' with pid 307738
+2024-11-21 04:39:57,539 INFO spawned: 'celery-hears-data1' with pid 307739
+2024-11-21 04:39:57,542 INFO spawned: 'celery-hears-data2' with pid 307740
+2024-11-21 04:39:57,544 INFO spawned: 'celery-hears-data3' with pid 307741
+2024-11-21 04:40:02,549 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:40:02,549 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:40:02,549 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:40:02,549 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:40:02,549 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 04:40:02,549 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 17:33:43,241 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-21 17:33:43,253 INFO RPC interface 'supervisor' initialized
+2024-11-21 17:33:43,254 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2024-11-21 17:33:43,255 INFO daemonizing the supervisord process
+2024-11-21 17:33:43,256 INFO supervisord started with pid 3414
+2024-11-21 17:33:44,259 INFO spawned: 'celery-hears-beat' with pid 3425
+2024-11-21 17:33:44,261 INFO spawned: 'celery-hears-default' with pid 3426
+2024-11-21 17:33:44,262 INFO spawned: 'celery-hears-alerts' with pid 3427
+2024-11-21 17:33:44,264 INFO spawned: 'celery-hears-data1' with pid 3428
+2024-11-21 17:33:44,265 INFO spawned: 'celery-hears-data2' with pid 3429
+2024-11-21 17:33:44,268 INFO spawned: 'celery-hears-data3' with pid 3430
+2024-11-21 17:33:49,275 INFO success: celery-hears-beat entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 17:33:49,275 INFO success: celery-hears-default entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 17:33:49,275 INFO success: celery-hears-alerts entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 17:33:49,275 INFO success: celery-hears-data1 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 17:33:49,276 INFO success: celery-hears-data2 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)
+2024-11-21 17:33:49,276 INFO success: celery-hears-data3 entered RUNNING state, process has stayed up for > than 5 seconds (startsecs)

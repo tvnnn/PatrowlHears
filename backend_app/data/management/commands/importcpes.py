@@ -1,5 +1,4 @@
 from django.core.management.base import BaseCommand
-from django.db import transaction
 from common.utils import chunks
 from cves.models import Vendor, Product, CPE
 from data.tasks import import_cpe_batch_task
@@ -8,7 +7,7 @@ import time
 import os
 from tqdm import tqdm
 
-CHUNK_SIZE = 128
+CHUNK_SIZE = 8
 
 class Command(BaseCommand):
     help = 'Import CPE from JSON file'
@@ -22,17 +21,17 @@ class Command(BaseCommand):
 
         # Validate the input file
         if not input_file or not os.path.exists(input_file):
-            self.stdout.write("File not found. Exiting.")
+            print("File not found. Exiting.")
             return
 
-        self.stdout.write(f"Importing CPEs from file: {input_file}")
+        print(f"Importing CPEs from file: {input_file}")
 
         # Load data from the input JSON file
         with open(input_file, 'r') as f:
             data = json.load(f).get('cpes', {})
 
         # Cache existing CPEs, Vendors, and Products
-        self.stdout.write("Caching existing data...")
+        print("Caching existing data...")
         existing_cpes = set(CPE.objects.values_list('vector', flat=True))
         vendors = {v.name: v for v in Vendor.objects.all()}
         products = {p.name: p for p in Product.objects.all()}
@@ -56,13 +55,12 @@ class Command(BaseCommand):
                         tasks.append((cpe_vector, details, product.id, vendor.id))
                         existing_cpes.add(cpe_vector)  # Prevent duplicate tasks
 
-        # Dispatch tasks to Celery in chunks
-        self.stdout.write(f"Dispatching {len(tasks)} tasks in chunks of {CHUNK_SIZE}...")
+        print(f"Dispatching {len(tasks)} tasks in chunks of {CHUNK_SIZE}...")
         pbar = tqdm(total=len(tasks), desc="Dispatching tasks")
         for chunk in chunks(tasks, CHUNK_SIZE):
-            import_cpe_batch_task.apply_async(args=[chunk], queue='data')  # Use 'data' queue
+            import_cpe_batch_task.apply_async(args=[chunk], queue='data')
             pbar.update(len(chunk))
         pbar.close()
 
         elapsed_time = time.time() - start_time
-        self.stdout.write(f"Task dispatch completed in {elapsed_time:.2f} seconds.")
+        print(f"Task dispatch completed in {elapsed_time:.2f} seconds.")

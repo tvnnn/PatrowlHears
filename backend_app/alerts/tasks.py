@@ -35,7 +35,7 @@ def telegram_alert_vuln_task(self, vuln_id, type):
             # if _is_vuln_monitored(vuln, org):
             bot_token = org.org_settings.alerts_telegram['bot_token']
             chat_id = org.org_settings.alerts_telegram['chat_id']
-            vuln_link = "<{}/#/vulns/{}|Direct link>".format(settings.BASE_URL, vuln.id)
+            vuln_link = f"{settings.BASE_URL}/#/vulns/{vuln.id}"
             vuln_exploit_count = vuln.exploitmetadata_set.count()
             metrics = (
                 f"\t\t\t\t\t- Is Exploitable? {vuln.is_exploitable}\n"
@@ -45,10 +45,10 @@ def telegram_alert_vuln_task(self, vuln_id, type):
             )
             affected_products = ", ".join(["*{}* ({})".format(p.name.replace('_', ' ').title(), p.vendor.name.replace('_', ' ').title()) for p in vuln.products.all()])
             product = affected_products if affected_products else "None"
-            references = "\n".join(f"- {escape_markdown(link)}" for link in vuln.reflinks) if vuln.reflinks else "None"
+            references = "\n".join(f"{escape_markdown(link)}" for link in vuln.reflinks) if vuln.reflinks else "None"
             additional_title = f" - Score: *{vuln.score}* - Exploits: *{vuln_exploit_count}*\n"
             content = (
-                f"*Link:* {escape_markdown(vuln_link)}\n"
+                f"*Link:* {vuln_link}\n"
                 f"*CVE ID:* [{escape_markdown(vuln.cveid)}](https://www.cve.org/CVERecord?id={vuln.cveid})\n"
                 f"*Summary:* {escape_markdown(vuln.summary)}\n"
                 f"*CVSSv3 Vector:* {vuln.cvss3_vector}\n"
@@ -58,7 +58,7 @@ def telegram_alert_vuln_task(self, vuln_id, type):
                 f"*Affected Products:* {escape_markdown(product)}\n"
                 f"*References:*\n{references}"
             )
-            title = "*PatrowlHears // New vulnerability found !*" if type == "new" else "*PatrowlHears // Vulnerability changes detected !*"
+            title = "*New vuln!*" if type == "new" else "*Vuln updated!*"
             message = title + additional_title + content
             telegram.send_message(bot_token, chat_id, message)
         else:

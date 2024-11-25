@@ -35,7 +35,7 @@ def escape_markdown(text):
     """
     Escape special characters for Telegram formatting.
     """
-    special_chars = r"`*_~["
+    special_chars = r"`_~["
     for char in special_chars:
         text = text.replace(char, f"\{char}")
     return text

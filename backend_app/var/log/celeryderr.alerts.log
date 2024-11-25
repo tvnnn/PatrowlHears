@@ -1,3 +1,17 @@
+
+worker: Warm shutdown (MainProcess)
+[2024-11-21 05:20:13,466: WARNING/MainProcess] Traceback (most recent call last):
+[2024-11-21 05:20:13,491: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+[2024-11-21 05:20:13,491: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+[2024-11-21 05:20:13,491: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 133, in _remove_temp_dir
+    rmtree(tempdir)
+[2024-11-21 05:20:13,492: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/shutil.py", line 724, in rmtree
+    onerror(os.lstat, path, sys.exc_info())
+[2024-11-21 05:20:13,492: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/shutil.py", line 722, in rmtree
+    orig_st = os.lstat(path)
+[2024-11-21 05:20:13,492: WARNING/MainProcess] FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pymp-s8dh0xrt'
 /root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
 absolutely not recommended!
 
@@ -6,125 +20,925 @@ Please specify a different user using the --uid option.
 User information: uid=0 euid=0 gid=0 egid=0
 
   warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
-[2024-11-19 09:58:25,484: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
-[2024-11-19 09:58:25,535: INFO/MainProcess] alerts-node@ph ready.
-[2024-11-20 03:25:09,251: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6fe6d7a3-c5e1-4154-8096-857149f0db31]  
-[2024-11-20 03:25:09,361: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ee98f4bd-e5fd-4431-947c-df4952a33d9b]  
-[2024-11-20 03:25:09,375: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b11d779e-9b9f-4476-bd2b-145c0a3c5dcb]  
-[2024-11-20 03:25:09,384: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2b9ff262-eb77-4862-be88-448fc5bb840d]  
-[2024-11-20 03:25:09,393: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3d34977b-91f4-424c-9fb0-2684b041e308]  
-[2024-11-20 03:25:09,454: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fcaf05b5-85c8-4df3-90cf-0afe3dc5b0d2]  
-[2024-11-20 03:25:09,541: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[295a7447-ad15-4e0e-adbd-8e2b535b955d]  
-[2024-11-20 03:25:09,645: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4b8e827e-9f28-47ba-a9b3-5fefbc59d95d]  
-[2024-11-20 03:25:09,785: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ee98f4bd-e5fd-4431-947c-df4952a33d9b] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
-    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'NoneType' object has no attribute 'replace'
-[2024-11-20 03:25:09,836: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b11d779e-9b9f-4476-bd2b-145c0a3c5dcb] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
-    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'NoneType' object has no attribute 'replace'
-[2024-11-20 03:25:09,835: ERROR/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[6fe6d7a3-c5e1-4154-8096-857149f0db31] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
-    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'NoneType' object has no attribute 'replace'
-[2024-11-20 03:25:09,859: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3356a5ca-b7c3-4f6d-b724-1adc49791a88]  
-[2024-11-20 03:25:09,886: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[2b9ff262-eb77-4862-be88-448fc5bb840d] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
-    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'NoneType' object has no attribute 'replace'
-[2024-11-20 03:25:09,908: ERROR/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3d34977b-91f4-424c-9fb0-2684b041e308] raised unexpected: AttributeError("'NoneType' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 54, in telegram_alert_vuln_task
-    f"*CVSSv3 Vector:* {escape_markdown(vuln.cvss3_vector)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'NoneType' object has no attribute 'replace'
-[2024-11-20 03:25:09,937: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4ed53e4d-8c83-44b8-bd05-831dc84623be]  
-[2024-11-20 03:25:09,944: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[fcaf05b5-85c8-4df3-90cf-0afe3dc5b0d2] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
-    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'float' object has no attribute 'replace'
-[2024-11-20 03:25:09,949: ERROR/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[295a7447-ad15-4e0e-adbd-8e2b535b955d] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
-    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'float' object has no attribute 'replace'
-[2024-11-20 03:25:09,991: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4b8e827e-9f28-47ba-a9b3-5fefbc59d95d] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
-    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'float' object has no attribute 'replace'
-[2024-11-20 03:25:10,008: ERROR/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3356a5ca-b7c3-4f6d-b724-1adc49791a88] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
-    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'float' object has no attribute 'replace'
-[2024-11-20 03:25:10,042: ERROR/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4ed53e4d-8c83-44b8-bd05-831dc84623be] raised unexpected: AttributeError("'float' object has no attribute 'replace'")
-Traceback (most recent call last):
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 385, in trace_task
-    R = retval = fun(*args, **kwargs)
-  File "/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/app/trace.py", line 650, in __protected_call__
-    return self.run(*args, **kwargs)
-  File "/root/PatrowlHears/backend_app/alerts/tasks.py", line 55, in telegram_alert_vuln_task
-    f"*CVSSv3 Score:* {escape_markdown(vuln.cvss3)}\n"
-  File "/root/PatrowlHears/backend_app/alerts/utils.py", line 40, in escape_markdown
-    text = text.replace(char, f"\{char}")
-AttributeError: 'float' object has no attribute 'replace'
+[2024-11-21 05:20:33,211: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-21 05:20:33,296: INFO/MainProcess] alerts-node@ph ready.
+
+worker: Warm shutdown (MainProcess)
+[2024-11-21 05:39:46,647: WARNING/MainProcess] Traceback (most recent call last):
+[2024-11-21 05:39:46,651: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+[2024-11-21 05:39:46,652: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+[2024-11-21 05:39:46,652: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 133, in _remove_temp_dir
+    rmtree(tempdir)
+[2024-11-21 05:39:46,652: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/shutil.py", line 724, in rmtree
+    onerror(os.lstat, path, sys.exc_info())
+[2024-11-21 05:39:46,652: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/shutil.py", line 722, in rmtree
+    orig_st = os.lstat(path)
+[2024-11-21 05:39:46,652: WARNING/MainProcess] FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pymp-ur4uahpo'
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-21 05:40:05,442: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-21 05:40:05,498: INFO/MainProcess] alerts-node@ph ready.
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-21 18:33:52,549: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-21 18:33:52,625: INFO/MainProcess] alerts-node@ph ready.
+[2024-11-22 12:50:28,727: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0a5e0e22-3655-4c2b-a189-a882c9f25faa]  
+[2024-11-22 12:50:28,981: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f37fb5ae-f706-4b93-88e5-64c054eead09]  
+[2024-11-22 12:50:29,052: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[eae49384-c2bc-4654-a3a7-32cdd125d954]  
+[2024-11-22 12:50:29,063: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[57e175b0-8f31-4781-96d2-ce7058f77263]  
+[2024-11-22 12:50:29,063: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[90505704-5b97-489f-a8fb-7a274c654e7b]  
+[2024-11-22 12:50:29,064: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2210d24d-7be7-4bf1-b3b5-c620bfe891e3]  
+[2024-11-22 12:50:29,065: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[40972b02-d3cf-4570-8abe-85f52c8709ac]  
+[2024-11-22 12:50:29,065: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2fc2dc80-dcf8-42ec-a8f3-29aa3d7470ae]  
+[2024-11-22 12:50:30,476: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[f37fb5ae-f706-4b93-88e5-64c054eead09] succeeded in 1.4153665939957136s: None
+[2024-11-22 12:50:30,494: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[94945f9e-496e-4023-9f78-87040cfe01af]  
+[2024-11-22 12:50:30,507: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[0a5e0e22-3655-4c2b-a189-a882c9f25faa] succeeded in 1.4093874829995912s: None
+[2024-11-22 12:50:30,518: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d69c737c-5931-44d8-bd2b-db6115c769fd]  
+[2024-11-22 12:50:31,781: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[57e175b0-8f31-4781-96d2-ce7058f77263] succeeded in 1.2589843199966708s: None
+[2024-11-22 12:50:31,786: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6a204612-5088-45a8-ab88-32602f3977ac]  
+[2024-11-22 12:50:32,107: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[eae49384-c2bc-4654-a3a7-32cdd125d954] succeeded in 1.5968464239995228s: None
+[2024-11-22 12:50:32,113: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[60e636ad-f54c-4704-bab5-f61d115ded46]  
+[2024-11-22 12:50:32,977: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[90505704-5b97-489f-a8fb-7a274c654e7b] succeeded in 1.1878921890020138s: None
+[2024-11-22 12:50:32,983: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f551b758-b17e-4ed9-a4e6-a2951d4078e5]  
+[2024-11-22 12:50:33,098: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[2210d24d-7be7-4bf1-b3b5-c620bfe891e3] succeeded in 0.9841058869933477s: None
+[2024-11-22 12:50:33,105: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f4cfeef2-72b4-4459-a573-e93d57babde0]  
+[2024-11-22 12:50:34,319: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[2fc2dc80-dcf8-42ec-a8f3-29aa3d7470ae] succeeded in 1.2123080110031879s: None
+[2024-11-22 12:50:34,327: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7daca689-93d9-4bf5-97f4-f90ae87f9bd3]  
+[2024-11-22 12:50:34,433: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[40972b02-d3cf-4570-8abe-85f52c8709ac] succeeded in 1.4515659000026062s: None
+[2024-11-22 12:50:34,443: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[19401a43-92cc-4559-9c0b-f3b85c273362]  
+[2024-11-22 12:50:35,569: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[94945f9e-496e-4023-9f78-87040cfe01af] succeeded in 1.2423962709872285s: None
+[2024-11-22 12:50:35,571: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[eb14066b-aea0-4c19-8a09-b7330df34500]  
+[2024-11-22 12:50:35,753: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[d69c737c-5931-44d8-bd2b-db6115c769fd] succeeded in 1.3152316550113028s: None
+[2024-11-22 12:50:35,755: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[24855d41-68ad-4f39-9557-8bb812a9b32e]  
+[2024-11-22 12:50:36,526: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[6a204612-5088-45a8-ab88-32602f3977ac] succeeded in 0.954426398006035s: None
+[2024-11-22 12:50:36,528: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ba53e7c9-c882-4f5e-b8b1-5e2fef636f85]  
+[2024-11-22 12:50:36,571: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[60e636ad-f54c-4704-bab5-f61d115ded46] succeeded in 0.8158420290128561s: None
+[2024-11-22 12:50:36,577: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4721a00d-edf1-41fe-839a-18ff7661209c]  
+[2024-11-22 12:50:37,387: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[f4cfeef2-72b4-4459-a573-e93d57babde0] succeeded in 0.8102579740079818s: None
+[2024-11-22 12:50:37,391: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8fe50d0f-c1b5-4d7e-aaa6-5a9281905b71]  
+[2024-11-22 12:50:37,716: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[f551b758-b17e-4ed9-a4e6-a2951d4078e5] succeeded in 1.1869591809954727s: None
+[2024-11-22 12:50:37,720: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[660b4c8e-d03e-41fa-ac80-c22d9754bc07]  
+[2024-11-22 12:50:38,390: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[7daca689-93d9-4bf5-97f4-f90ae87f9bd3] succeeded in 0.9976006710057845s: None
+[2024-11-22 12:50:38,402: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[db6899e3-6eb5-4232-8fc9-25e2d17f0b41]  
+[2024-11-22 12:50:38,806: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[19401a43-92cc-4559-9c0b-f3b85c273362] succeeded in 1.0848812309995992s: None
+[2024-11-22 12:50:38,813: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a2e4f4ea-ab04-447c-9e98-6b13e453b98e]  
+[2024-11-22 12:50:39,871: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[eb14066b-aea0-4c19-8a09-b7330df34500] succeeded in 1.46714838600019s: None
+[2024-11-22 12:50:39,879: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[bc731e99-c616-47f1-b5c8-a9774607924d]  
+[2024-11-22 12:50:40,017: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[24855d41-68ad-4f39-9557-8bb812a9b32e] succeeded in 1.1973375380039215s: None
+[2024-11-22 12:50:40,021: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[be012349-29e4-40e4-ad5c-cef6f48ea3d2]  
+[2024-11-22 12:50:40,867: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ba53e7c9-c882-4f5e-b8b1-5e2fef636f85] succeeded in 0.9876236090058228s: None
+[2024-11-22 12:50:40,874: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7342a2d7-a539-4a10-ac47-9026a5ee6934]  
+[2024-11-22 12:50:41,145: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4721a00d-edf1-41fe-839a-18ff7661209c] succeeded in 1.1229553719895193s: None
+[2024-11-22 12:50:41,161: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[993231ea-cecc-4a66-b4d0-5ecdb3c4b006]  
+[2024-11-22 12:50:41,757: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[8fe50d0f-c1b5-4d7e-aaa6-5a9281905b71] succeeded in 0.8817979349987581s: None
+[2024-11-22 12:50:41,772: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[77c86629-fb28-4e2f-b36a-5cece5499ee9]  
+[2024-11-22 12:50:42,076: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[660b4c8e-d03e-41fa-ac80-c22d9754bc07] succeeded in 0.9130339520052075s: None
+[2024-11-22 12:50:42,080: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[960ea869-756a-4147-b894-c1d7d764556f]  
+[2024-11-22 12:50:42,801: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[db6899e3-6eb5-4232-8fc9-25e2d17f0b41] succeeded in 1.0404439849953633s: None
+[2024-11-22 12:50:42,804: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3b096fdb-6e8f-42ff-b8c3-8672f0eee9c2]  
+[2024-11-22 12:50:42,909: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[a2e4f4ea-ab04-447c-9e98-6b13e453b98e] succeeded in 0.8276968939899234s: None
+[2024-11-22 12:50:42,912: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3c2cc229-7b38-40d4-99fd-eeb25aecaf1f]  
+[2024-11-22 12:50:43,622: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[bc731e99-c616-47f1-b5c8-a9774607924d] succeeded in 0.8181075079919538s: None
+[2024-11-22 12:50:43,624: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[61e626a0-3db2-4f53-b115-5f981f78200b]  
+[2024-11-22 12:50:43,705: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[be012349-29e4-40e4-ad5c-cef6f48ea3d2] succeeded in 0.7953333699988434s: None
+[2024-11-22 12:50:43,708: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4d275f69-eebd-4fe2-bad2-c7739928f40f]  
+[2024-11-22 12:50:44,483: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[7342a2d7-a539-4a10-ac47-9026a5ee6934] succeeded in 0.8593998699943768s: None
+[2024-11-22 12:50:44,485: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2d8e2a18-133d-481c-9d65-59bd1cf9a830]  
+[2024-11-22 12:50:44,616: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[993231ea-cecc-4a66-b4d0-5ecdb3c4b006] succeeded in 0.9082476500043413s: None
+[2024-11-22 12:50:44,618: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3b9e6372-05d2-4f90-a3d7-256b73491662]  
+[2024-11-22 12:50:45,487: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[960ea869-756a-4147-b894-c1d7d764556f] succeeded in 0.8698602029908216s: None
+[2024-11-22 12:50:45,489: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[32f843ad-584c-4d90-a9aa-513df0c6709b]  
+[2024-11-22 12:50:45,909: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[77c86629-fb28-4e2f-b36a-5cece5499ee9] succeeded in 1.4246891829970991s: None
+[2024-11-22 12:50:45,912: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e6e0857d-5013-4514-9008-29334c00d113]  
+[2024-11-22 12:50:46,323: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[3b096fdb-6e8f-42ff-b8c3-8672f0eee9c2] succeeded in 0.8344186980102677s: None
+[2024-11-22 12:50:46,326: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d0d618ad-a786-430d-a4de-81f87691dd6a]  
+[2024-11-22 12:50:46,923: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3c2cc229-7b38-40d4-99fd-eeb25aecaf1f] succeeded in 1.0128483620064799s: None
+[2024-11-22 12:50:46,926: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[bfa830ce-c28b-4a67-bbeb-0447d80a1fd3]  
+[2024-11-22 12:50:47,413: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[61e626a0-3db2-4f53-b115-5f981f78200b] succeeded in 1.0885715640033595s: None
+[2024-11-22 12:50:47,416: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c61f6cd8-620f-4bc3-92eb-8e1966db65dc]  
+[2024-11-22 12:50:47,901: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[4d275f69-eebd-4fe2-bad2-c7739928f40f] succeeded in 0.9738899860094534s: None
+[2024-11-22 12:50:47,904: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[435437d1-3e40-44bc-a9cb-d17ff4bb9cff]  
+[2024-11-22 12:50:48,396: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[2d8e2a18-133d-481c-9d65-59bd1cf9a830] succeeded in 0.9796504850091878s: None
+[2024-11-22 12:50:48,401: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0099a880-9fdf-46d5-9a6e-605eee883d2c]  
+[2024-11-22 12:50:48,857: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3b9e6372-05d2-4f90-a3d7-256b73491662] succeeded in 0.9545808609982487s: None
+[2024-11-22 12:50:48,861: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[52be48bc-9bb2-445a-8297-1d53a187ae41]  
+[2024-11-22 12:50:49,387: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[32f843ad-584c-4d90-a9aa-513df0c6709b] succeeded in 0.9887187849963084s: None
+[2024-11-22 12:50:49,391: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7e67d81b-15d0-4d81-b0eb-97de663cdc02]  
+[2024-11-22 12:50:49,840: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e6e0857d-5013-4514-9008-29334c00d113] succeeded in 0.9793487470014952s: None
+[2024-11-22 12:50:49,843: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[747a9c1e-ea5d-4639-a009-5fdf749fac63]  
+[2024-11-22 12:50:50,184: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[d0d618ad-a786-430d-a4de-81f87691dd6a] succeeded in 0.7928460910043214s: None
+[2024-11-22 12:50:50,186: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e912f1b6-f544-488e-88f7-4c49afc0ff38]  
+[2024-11-22 12:50:50,827: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[bfa830ce-c28b-4a67-bbeb-0447d80a1fd3] succeeded in 0.9838478949968703s: None
+[2024-11-22 12:50:50,834: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[664cac69-7d64-4c77-886a-2e281973effb]  
+[2024-11-22 12:50:50,982: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c61f6cd8-620f-4bc3-92eb-8e1966db65dc] succeeded in 0.7962431650084909s: None
+[2024-11-22 12:50:50,984: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[27dcb8ac-d1a5-4052-a1c9-d00d3488e320]  
+[2024-11-22 12:50:51,629: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[435437d1-3e40-44bc-a9cb-d17ff4bb9cff] succeeded in 0.8001635999971768s: None
+[2024-11-22 12:50:51,635: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[934a51dd-901d-4265-b3d6-335768a3df52]  
+[2024-11-22 12:50:51,771: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0099a880-9fdf-46d5-9a6e-605eee883d2c] succeeded in 0.787647024000762s: None
+[2024-11-22 12:50:51,773: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6b3cc2f5-dd39-4a14-bdcb-ff89f6f9a313]  
+[2024-11-22 12:50:52,731: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[52be48bc-9bb2-445a-8297-1d53a187ae41] succeeded in 1.0972059049963718s: None
+[2024-11-22 12:50:52,736: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[37d74c5a-1862-42d7-8bd7-353c08e8277b]  
+[2024-11-22 12:50:52,764: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[7e67d81b-15d0-4d81-b0eb-97de663cdc02] succeeded in 0.990807025009417s: None
+[2024-11-22 12:50:52,766: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[20327335-f1a5-42dc-9612-c9a2a2e5e72b]  
+[2024-11-22 12:50:53,689: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[747a9c1e-ea5d-4639-a009-5fdf749fac63] succeeded in 0.9533053359918995s: None
+[2024-11-22 12:50:53,691: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d4ed3afd-e492-447c-bec0-15371194de5a]  
+[2024-11-22 12:50:53,888: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[e912f1b6-f544-488e-88f7-4c49afc0ff38] succeeded in 1.1224218159914017s: None
+[2024-11-22 12:50:53,892: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0db33b65-c345-4340-9001-4d7107159260]  
+[2024-11-22 12:50:54,502: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[664cac69-7d64-4c77-886a-2e281973effb] succeeded in 0.8118566960038152s: None
+[2024-11-22 12:50:54,506: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e15c86e4-8d07-4c59-8280-c340288f5e41]  
+[2024-11-22 12:50:54,951: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[27dcb8ac-d1a5-4052-a1c9-d00d3488e320] succeeded in 1.0588752050098265s: None
+[2024-11-22 12:50:54,965: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d97158e5-2a8b-467f-90b5-f08a2d5a8420]  
+[2024-11-22 12:50:55,391: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[934a51dd-901d-4265-b3d6-335768a3df52] succeeded in 0.8851978380116634s: None
+[2024-11-22 12:50:55,393: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e4047932-357c-4eb9-88ff-69ebae6fb158]  
+[2024-11-22 12:50:55,963: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[6b3cc2f5-dd39-4a14-bdcb-ff89f6f9a313] succeeded in 0.9975046659965301s: None
+[2024-11-22 12:50:55,965: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a5886e05-6556-4782-b479-7ddc196e065a]  
+[2024-11-22 12:50:56,369: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[37d74c5a-1862-42d7-8bd7-353c08e8277b] succeeded in 0.9765387340012239s: None
+[2024-11-22 12:50:56,373: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2a11af28-8310-4731-a284-90f7aa78f59b]  
+[2024-11-22 12:50:56,770: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[20327335-f1a5-42dc-9612-c9a2a2e5e72b] succeeded in 0.8039461290027248s: None
+[2024-11-22 12:50:56,775: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ded877c4-0f75-4ff5-a4ba-f3a46d28ec13]  
+[2024-11-22 12:50:57,456: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[d4ed3afd-e492-447c-bec0-15371194de5a] succeeded in 1.0825572930043563s: None
+[2024-11-22 12:50:57,459: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8b968dd1-6866-474d-9185-3597f56691ab]  
+[2024-11-22 12:50:57,865: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0db33b65-c345-4340-9001-4d7107159260] succeeded in 1.0924296870070975s: None
+[2024-11-22 12:50:57,869: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2e354b22-e45a-498e-b8f3-88d61791cb81]  
+[2024-11-22 12:50:58,694: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[d97158e5-2a8b-467f-90b5-f08a2d5a8420] succeeded in 0.8249745509965578s: None
+[2024-11-22 12:50:58,695: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[09ef6927-c7cd-4200-a7e7-ed722ce3915f]  
+[2024-11-22 12:50:58,805: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e15c86e4-8d07-4c59-8280-c340288f5e41] succeeded in 1.347227306003333s: None
+[2024-11-22 12:50:58,810: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[dbca0ab1-33c1-472a-ba8f-6f40c2469de9]  
+[2024-11-22 12:50:59,904: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[a5886e05-6556-4782-b479-7ddc196e065a] succeeded in 1.0960529629956s: None
+[2024-11-22 12:50:59,907: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[adc89ce0-c2a2-4061-b6e4-b2584e4f09fb]  
+[2024-11-22 12:51:00,116: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[e4047932-357c-4eb9-88ff-69ebae6fb158] succeeded in 1.4216021809988888s: None
+[2024-11-22 12:51:00,122: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c4f3605c-bf03-4a65-80f2-c6e7ac813594]  
+[2024-11-22 12:51:00,972: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2a11af28-8310-4731-a284-90f7aa78f59b] succeeded in 1.0653908500098623s: None
+[2024-11-22 12:51:00,977: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[795c1fc4-c5ff-4491-a78e-83426dc310b5]  
+[2024-11-22 12:51:01,101: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ded877c4-0f75-4ff5-a4ba-f3a46d28ec13] succeeded in 0.9820575419871602s: None
+[2024-11-22 12:51:01,105: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[29969bf6-54ec-4e61-9c5d-46e99621cd8c]  
+[2024-11-22 12:51:01,968: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[8b968dd1-6866-474d-9185-3597f56691ab] succeeded in 0.9941347359999781s: None
+[2024-11-22 12:51:01,970: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ce2c5d0d-0fe4-454c-9fc4-7f583b2266b0]  
+[2024-11-22 12:51:02,076: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[2e354b22-e45a-498e-b8f3-88d61791cb81] succeeded in 0.9718646289984463s: None
+[2024-11-22 12:51:02,079: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b8fcd522-aec4-4f48-b000-9bf6f598c5a8]  
+[2024-11-22 12:51:02,759: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[09ef6927-c7cd-4200-a7e7-ed722ce3915f] succeeded in 0.7886815439997008s: None
+[2024-11-22 12:51:02,763: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a14501ba-e97e-48bc-927c-e0b17268db89]  
+[2024-11-22 12:51:03,121: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[dbca0ab1-33c1-472a-ba8f-6f40c2469de9] succeeded in 1.0410222750069806s: None
+[2024-11-22 12:51:03,122: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[33b26bc7-4fb2-442b-9cdc-02f27133ed0f]  
+[2024-11-22 12:51:03,745: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[adc89ce0-c2a2-4061-b6e4-b2584e4f09fb] succeeded in 0.9833314050047193s: None
+[2024-11-22 12:51:03,749: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[498ba47c-25b0-43c3-8ee2-d7de2edda886]  
+[2024-11-22 12:51:04,521: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c4f3605c-bf03-4a65-80f2-c6e7ac813594] succeeded in 1.3993095499899937s: None
+[2024-11-22 12:51:04,525: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[18ad8b96-c349-4935-a3e8-24afbcbe1dbe]  
+[2024-11-22 12:51:04,807: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[795c1fc4-c5ff-4491-a78e-83426dc310b5] succeeded in 1.0596980700065615s: None
+[2024-11-22 12:51:04,809: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[860f15c1-7fdb-4f0c-8239-310b5cb6cfaa]  
+[2024-11-22 12:51:05,349: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[29969bf6-54ec-4e61-9c5d-46e99621cd8c] succeeded in 0.8247989380033687s: None
+[2024-11-22 12:51:05,351: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[074880af-f4a6-4774-9a5d-d79cbad6896f]  
+[2024-11-22 12:51:05,744: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ce2c5d0d-0fe4-454c-9fc4-7f583b2266b0] succeeded in 0.9350656589958817s: None
+[2024-11-22 12:51:05,746: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e9206963-69be-4c40-84a7-e0b173e09633]  
+[2024-11-22 12:51:06,580: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b8fcd522-aec4-4f48-b000-9bf6f598c5a8] succeeded in 1.2286969419947127s: None
+[2024-11-22 12:51:06,583: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a21c931e-f194-4ef9-876a-66c1f393214d]  
+[2024-11-22 12:51:06,640: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[a14501ba-e97e-48bc-927c-e0b17268db89] succeeded in 0.8946427769988077s: None
+[2024-11-22 12:51:06,642: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8d722fd7-bef7-4716-bf7c-9d249847f772]  
+[2024-11-22 12:51:07,414: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[33b26bc7-4fb2-442b-9cdc-02f27133ed0f] succeeded in 0.8322763070027577s: None
+[2024-11-22 12:51:07,419: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3352a7e7-aa89-4cf4-b9c0-fb772fc3c807]  
+[2024-11-22 12:51:07,626: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[498ba47c-25b0-43c3-8ee2-d7de2edda886] succeeded in 0.9847330870106816s: None
+[2024-11-22 12:51:07,630: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[cee6bda4-f174-41b1-bb2d-489f0ce56ac9]  
+[2024-11-22 12:51:08,441: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[860f15c1-7fdb-4f0c-8239-310b5cb6cfaa] succeeded in 0.8111322129989276s: None
+[2024-11-22 12:51:08,443: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b5ab9087-c5ee-4a47-a3da-29f61df52e4b]  
+[2024-11-22 12:51:08,489: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[18ad8b96-c349-4935-a3e8-24afbcbe1dbe] succeeded in 1.0719068639882607s: None
+[2024-11-22 12:51:08,493: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e344c7f9-499c-4330-bb8a-68f671cbdd41]  
+[2024-11-22 12:51:09,241: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[074880af-f4a6-4774-9a5d-d79cbad6896f] succeeded in 0.7988132139871595s: None
+[2024-11-22 12:51:09,244: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d0c7c072-738f-41bb-9193-f09cba71b04a]  
+[2024-11-22 12:51:09,317: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[e9206963-69be-4c40-84a7-e0b173e09633] succeeded in 0.8249920689995633s: None
+[2024-11-22 12:51:09,321: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[48ee1c79-869d-4588-aaaf-51147e5911d1]  
+[2024-11-22 12:51:10,112: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[8d722fd7-bef7-4716-bf7c-9d249847f772] succeeded in 0.793496205995325s: None
+[2024-11-22 12:51:10,116: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b6565733-79df-4808-9ee3-6a9673cc86ab]  
+[2024-11-22 12:51:10,220: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[a21c931e-f194-4ef9-876a-66c1f393214d] succeeded in 0.9777442979975604s: None
+[2024-11-22 12:51:10,225: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[aa40efaa-b3fa-4ca4-9262-143fda3f12c5]  
+[2024-11-22 12:51:11,021: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[cee6bda4-f174-41b1-bb2d-489f0ce56ac9] succeeded in 0.7977166700002272s: None
+[2024-11-22 12:51:11,024: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2d7960c3-68a9-41d8-9cc1-068a8807ee71]  
+[2024-11-22 12:51:11,196: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[3352a7e7-aa89-4cf4-b9c0-fb772fc3c807] succeeded in 1.0794243139971513s: None
+[2024-11-22 12:51:11,201: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6d723a6c-6b6a-4d94-ae1c-d2cb6409ed4d]  
+[2024-11-22 12:51:11,838: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b5ab9087-c5ee-4a47-a3da-29f61df52e4b] succeeded in 0.8145136710081715s: None
+[2024-11-22 12:51:11,842: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d746203f-b6f0-4876-9e91-97363df57ecb]  
+[2024-11-22 12:51:11,997: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[e344c7f9-499c-4330-bb8a-68f671cbdd41] succeeded in 0.798784844999318s: None
+[2024-11-22 12:51:12,001: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[edfc7d8d-0f37-4af9-8d46-e22a16f072da]  
+[2024-11-22 12:51:12,623: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[d0c7c072-738f-41bb-9193-f09cba71b04a] succeeded in 0.7816629529988859s: None
+[2024-11-22 12:51:12,625: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fedeb3ed-251d-429e-95d4-52573514a043]  
+[2024-11-22 12:51:12,968: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[48ee1c79-869d-4588-aaaf-51147e5911d1] succeeded in 0.9691337539989036s: None
+[2024-11-22 12:51:12,972: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1807c590-eaf8-4608-b376-fdd683653ec8]  
+[2024-11-22 12:51:13,596: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b6565733-79df-4808-9ee3-6a9673cc86ab] succeeded in 0.970373953008675s: None
+[2024-11-22 12:51:13,600: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e1f9eb3e-4036-4148-be9d-2a1697c4574c]  
+[2024-11-22 12:51:14,320: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[aa40efaa-b3fa-4ca4-9262-143fda3f12c5] succeeded in 1.3495682520006085s: None
+[2024-11-22 12:51:14,323: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[10d6458a-2f73-4a44-96b0-81e942a435f4]  
+[2024-11-22 12:51:14,383: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2d7960c3-68a9-41d8-9cc1-068a8807ee71] succeeded in 0.7851261489995522s: None
+[2024-11-22 12:51:14,385: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[498c4757-138a-4f92-bd45-300f5375b096]  
+[2024-11-22 12:51:15,118: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[6d723a6c-6b6a-4d94-ae1c-d2cb6409ed4d] succeeded in 0.7951906959933694s: None
+[2024-11-22 12:51:15,122: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9332bf46-b79d-473c-bea8-53425b5c8c42]  
+[2024-11-22 12:51:15,183: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[d746203f-b6f0-4876-9e91-97363df57ecb] succeeded in 0.7974763399979565s: None
+[2024-11-22 12:51:15,187: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[50c82850-26d3-4b39-9e2a-14faf2c71152]  
+[2024-11-22 12:51:16,084: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[edfc7d8d-0f37-4af9-8d46-e22a16f072da] succeeded in 0.9639797379932133s: None
+[2024-11-22 12:51:16,088: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9b33e16b-105b-41f9-b95b-7ca7aa4e81bd]  
+[2024-11-22 12:51:16,159: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[fedeb3ed-251d-429e-95d4-52573514a043] succeeded in 0.9724309340090258s: None
+[2024-11-22 12:51:16,163: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f269a157-3a44-4f81-91c6-c67c376e9e41]  
+[2024-11-22 12:51:16,901: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[1807c590-eaf8-4608-b376-fdd683653ec8] succeeded in 0.813260751994676s: None
+[2024-11-22 12:51:16,906: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fa0ea0b1-ca62-4f2c-b729-aa3c92ca17c6]  
+[2024-11-22 12:51:17,130: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e1f9eb3e-4036-4148-be9d-2a1697c4574c] succeeded in 0.9682059500046307s: None
+[2024-11-22 12:51:17,135: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8f3dff51-9b6e-43a4-b76d-a060c68fcada]  
+[2024-11-22 12:51:18,118: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[498c4757-138a-4f92-bd45-300f5375b096] succeeded in 0.9838937950116815s: None
+[2024-11-22 12:51:18,120: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[27d8eee2-e770-4a9f-bcf4-b9686f15878a]  
+[2024-11-22 12:51:18,254: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[10d6458a-2f73-4a44-96b0-81e942a435f4] succeeded in 1.3502253430051496s: None
+[2024-11-22 12:51:18,257: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ded69ac4-88cd-4ddd-b3c5-5a982f7c150b]  
+[2024-11-22 12:51:19,187: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9332bf46-b79d-473c-bea8-53425b5c8c42] succeeded in 1.0661772410094272s: None
+[2024-11-22 12:51:19,191: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[96f9dbf3-6035-4b3e-ba11-8f407e96f49e]  
+[2024-11-22 12:51:19,650: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[50c82850-26d3-4b39-9e2a-14faf2c71152] succeeded in 1.39227946200117s: None
+[2024-11-22 12:51:19,654: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[59d11db1-b922-478e-9a36-a7ddecae4bbc]  
+[2024-11-22 12:51:20,212: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9b33e16b-105b-41f9-b95b-7ca7aa4e81bd] succeeded in 1.02303937500983s: None
+[2024-11-22 12:51:20,214: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3da8d126-6068-4e78-85a8-405a2b63ea1f]  
+[2024-11-22 12:51:20,412: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[f269a157-3a44-4f81-91c6-c67c376e9e41] succeeded in 0.7606146659963997s: None
+[2024-11-22 12:51:20,421: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c3b10b99-98a2-4a0c-b749-b5235208c9d0]  
+[2024-11-22 12:51:20,986: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[fa0ea0b1-ca62-4f2c-b729-aa3c92ca17c6] succeeded in 0.7722735220013419s: None
+[2024-11-22 12:51:20,989: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c31ebeb4-95e7-4016-afe2-571cb09b784a]  
+[2024-11-22 12:51:21,184: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[8f3dff51-9b6e-43a4-b76d-a060c68fcada] succeeded in 0.7668412960047135s: None
+[2024-11-22 12:51:21,185: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[263d8532-cf91-47ea-8adf-5963485686e3]  
+[2024-11-22 12:51:21,752: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[27d8eee2-e770-4a9f-bcf4-b9686f15878a] succeeded in 0.7617824780027149s: None
+[2024-11-22 12:51:21,753: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[119731d1-2917-46e5-a4c6-c6038a05c522]  
+[2024-11-22 12:51:21,949: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ded69ac4-88cd-4ddd-b3c5-5a982f7c150b] succeeded in 0.7632828329951735s: None
+[2024-11-22 12:51:21,951: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[18252d3b-57ab-4f12-8f34-36a40041c841]  
+[2024-11-22 12:51:22,551: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[96f9dbf3-6035-4b3e-ba11-8f407e96f49e] succeeded in 0.7967471790034324s: None
+[2024-11-22 12:51:22,553: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[99f2492b-d431-4d68-8d34-7e01f69af18f]  
+[2024-11-22 12:51:22,730: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[59d11db1-b922-478e-9a36-a7ddecae4bbc] succeeded in 0.7797064129990758s: None
+[2024-11-22 12:51:22,733: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[23512526-7a7b-44f6-96f1-68b0e6177997]  
+[2024-11-22 12:51:23,610: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3da8d126-6068-4e78-85a8-405a2b63ea1f] succeeded in 1.0560644079960184s: None
+[2024-11-22 12:51:23,611: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[aec71e71-64e9-424a-81cf-bc87e30badbd]  
+[2024-11-22 12:51:23,628: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c3b10b99-98a2-4a0c-b749-b5235208c9d0] succeeded in 0.8947973540052772s: None
+[2024-11-22 12:51:23,631: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[dd049472-881a-4cd7-ab70-5504691c4e1b]  
+[2024-11-22 12:51:24,366: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[c31ebeb4-95e7-4016-afe2-571cb09b784a] succeeded in 0.7546140780032147s: None
+[2024-11-22 12:51:24,370: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fbd6a81c-a143-4600-84a0-4f9388a8b216]  
+[2024-11-22 12:51:24,387: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[263d8532-cf91-47ea-8adf-5963485686e3] succeeded in 0.7574884459900204s: None
+[2024-11-22 12:51:24,389: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7cf53fd2-d8bf-4284-9ca7-5f4fd80a51d5]  
+[2024-11-22 12:51:25,132: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[119731d1-2917-46e5-a4c6-c6038a05c522] succeeded in 0.7633178550022421s: None
+[2024-11-22 12:51:25,136: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[04c53df2-75b9-4eda-8ef5-794f4124101f]  
+[2024-11-22 12:51:25,320: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[18252d3b-57ab-4f12-8f34-36a40041c841] succeeded in 0.9301584490021924s: None
+[2024-11-22 12:51:25,324: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[cef30811-03df-41d5-bed4-ec75a725bbb2]  
+[2024-11-22 12:51:26,069: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[99f2492b-d431-4d68-8d34-7e01f69af18f] succeeded in 0.9343979520053836s: None
+[2024-11-22 12:51:26,071: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[adf76732-432d-4469-a3e0-f4e56ac061c4]  
+[2024-11-22 12:51:26,722: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[23512526-7a7b-44f6-96f1-68b0e6177997] succeeded in 1.399384270000155s: None
+[2024-11-22 12:51:26,726: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ba94ea93-f115-4f04-844b-691a18d9e054]  
+[2024-11-22 12:51:27,002: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[aec71e71-64e9-424a-81cf-bc87e30badbd] succeeded in 0.9315535799978534s: None
+[2024-11-22 12:51:27,005: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[412f4e81-8804-4f23-92d9-84dbcea20ed1]  
+[2024-11-22 12:51:27,503: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[dd049472-881a-4cd7-ab70-5504691c4e1b] succeeded in 0.7789194880024297s: None
+[2024-11-22 12:51:27,507: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3a211977-ebd3-47e4-91ca-76f224eedca5]  
+[2024-11-22 12:51:27,959: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[fbd6a81c-a143-4600-84a0-4f9388a8b216] succeeded in 0.9557491750019835s: None
+[2024-11-22 12:51:27,961: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c132ffa7-0af4-4320-98f3-aaa6d97217a1]  
+[2024-11-22 12:51:28,660: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[7cf53fd2-d8bf-4284-9ca7-5f4fd80a51d5] succeeded in 1.1540116149990354s: None
+[2024-11-22 12:51:28,663: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9210e464-780b-4c1d-9b90-2d2f18563db4]  
+[2024-11-22 12:51:28,704: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[04c53df2-75b9-4eda-8ef5-794f4124101f] succeeded in 0.7435932549997233s: None
+[2024-11-22 12:51:28,706: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[45e98320-424d-4500-badb-4dc6fd5c568a]  
+[2024-11-22 12:51:29,470: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[adf76732-432d-4469-a3e0-f4e56ac061c4] succeeded in 0.7641087859956315s: None
+[2024-11-22 12:51:29,472: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ad9cd266-b3e4-4653-96c6-ea6a692a2319]  
+[2024-11-22 12:51:29,733: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[cef30811-03df-41d5-bed4-ec75a725bbb2] succeeded in 1.0720530559920007s: None
+[2024-11-22 12:51:29,737: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0f87db8e-4342-4047-a609-9982eb98e586]  
+[2024-11-22 12:51:30,229: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ba94ea93-f115-4f04-844b-691a18d9e054] succeeded in 0.7575500889943214s: None
+[2024-11-22 12:51:30,233: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[bbce515f-f015-4348-a5f0-66fde0de8119]  
+[2024-11-22 12:51:30,771: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[412f4e81-8804-4f23-92d9-84dbcea20ed1] succeeded in 1.0359125590039184s: None
+[2024-11-22 12:51:30,774: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4339cfec-60d5-4733-b4da-faf7a78f1b4a]  
+[2024-11-22 12:51:31,305: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3a211977-ebd3-47e4-91ca-76f224eedca5] succeeded in 1.073978130996693s: None
+[2024-11-22 12:51:31,309: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[61b9ec4b-6947-48fd-9f90-69caf3ca1403]  
+[2024-11-22 12:51:31,746: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c132ffa7-0af4-4320-98f3-aaa6d97217a1] succeeded in 0.9728314640087774s: None
+[2024-11-22 12:51:31,748: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[630ed0bb-af1e-42aa-9d2d-f3dc4f2957e8]  
+[2024-11-22 12:51:32,242: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9210e464-780b-4c1d-9b90-2d2f18563db4] succeeded in 0.9334190530062187s: None
+[2024-11-22 12:51:32,244: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3426d7ec-2e0d-4f63-a8fd-98b8fa0eae49]  
+[2024-11-22 12:51:32,685: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[45e98320-424d-4500-badb-4dc6fd5c568a] succeeded in 0.9373683220037492s: None
+[2024-11-22 12:51:32,689: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5ac96e43-2fa1-4b87-b9d7-54c78719639d]  
+[2024-11-22 12:51:33,158: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ad9cd266-b3e4-4653-96c6-ea6a692a2319] succeeded in 0.9150417209893931s: None
+[2024-11-22 12:51:33,162: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7efe7f12-96ee-4e21-a060-5ed8a0b76a3d]  
+[2024-11-22 12:51:33,467: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0f87db8e-4342-4047-a609-9982eb98e586] succeeded in 0.7790682790073333s: None
+[2024-11-22 12:51:33,470: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a7c6a7e4-c1bd-499b-917b-fefe19764ecf]  
+[2024-11-22 12:51:33,917: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[bbce515f-f015-4348-a5f0-66fde0de8119] succeeded in 0.7557290630065836s: None
+[2024-11-22 12:51:33,919: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[449c021c-cd74-48fe-bc0b-2e38ccf966b4]  
+[2024-11-22 12:51:34,235: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4339cfec-60d5-4733-b4da-faf7a78f1b4a] succeeded in 0.7651374300039606s: None
+[2024-11-22 12:51:34,236: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5b92a91a-b089-484f-9ce0-7e9d17a69f1a]  
+[2024-11-22 12:51:35,189: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[630ed0bb-af1e-42aa-9d2d-f3dc4f2957e8] succeeded in 0.9528999890026171s: None
+[2024-11-22 12:51:35,193: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[be59a29a-7bf9-4b69-87a5-c75d92477910]  
+[2024-11-22 12:51:35,251: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[61b9ec4b-6947-48fd-9f90-69caf3ca1403] succeeded in 1.3321348299941747s: None
+[2024-11-22 12:51:35,254: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[433987d9-d14b-4252-aed0-1fd77ab53b1a]  
+[2024-11-22 12:51:36,214: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[5ac96e43-2fa1-4b87-b9d7-54c78719639d] succeeded in 0.9600541580002755s: None
+[2024-11-22 12:51:36,216: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9caebff1-cea9-4cc1-827d-f08961024d47]  
+[2024-11-22 12:51:36,508: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[3426d7ec-2e0d-4f63-a8fd-98b8fa0eae49] succeeded in 1.3171221709926613s: None
+[2024-11-22 12:51:36,511: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0edb85b4-d64c-4c95-b245-6743a7ad6df3]  
+[2024-11-22 12:51:37,151: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[7efe7f12-96ee-4e21-a060-5ed8a0b76a3d] succeeded in 0.9339658770040842s: None
+[2024-11-22 12:51:37,155: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3a455f33-14dd-4225-83c3-f86236440813]  
+[2024-11-22 12:51:37,889: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[a7c6a7e4-c1bd-499b-917b-fefe19764ecf] succeeded in 1.3795801009982824s: None
+[2024-11-22 12:51:37,894: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5ea03e84-be80-4495-a013-4e0998c3f2d1]  
+[2024-11-22 12:51:38,102: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[449c021c-cd74-48fe-bc0b-2e38ccf966b4] succeeded in 0.94713914199383s: None
+[2024-11-22 12:51:38,105: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c06eb640-b79e-43ac-993e-b0713bacbabc]  
+[2024-11-22 12:51:38,885: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[5b92a91a-b089-484f-9ce0-7e9d17a69f1a] succeeded in 0.9944532179943053s: None
+[2024-11-22 12:51:38,887: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6b10c81b-21ee-42d1-b1c9-25c9b9cb2364]  
+[2024-11-22 12:51:39,458: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[be59a29a-7bf9-4b69-87a5-c75d92477910] succeeded in 1.3549858979968121s: None
+[2024-11-22 12:51:39,460: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b1e36b2b-2572-4ffc-bf02-6706dc1f8215]  
+[2024-11-22 12:51:39,828: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[433987d9-d14b-4252-aed0-1fd77ab53b1a] succeeded in 0.940706722001778s: None
+[2024-11-22 12:51:39,830: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ce6e6c0d-6112-4c5b-b026-a4832c6a50f6]  
+[2024-11-22 12:51:40,404: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9caebff1-cea9-4cc1-827d-f08961024d47] succeeded in 0.9446304540033452s: None
+[2024-11-22 12:51:40,406: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b21f3300-3527-4e65-af1e-0466f628d2c7]  
+[2024-11-22 12:51:40,759: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0edb85b4-d64c-4c95-b245-6743a7ad6df3] succeeded in 0.9292690190050052s: None
+[2024-11-22 12:51:40,763: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[04f3bc8e-d945-4a7d-a6e6-e36c2a3fb3cb]  
+[2024-11-22 12:51:41,395: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3a455f33-14dd-4225-83c3-f86236440813] succeeded in 0.9892408429877833s: None
+[2024-11-22 12:51:41,398: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a86b5d66-7ab6-4169-9592-2695d15055e0]  
+[2024-11-22 12:51:41,689: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[5ea03e84-be80-4495-a013-4e0998c3f2d1] succeeded in 0.9276318459887989s: None
+[2024-11-22 12:51:41,691: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c04ceaae-b8c3-4d92-aeff-be48cc58ce4e]  
+[2024-11-22 12:51:42,360: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[c06eb640-b79e-43ac-993e-b0713bacbabc] succeeded in 0.9627492680010619s: None
+[2024-11-22 12:51:42,362: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[967f944e-0cf0-4643-ba4b-659f6310a956]  
+[2024-11-22 12:51:42,700: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[6b10c81b-21ee-42d1-b1c9-25c9b9cb2364] succeeded in 1.0089222240058007s: None
+[2024-11-22 12:51:42,704: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8350a4c8-a681-45d2-8dde-2d26f46ae052]  
+[2024-11-22 12:51:43,636: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ce6e6c0d-6112-4c5b-b026-a4832c6a50f6] succeeded in 0.9315888959972654s: None
+[2024-11-22 12:51:43,638: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[61251220-e86a-498c-833c-202271ee94f6]  
+[2024-11-22 12:51:43,689: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b1e36b2b-2572-4ffc-bf02-6706dc1f8215] succeeded in 1.3268522519938415s: None
+[2024-11-22 12:51:43,691: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[cfe870cc-cdc3-4fea-bee6-765f25167a9e]  
+[2024-11-22 12:51:44,579: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b21f3300-3527-4e65-af1e-0466f628d2c7] succeeded in 0.9408182869956363s: None
+[2024-11-22 12:51:44,583: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1b1a498c-d666-41b4-a43b-5b06681ffe3b]  
+[2024-11-22 12:51:45,027: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[04f3bc8e-d945-4a7d-a6e6-e36c2a3fb3cb] succeeded in 1.3348870269983308s: None
+[2024-11-22 12:51:45,031: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[35592cc6-bdb4-4b97-80e5-71711658d91e]  
+[2024-11-22 12:51:45,918: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[a86b5d66-7ab6-4169-9592-2695d15055e0] succeeded in 1.3370914480037754s: None
+[2024-11-22 12:51:45,921: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[bc554bd2-54e8-4da0-ba8f-c4914375b578]  
+[2024-11-22 12:51:45,961: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[c04ceaae-b8c3-4d92-aeff-be48cc58ce4e] succeeded in 0.9301040650025243s: None
+[2024-11-22 12:51:45,963: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8109bc27-8b54-4fab-97c6-a87db0d3b6b6]  
+[2024-11-22 12:51:46,894: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[967f944e-0cf0-4643-ba4b-659f6310a956] succeeded in 0.9741695270058699s: None
+[2024-11-22 12:51:46,898: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9a25ae2a-2e8d-462f-840e-f1c2e3cff78c]  
+[2024-11-22 12:51:46,917: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[8350a4c8-a681-45d2-8dde-2d26f46ae052] succeeded in 0.9528909490036312s: None
+[2024-11-22 12:51:46,919: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d5e9cf85-e3ff-4ede-93c6-a7c81894bbc8]  
+[2024-11-22 12:51:47,836: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[61251220-e86a-498c-833c-202271ee94f6] succeeded in 0.9382715920073679s: None
+[2024-11-22 12:51:47,839: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[16e9f3f5-fb9b-4c62-a143-0351ccb4c797]  
+[2024-11-22 12:51:47,845: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[cfe870cc-cdc3-4fea-bee6-765f25167a9e] succeeded in 0.9270558389980579s: None
+[2024-11-22 12:51:47,847: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4ca86b03-b5ab-4aad-89c8-a5084047bd60]  
+[2024-11-22 12:51:48,864: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[35592cc6-bdb4-4b97-80e5-71711658d91e] succeeded in 1.0165619990002597s: None
+[2024-11-22 12:51:48,868: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c7437988-b3dc-439a-af2e-4d06ad64e676]  
+[2024-11-22 12:51:48,875: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[1b1a498c-d666-41b4-a43b-5b06681ffe3b] succeeded in 1.035907548997784s: None
+[2024-11-22 12:51:48,878: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8d2028f1-a6ea-4f55-b376-867575ea92ff]  
+[2024-11-22 12:51:49,850: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[bc554bd2-54e8-4da0-ba8f-c4914375b578] succeeded in 0.9819337749941042s: None
+[2024-11-22 12:51:49,854: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f4bc4aff-9d8a-4afe-bad0-2f92887b00b9]  
+[2024-11-22 12:51:49,869: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[8109bc27-8b54-4fab-97c6-a87db0d3b6b6] succeeded in 0.9902436420088634s: None
+[2024-11-22 12:51:49,871: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[17dfeff2-88db-4544-b20e-ad8d04c3a135]  
+[2024-11-22 12:51:50,864: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[d5e9cf85-e3ff-4ede-93c6-a7c81894bbc8] succeeded in 0.9915009010001086s: None
+[2024-11-22 12:51:50,867: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[dd7c9129-52b7-4cff-9516-57015825213d]  
+[2024-11-22 12:51:50,935: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9a25ae2a-2e8d-462f-840e-f1c2e3cff78c] succeeded in 1.0800823640020099s: None
+[2024-11-22 12:51:50,938: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a62a9a9b-459f-464c-8659-16b4ddac9044]  
+[2024-11-22 12:51:51,838: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[16e9f3f5-fb9b-4c62-a143-0351ccb4c797] succeeded in 0.9695625399908749s: None
+[2024-11-22 12:51:51,841: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9a3a7338-a55c-41f5-9356-db8e576bc4d9]  
+[2024-11-22 12:51:51,879: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[4ca86b03-b5ab-4aad-89c8-a5084047bd60] succeeded in 0.9403144669922767s: None
+[2024-11-22 12:51:51,884: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[04193ec9-a290-4c65-a575-8351dd589074]  
+[2024-11-22 12:51:52,652: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[8d2028f1-a6ea-4f55-b376-867575ea92ff] succeeded in 0.7701197679998586s: None
+[2024-11-22 12:51:52,655: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4cd9cfe1-3f02-4d53-b0d9-0db18d971149]  
+[2024-11-22 12:51:53,155: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c7437988-b3dc-439a-af2e-4d06ad64e676] succeeded in 1.3143521720048739s: None
+[2024-11-22 12:51:53,586: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[f4bc4aff-9d8a-4afe-bad0-2f92887b00b9] succeeded in 0.9312001520011108s: None
+[2024-11-22 12:51:53,909: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[17dfeff2-88db-4544-b20e-ad8d04c3a135] succeeded in 0.752129344997229s: None
+[2024-11-22 12:51:54,352: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[dd7c9129-52b7-4cff-9516-57015825213d] succeeded in 0.76282257999992s: None
+[2024-11-22 12:51:54,869: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[a62a9a9b-459f-464c-8659-16b4ddac9044] succeeded in 0.9560042250086553s: None
+[2024-11-22 12:51:55,111: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9a3a7338-a55c-41f5-9356-db8e576bc4d9] succeeded in 0.7565972739976132s: None
+[2024-11-22 12:51:55,710: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[04193ec9-a290-4c65-a575-8351dd589074] succeeded in 0.8394642920029582s: None
+[2024-11-22 12:51:55,959: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[4cd9cfe1-3f02-4d53-b0d9-0db18d971149] succeeded in 0.8462466219934868s: None
+[2024-11-24 17:16:28,087: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c0daf6e9-34f4-41a2-b753-21e8c7114ede]  
+[2024-11-24 17:16:28,168: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e1810134-3f28-4850-9792-8e8de89ee78e]  
+[2024-11-24 17:16:28,169: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[43df63b8-b3cf-4fba-a775-d858cac8273c]  
+[2024-11-24 17:16:28,246: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[47cedf98-f93c-4da9-afea-ac7a4e7d82fe]  
+[2024-11-24 17:16:28,247: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9bc8fb8b-1b0f-4ae3-a5f3-58af1764599a]  
+[2024-11-24 17:16:28,292: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5b5d3cb3-48ce-44e5-9b2e-9e4a14e48f0f]  
+[2024-11-24 17:16:28,296: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d4bd1135-58d6-4381-bcc6-3f2d5cd65636]  
+[2024-11-24 17:16:28,297: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0f20306f-44bc-4c1a-898a-ead5131d407b]  
+[2024-11-24 17:16:29,988: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[e1810134-3f28-4850-9792-8e8de89ee78e] succeeded in 1.7420500960142817s: None
+[2024-11-24 17:16:29,999: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ed3daf3f-3a74-4aca-904b-cb96b690b7a6]  
+[2024-11-24 17:16:30,074: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[c0daf6e9-34f4-41a2-b753-21e8c7114ede] succeeded in 1.8279002899944317s: None
+[2024-11-24 17:16:30,080: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2e2cfe36-9cd1-4d4e-ac5b-6b0fd4ac6ee9]  
+[2024-11-24 17:16:31,199: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[47cedf98-f93c-4da9-afea-ac7a4e7d82fe] succeeded in 1.1174666649894789s: None
+[2024-11-24 17:16:31,202: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a56f7f36-9bed-45cc-8b15-6d67c6c3d6a7]  
+[2024-11-24 17:16:31,241: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[43df63b8-b3cf-4fba-a775-d858cac8273c] succeeded in 1.2295309200126212s: None
+[2024-11-24 17:16:31,253: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[751c9e7f-2e16-456a-8a59-9db99f6f60a9]  
+[2024-11-24 17:16:32,631: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9bc8fb8b-1b0f-4ae3-a5f3-58af1764599a] succeeded in 1.4216037720034365s: None
+[2024-11-24 17:16:32,636: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[5b5d3cb3-48ce-44e5-9b2e-9e4a14e48f0f] succeeded in 1.388149295002222s: None
+[2024-11-24 17:16:32,640: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b31e963c-2384-4098-a37c-3ec0a6f3651a]  
+[2024-11-24 17:16:32,645: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d73591ae-7859-4964-9923-847aaf3f0c31]  
+[2024-11-24 17:16:34,079: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0f20306f-44bc-4c1a-898a-ead5131d407b] succeeded in 1.4314352009969298s: None
+[2024-11-24 17:16:34,081: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[14a4c7f7-2c8f-45bc-82f1-11855eba889a]  
+[2024-11-24 17:16:34,191: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[d4bd1135-58d6-4381-bcc6-3f2d5cd65636] succeeded in 1.5548398889950477s: None
+[2024-11-24 17:16:34,197: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b3d26a93-cac4-465c-8d80-a23e08b841a9]  
+[2024-11-24 17:16:35,635: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2e2cfe36-9cd1-4d4e-ac5b-6b0fd4ac6ee9] succeeded in 1.4386278569872957s: None
+[2024-11-24 17:16:35,641: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5ede137a-162c-4e7e-99cf-59d15282aa81]  
+[2024-11-24 17:16:35,662: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ed3daf3f-3a74-4aca-904b-cb96b690b7a6] succeeded in 1.5811413839983288s: None
+[2024-11-24 17:16:35,666: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7361e05f-bde9-4a4d-be4d-fcbeff4a32a2]  
+[2024-11-24 17:16:36,954: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[751c9e7f-2e16-456a-8a59-9db99f6f60a9] succeeded in 1.2894315449811984s: None
+[2024-11-24 17:16:36,962: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[396802b8-2e9a-4122-b4dc-4b8c89485bbc]  
+[2024-11-24 17:16:37,018: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[a56f7f36-9bed-45cc-8b15-6d67c6c3d6a7] succeeded in 1.3771344069973566s: None
+[2024-11-24 17:16:37,037: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b673f45a-01e0-4d2a-b023-7109cb4ab34f]  
+[2024-11-24 17:16:38,280: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b31e963c-2384-4098-a37c-3ec0a6f3651a] succeeded in 1.3250233540020417s: None
+[2024-11-24 17:16:38,285: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9dc58bff-484b-470a-8600-6ea57e187c18]  
+[2024-11-24 17:16:38,758: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[d73591ae-7859-4964-9923-847aaf3f0c31] succeeded in 1.7130304900056217s: None
+[2024-11-24 17:16:38,779: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9abf3541-6c72-4cd2-ac53-427560961867]  
+[2024-11-24 17:16:39,410: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[14a4c7f7-2c8f-45bc-82f1-11855eba889a] succeeded in 1.1283667330280878s: None
+[2024-11-24 17:16:39,416: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[784d0954-4646-4b05-8c46-1a6d2c0138ac]  
+[2024-11-24 17:16:40,004: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b3d26a93-cac4-465c-8d80-a23e08b841a9] succeeded in 1.235762138996506s: None
+[2024-11-24 17:16:40,007: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e3125cc0-4620-4c35-91a0-52eece4cac6b]  
+[2024-11-24 17:16:40,980: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[5ede137a-162c-4e7e-99cf-59d15282aa81] succeeded in 1.5636973649961874s: None
+[2024-11-24 17:16:40,985: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b55de29c-0018-4289-96e3-7532d4c3990c]  
+[2024-11-24 17:16:41,095: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[7361e05f-bde9-4a4d-be4d-fcbeff4a32a2] succeeded in 1.0887005120166577s: None
+[2024-11-24 17:16:41,098: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fbbbced1-39c7-44cb-8da4-5cbd391ae3aa]  
+[2024-11-24 17:16:42,034: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[396802b8-2e9a-4122-b4dc-4b8c89485bbc] succeeded in 1.0510849049896933s: None
+[2024-11-24 17:16:42,038: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1335b181-13ac-4b30-99d6-3f4ff675abfb]  
+[2024-11-24 17:16:42,204: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b673f45a-01e0-4d2a-b023-7109cb4ab34f] succeeded in 1.1067114979960024s: None
+[2024-11-24 17:16:42,211: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f4f457f0-6a66-41c0-beae-e4a043e58c0a]  
+[2024-11-24 17:16:43,089: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[9dc58bff-484b-470a-8600-6ea57e187c18] succeeded in 1.0513803529902361s: None
+[2024-11-24 17:16:43,095: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[826df029-6e27-4b8d-a0bd-f3db72b99832]  
+[2024-11-24 17:16:43,266: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9abf3541-6c72-4cd2-ac53-427560961867] succeeded in 1.057850379991578s: None
+[2024-11-24 17:16:43,270: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[dc64bcbb-578f-4a06-8170-fd896cfd3ee3]  
+[2024-11-24 17:16:44,200: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[784d0954-4646-4b05-8c46-1a6d2c0138ac] succeeded in 1.1049168469908182s: None
+[2024-11-24 17:16:44,204: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fa6a7e1c-2183-4531-a05e-008e59e867dd]  
+[2024-11-24 17:16:44,688: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e3125cc0-4620-4c35-91a0-52eece4cac6b] succeeded in 1.4173348800104577s: None
+[2024-11-24 17:16:44,694: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[cdd06384-8251-481c-8330-8a2f68852a3f]  
+[2024-11-24 17:16:45,524: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b55de29c-0018-4289-96e3-7532d4c3990c] succeeded in 1.3192047350166831s: None
+[2024-11-24 17:16:45,529: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[201b6337-72e7-4717-ba9c-c0d38a97ec4f]  
+[2024-11-24 17:16:45,750: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[fbbbced1-39c7-44cb-8da4-5cbd391ae3aa] succeeded in 1.057176956004696s: None
+[2024-11-24 17:16:45,755: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1d09ebf6-4ad9-4d26-ab99-535885143870]  
+[2024-11-24 17:16:46,816: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[f4f457f0-6a66-41c0-beae-e4a043e58c0a] succeeded in 1.0612811940081883s: None
+[2024-11-24 17:16:46,818: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[10355a21-cc2c-488b-844e-9afac040d386]  
+[2024-11-24 17:16:46,857: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[1335b181-13ac-4b30-99d6-3f4ff675abfb] succeeded in 1.328746339015197s: None
+[2024-11-24 17:16:46,863: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ede64623-fb0f-4a8e-a2ce-1c9036f1a342]  
+[2024-11-24 17:16:48,212: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[826df029-6e27-4b8d-a0bd-f3db72b99832] succeeded in 1.3948465520225s: None
+[2024-11-24 17:16:48,215: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ccdcdb9c-5354-4ff9-8a3e-50efe6e8e044]  
+[2024-11-24 17:16:48,222: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[dc64bcbb-578f-4a06-8170-fd896cfd3ee3] succeeded in 1.360885992005933s: None
+[2024-11-24 17:16:48,224: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[cd74f747-4f52-4842-a5c3-ccf69682f196]  
+[2024-11-24 17:16:49,346: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[cdd06384-8251-481c-8330-8a2f68852a3f] succeeded in 1.1213006750040222s: None
+[2024-11-24 17:16:49,349: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[74e05c64-e80b-43c3-bf6f-236a7ca7061e]  
+[2024-11-24 17:16:49,385: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[fa6a7e1c-2183-4531-a05e-008e59e867dd] succeeded in 1.1686937760096043s: None
+[2024-11-24 17:16:49,386: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f60cbaf4-cd69-4a81-bf60-82a6d374ca62]  
+[2024-11-24 17:16:50,370: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[201b6337-72e7-4717-ba9c-c0d38a97ec4f] succeeded in 1.0227712060150225s: None
+[2024-11-24 17:16:50,374: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[bf942967-960e-4f29-bc56-07951f87a4e8]  
+[2024-11-24 17:16:50,715: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[1d09ebf6-4ad9-4d26-ab99-535885143870] succeeded in 1.3273502929951064s: None
+[2024-11-24 17:16:50,716: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[89dad644-dfbf-4336-9234-219834154b6f]  
+[2024-11-24 17:16:51,429: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[10355a21-cc2c-488b-844e-9afac040d386] succeeded in 1.054373040999053s: None
+[2024-11-24 17:16:51,431: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c645262a-0ece-46a7-8e78-5a3c885932d3]  
+[2024-11-24 17:16:52,044: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ede64623-fb0f-4a8e-a2ce-1c9036f1a342] succeeded in 1.326920583989704s: None
+[2024-11-24 17:16:52,046: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9bfb8d1a-f211-4862-b187-740ebaf0699e]  
+[2024-11-24 17:16:52,466: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ccdcdb9c-5354-4ff9-8a3e-50efe6e8e044] succeeded in 1.0342713319987524s: None
+[2024-11-24 17:16:52,468: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[dec8acda-0ad1-4fc0-8771-208563f3fb86]  
+[2024-11-24 17:16:53,088: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[cd74f747-4f52-4842-a5c3-ccf69682f196] succeeded in 1.0411785659962334s: None
+[2024-11-24 17:16:53,091: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[56fea46c-498e-4c30-a3a2-2e5288476875]  
+[2024-11-24 17:16:53,485: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[74e05c64-e80b-43c3-bf6f-236a7ca7061e] succeeded in 1.0167420229990967s: None
+[2024-11-24 17:16:53,488: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[815d11e5-306c-43b9-b182-e24949dd7eb4]  
+[2024-11-24 17:16:54,504: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[f60cbaf4-cd69-4a81-bf60-82a6d374ca62] succeeded in 1.414462671004003s: None
+[2024-11-24 17:16:54,507: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[95258150-841b-4c37-9c3f-ef396332a8bd]  
+[2024-11-24 17:16:54,601: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[bf942967-960e-4f29-bc56-07951f87a4e8] succeeded in 1.114749447995564s: None
+[2024-11-24 17:16:54,605: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b0e4907b-42d0-4f62-b13c-11cd8a69bb52]  
+[2024-11-24 17:16:55,809: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[89dad644-dfbf-4336-9234-219834154b6f] succeeded in 1.3031280850118492s: None
+[2024-11-24 17:16:55,813: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[988702b6-7dbb-4911-83ec-8b1b5157bc44]  
+[2024-11-24 17:16:55,863: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c645262a-0ece-46a7-8e78-5a3c885932d3] succeeded in 1.2596201679843944s: None
+[2024-11-24 17:16:55,866: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e603f97d-90fe-4653-ad75-b8b8f82b22fe]  
+[2024-11-24 17:16:56,848: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[dec8acda-0ad1-4fc0-8771-208563f3fb86] succeeded in 0.9821418589854147s: None
+[2024-11-24 17:16:56,849: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b1b204ec-f5c1-4c2a-8c97-692dff8202a5]  
+[2024-11-24 17:16:57,124: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9bfb8d1a-f211-4862-b187-740ebaf0699e] succeeded in 1.3129422509809956s: None
+[2024-11-24 17:16:57,129: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1dc0e768-ff0c-495a-bcdf-0767a5a7f8f9]  
+[2024-11-24 17:16:58,125: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[56fea46c-498e-4c30-a3a2-2e5288476875] succeeded in 1.2756188530183863s: None
+[2024-11-24 17:16:58,128: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[283105bf-e21f-4c35-b843-c53f9cc057b7]  
+[2024-11-24 17:16:58,161: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[815d11e5-306c-43b9-b182-e24949dd7eb4] succeeded in 1.0334568370017223s: None
+[2024-11-24 17:16:58,163: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[91126c7e-90f5-4d9a-ba33-a9cfa7d6239c]  
+[2024-11-24 17:16:59,176: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[95258150-841b-4c37-9c3f-ef396332a8bd] succeeded in 1.0469207249989267s: None
+[2024-11-24 17:16:59,178: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[30996a5f-cfb0-40be-8400-f770e56b185d]  
+[2024-11-24 17:16:59,253: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b0e4907b-42d0-4f62-b13c-11cd8a69bb52] succeeded in 1.0896763859782368s: None
+[2024-11-24 17:16:59,255: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1258e5cb-1e54-442c-8807-4de52d4ff415]  
+[2024-11-24 17:17:00,209: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[988702b6-7dbb-4911-83ec-8b1b5157bc44] succeeded in 1.0308305819926318s: None
+[2024-11-24 17:17:00,215: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8bb4f0ca-6629-42e2-aa83-ac86d3bc7cf8]  
+[2024-11-24 17:17:00,518: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e603f97d-90fe-4653-ad75-b8b8f82b22fe] succeeded in 1.262844901997596s: None
+[2024-11-24 17:17:00,520: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[79142d1c-93cd-4e4a-9f46-ff993bcfdfe8]  
+[2024-11-24 17:17:01,241: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b1b204ec-f5c1-4c2a-8c97-692dff8202a5] succeeded in 1.027964556007646s: None
+[2024-11-24 17:17:01,245: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f667cb9b-c308-4df6-aad1-c8feaf3f126e]  
+[2024-11-24 17:17:01,569: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[1dc0e768-ff0c-495a-bcdf-0767a5a7f8f9] succeeded in 1.049948603991652s: None
+[2024-11-24 17:17:01,571: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b29f9f0a-00b9-4012-a712-1389a0e65d07]  
+[2024-11-24 17:17:02,280: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[283105bf-e21f-4c35-b843-c53f9cc057b7] succeeded in 1.03639279701747s: None
+[2024-11-24 17:17:02,282: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0d20b563-2759-4eff-a62c-3101539960b7]  
+[2024-11-24 17:17:02,596: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[91126c7e-90f5-4d9a-ba33-a9cfa7d6239c] succeeded in 1.0255549779976718s: None
+[2024-11-24 17:17:02,600: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1bec4a43-81b4-45ad-a960-899189b145c1]  
+[2024-11-24 17:17:03,364: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[30996a5f-cfb0-40be-8400-f770e56b185d] succeeded in 1.081441693007946s: None
+[2024-11-24 17:17:03,370: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c313cf07-c194-49e0-95aa-e0195defea68]  
+[2024-11-24 17:17:03,895: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[1258e5cb-1e54-442c-8807-4de52d4ff415] succeeded in 1.2959357330109924s: None
+[2024-11-24 17:17:03,897: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e439cafc-a87a-46b2-9bd4-f431fb42ae74]  
+[2024-11-24 17:17:04,404: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[8bb4f0ca-6629-42e2-aa83-ac86d3bc7cf8] succeeded in 1.035673816979397s: None
+[2024-11-24 17:17:04,409: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[38123689-f6b5-459c-b876-307e13920d46]  
+[2024-11-24 17:17:04,916: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[79142d1c-93cd-4e4a-9f46-ff993bcfdfe8] succeeded in 1.019973554997705s: None
+[2024-11-24 17:17:04,919: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7a296635-20a3-47a4-801a-0e29e4d2d685]  
+[2024-11-24 17:17:05,489: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[f667cb9b-c308-4df6-aad1-c8feaf3f126e] succeeded in 1.083701512980042s: None
+[2024-11-24 17:17:05,492: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[948d5351-e224-40f5-81ee-6c0aa3142388]  
+[2024-11-24 17:17:05,994: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b29f9f0a-00b9-4012-a712-1389a0e65d07] succeeded in 1.0743197500123642s: None
+[2024-11-24 17:17:05,996: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9da7a60c-5dd6-4865-a162-81c003207925]  
+[2024-11-24 17:17:06,765: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0d20b563-2759-4eff-a62c-3101539960b7] succeeded in 1.2753307600214612s: None
+[2024-11-24 17:17:06,771: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5b268f4f-de62-461a-8edc-e282f3a4589d]  
+[2024-11-24 17:17:07,023: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[1bec4a43-81b4-45ad-a960-899189b145c1] succeeded in 1.0266874869994354s: None
+[2024-11-24 17:17:07,027: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0f4fae4f-e8fb-440b-a9d5-507bac80403e]  
+[2024-11-24 17:17:08,064: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c313cf07-c194-49e0-95aa-e0195defea68] succeeded in 1.2974028719763737s: None
+[2024-11-24 17:17:08,067: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[bc3e490d-8314-4d5a-875a-e7b1c1ee6465]  
+[2024-11-24 17:17:08,307: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e439cafc-a87a-46b2-9bd4-f431fb42ae74] succeeded in 1.2819846580096055s: None
+[2024-11-24 17:17:08,310: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c47f4079-54db-44bd-991a-bce6a44f5ee8]  
+[2024-11-24 17:17:09,371: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[38123689-f6b5-459c-b876-307e13920d46] succeeded in 1.3044960959814489s: None
+[2024-11-24 17:17:09,374: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1f43905c-970a-454c-bd03-67f4754d2a67]  
+[2024-11-24 17:17:09,420: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[7a296635-20a3-47a4-801a-0e29e4d2d685] succeeded in 1.1090573879773729s: None
+[2024-11-24 17:17:09,423: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8c7a2e96-9d94-4850-8376-84768c30316e]  
+[2024-11-24 17:17:10,434: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[948d5351-e224-40f5-81ee-6c0aa3142388] succeeded in 1.0619504410133231s: None
+[2024-11-24 17:17:10,436: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b0e4353d-c19f-478c-961a-f2d16528bcd6]  
+[2024-11-24 17:17:10,492: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[9da7a60c-5dd6-4865-a162-81c003207925] succeeded in 1.0688978779944591s: None
+[2024-11-24 17:17:10,495: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[45604388-4f70-4530-a549-7b1ade6d4a30]  
+[2024-11-24 17:17:11,453: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[5b268f4f-de62-461a-8edc-e282f3a4589d] succeeded in 1.0171760590164922s: None
+[2024-11-24 17:17:11,457: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1eaf7129-ebb2-44a8-96fa-59faf5621b7d]  
+[2024-11-24 17:17:11,518: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[0f4fae4f-e8fb-440b-a9d5-507bac80403e] succeeded in 1.0246906859974843s: None
+[2024-11-24 17:17:11,522: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[91fa48b5-1198-4336-995e-c6f33f20a2b0]  
+[2024-11-24 17:17:12,496: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[bc3e490d-8314-4d5a-875a-e7b1c1ee6465] succeeded in 1.0414136729959864s: None
+[2024-11-24 17:17:12,501: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[61286b27-d6b2-477d-b450-11a94e21ec1f]  
+[2024-11-24 17:17:12,581: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[c47f4079-54db-44bd-991a-bce6a44f5ee8] succeeded in 1.059981191996485s: None
+[2024-11-24 17:17:12,584: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[483590b5-d082-402f-9468-20ae4817d7f4]  
+[2024-11-24 17:17:13,593: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[8c7a2e96-9d94-4850-8376-84768c30316e] succeeded in 1.0112626990012359s: None
+[2024-11-24 17:17:13,596: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e973db20-3837-4ac5-8446-71dbdb27c600]  
+[2024-11-24 17:17:13,769: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[1f43905c-970a-454c-bd03-67f4754d2a67] succeeded in 1.2696752780175302s: None
+[2024-11-24 17:17:13,771: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[82118231-4f15-48f7-9e9b-c08a82f5742a]  
+[2024-11-24 17:17:14,763: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b0e4353d-c19f-478c-961a-f2d16528bcd6] succeeded in 1.166923141980078s: None
+[2024-11-24 17:17:14,765: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ded74cd6-beda-47cf-a8f5-5884da6845a3]  
+[2024-11-24 17:17:14,855: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[45604388-4f70-4530-a549-7b1ade6d4a30] succeeded in 1.0842973900143988s: None
+[2024-11-24 17:17:14,857: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a85d0bb9-53f2-4a54-b11b-4eba89e79a50]  
+[2024-11-24 17:17:15,885: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[1eaf7129-ebb2-44a8-96fa-59faf5621b7d] succeeded in 1.1193585680157412s: None
+[2024-11-24 17:17:15,887: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fb48de31-2e20-4d27-9eb5-67044f422fc5]  
+[2024-11-24 17:17:16,149: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[91fa48b5-1198-4336-995e-c6f33f20a2b0] succeeded in 1.2923769170010928s: None
+[2024-11-24 17:17:16,152: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5a2c8479-d36b-4164-880c-bbd1ab92ad6b]  
+[2024-11-24 17:17:16,898: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[61286b27-d6b2-477d-b450-11a94e21ec1f] succeeded in 1.0097923490102403s: None
+[2024-11-24 17:17:16,901: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2ac1dcf0-a2b8-424a-add1-b93b4d52f5ff]  
+[2024-11-24 17:17:17,246: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[483590b5-d082-402f-9468-20ae4817d7f4] succeeded in 1.0951799460162874s: None
+[2024-11-24 17:17:17,249: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b8f0af14-418e-4781-8943-5019edb94969]  
+[2024-11-24 17:17:18,169: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e973db20-3837-4ac5-8446-71dbdb27c600] succeeded in 1.269971975008957s: None
+[2024-11-24 17:17:18,171: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[eca52554-1a9b-4d6f-b618-86f7fb639045]  
+[2024-11-24 17:17:18,286: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[82118231-4f15-48f7-9e9b-c08a82f5742a] succeeded in 1.0382206760114059s: None
+[2024-11-24 17:17:18,288: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b21f2804-12a9-41e7-a412-9486ab088e4f]  
+[2024-11-24 17:17:19,207: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ded74cd6-beda-47cf-a8f5-5884da6845a3] succeeded in 1.036687873012852s: None
+[2024-11-24 17:17:19,212: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2afea439-bd1e-4624-8c7a-6f2f9db3e6a1]  
+[2024-11-24 17:17:19,621: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[a85d0bb9-53f2-4a54-b11b-4eba89e79a50] succeeded in 1.332649207994109s: None
+[2024-11-24 17:17:19,623: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d1beede9-81af-4931-877a-ea926fa0537a]  
+[2024-11-24 17:17:20,267: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[fb48de31-2e20-4d27-9eb5-67044f422fc5] succeeded in 1.0554559380107094s: None
+[2024-11-24 17:17:20,271: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5cb3ffe7-b06f-43b7-a2ff-5ea2bc942255]  
+[2024-11-24 17:17:20,906: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[5a2c8479-d36b-4164-880c-bbd1ab92ad6b] succeeded in 1.2826485550031066s: None
+[2024-11-24 17:17:20,910: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a8aaa045-4a02-4fbc-ad34-7c50663cc42f]  
+[2024-11-24 17:17:21,403: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2ac1dcf0-a2b8-424a-add1-b93b4d52f5ff] succeeded in 1.1331573170027696s: None
+[2024-11-24 17:17:21,406: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[cb69fcac-566f-44c2-8686-c001a01d0431]  
+[2024-11-24 17:17:21,924: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b8f0af14-418e-4781-8943-5019edb94969] succeeded in 1.0136929520231206s: None
+[2024-11-24 17:17:21,927: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ef922255-1026-453c-b268-2670cf95f4fd]  
+[2024-11-24 17:17:22,430: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[eca52554-1a9b-4d6f-b618-86f7fb639045] succeeded in 1.023445617989637s: None
+[2024-11-24 17:17:22,432: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1ad5938d-e8d8-4a45-aa44-90be3d1af942]  
+[2024-11-24 17:17:22,987: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b21f2804-12a9-41e7-a412-9486ab088e4f] succeeded in 1.0594162849884015s: None
+[2024-11-24 17:17:22,991: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5df31f3e-97ed-4309-b905-109b09e13f58]  
+[2024-11-24 17:17:23,470: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2afea439-bd1e-4624-8c7a-6f2f9db3e6a1] succeeded in 1.0375544100243133s: None
+[2024-11-24 17:17:23,471: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b6ae73f2-cad9-4053-b91e-a5c2dd617da2]  
+[2024-11-24 17:17:24,021: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[d1beede9-81af-4931-877a-ea926fa0537a] succeeded in 1.030797518993495s: None
+[2024-11-24 17:17:24,023: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9ed68ef4-1aa2-42f8-882c-6de0cdbeab50]  
+[2024-11-24 17:17:24,778: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[5cb3ffe7-b06f-43b7-a2ff-5ea2bc942255] succeeded in 1.305604200984817s: None
+[2024-11-24 17:17:24,782: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[50af6a5b-e8fd-4b7b-ad80-7d61fa098b1a]  
+[2024-11-24 17:17:25,079: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[a8aaa045-4a02-4fbc-ad34-7c50663cc42f] succeeded in 1.0558374490065034s: None
+[2024-11-24 17:17:25,081: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4b511281-ae89-46c5-bdf9-da318e5ed077]  
+[2024-11-24 17:17:25,852: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[cb69fcac-566f-44c2-8686-c001a01d0431] succeeded in 1.0708846760098822s: None
+[2024-11-24 17:17:25,854: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b7580b14-1b7b-4397-a16d-c4cbe9486787]  
+[2024-11-24 17:17:26,490: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ef922255-1026-453c-b268-2670cf95f4fd] succeeded in 1.4090905410121195s: None
+[2024-11-24 17:17:26,493: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[58814696-4eda-4e9c-a1c4-a0ff07337a0c]  
+[2024-11-24 17:17:27,292: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[1ad5938d-e8d8-4a45-aa44-90be3d1af942] succeeded in 1.436362441017991s: None
+[2024-11-24 17:17:27,294: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e0ce030c-1d85-4ee1-95dd-80c26f649c70]  
+[2024-11-24 17:17:27,583: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[5df31f3e-97ed-4309-b905-109b09e13f58] succeeded in 1.0894873430079315s: None
+[2024-11-24 17:17:27,585: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ec0aba7b-68de-40df-96e4-50fe47d2c978]  
+[2024-11-24 17:17:28,345: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b6ae73f2-cad9-4053-b91e-a5c2dd617da2] succeeded in 1.0508631299890112s: None
+[2024-11-24 17:17:28,347: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4f2c4550-c19e-4917-a980-33ba830d7c7a]  
+[2024-11-24 17:17:28,755: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[9ed68ef4-1aa2-42f8-882c-6de0cdbeab50] succeeded in 1.168574384006206s: None
+[2024-11-24 17:17:28,757: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[631bce58-dba4-4866-a6ae-679757642908]  
+[2024-11-24 17:17:29,335: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[50af6a5b-e8fd-4b7b-ad80-7d61fa098b1a] succeeded in 0.9873517399828415s: None
+[2024-11-24 17:17:29,337: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8b336d2e-0f69-452d-ae98-09c3477f0369]  
+[2024-11-24 17:17:29,834: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4b511281-ae89-46c5-bdf9-da318e5ed077] succeeded in 1.0762041170091834s: None
+[2024-11-24 17:17:29,837: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8b9ae0b2-0023-40f6-8eed-0c231c278979]  
+[2024-11-24 17:17:30,337: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b7580b14-1b7b-4397-a16d-c4cbe9486787] succeeded in 0.9986851860012393s: None
+[2024-11-24 17:17:30,339: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[11d957a2-db14-4b37-ad3d-a210b2634e77]  
+[2024-11-24 17:17:31,111: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[58814696-4eda-4e9c-a1c4-a0ff07337a0c] succeeded in 1.2763712469895836s: None
+[2024-11-24 17:17:31,115: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4e521108-689d-49c5-b4af-1c2a0af162db]  
+[2024-11-24 17:17:31,601: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e0ce030c-1d85-4ee1-95dd-80c26f649c70] succeeded in 1.2618626189942006s: None
+[2024-11-24 17:17:31,604: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ad4432e3-9fa0-47f7-b259-34b93db902f2]  
+[2024-11-24 17:17:32,146: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ec0aba7b-68de-40df-96e4-50fe47d2c978] succeeded in 1.0334154999873135s: None
+[2024-11-24 17:17:32,150: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[dacfa315-f74f-4897-ab3f-46095842c50a]  
+[2024-11-24 17:17:32,589: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[4f2c4550-c19e-4917-a980-33ba830d7c7a] succeeded in 0.9864708759996574s: None
+[2024-11-24 17:17:32,591: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[08f10306-ab32-4b6b-ac03-5dca4fec1da5]  
+[2024-11-24 17:17:33,120: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[631bce58-dba4-4866-a6ae-679757642908] succeeded in 0.9694329619815107s: None
+[2024-11-24 17:17:33,122: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5b46f652-72bc-46be-a367-e309e0a2cbf8]  
+[2024-11-24 17:17:33,686: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[8b336d2e-0f69-452d-ae98-09c3477f0369] succeeded in 1.09528366199811s: None
+[2024-11-24 17:17:33,690: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[da9766f7-77f2-4398-af3f-88208b4b9303]  
+[2024-11-24 17:17:34,237: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[8b9ae0b2-0023-40f6-8eed-0c231c278979] succeeded in 1.1148539240239188s: None
+[2024-11-24 17:17:34,244: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[36806120-3602-41c0-903b-cbd6a1d5f712]  
+[2024-11-24 17:17:35,031: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[11d957a2-db14-4b37-ad3d-a210b2634e77] succeeded in 1.3411872849974316s: None
+[2024-11-24 17:17:35,033: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4618d93f-8cf8-42b5-8b72-5b844aa22bf9]  
+[2024-11-24 17:17:35,312: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4e521108-689d-49c5-b4af-1c2a0af162db] succeeded in 1.0712841140048113s: None
+[2024-11-24 17:17:35,316: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[30d4fa7f-85b9-4519-b73d-c2b3b8199e9b]  
+[2024-11-24 17:17:36,158: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ad4432e3-9fa0-47f7-b259-34b93db902f2] succeeded in 1.1244442879979033s: None
+[2024-11-24 17:17:36,161: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ab9963dd-5b7e-41e5-8eba-dc8449efdf53]  
+[2024-11-24 17:17:36,357: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[dacfa315-f74f-4897-ab3f-46095842c50a] succeeded in 1.0417958729958627s: None
+[2024-11-24 17:17:36,360: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6c4a37a9-0222-4aa2-b3b4-5e3047d5b84a]  
+[2024-11-24 17:17:37,178: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[08f10306-ab32-4b6b-ac03-5dca4fec1da5] succeeded in 1.0169555110041983s: None
+[2024-11-24 17:17:37,182: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3d4b40f2-dce9-472b-9a5a-87bcc2cffd40]  
+[2024-11-24 17:17:37,371: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[5b46f652-72bc-46be-a367-e309e0a2cbf8] succeeded in 1.0104315420030616s: None
+[2024-11-24 17:17:37,374: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[66d71166-a0b6-40b8-a682-9fee2f19765e]  
+[2024-11-24 17:17:38,191: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[da9766f7-77f2-4398-af3f-88208b4b9303] succeeded in 1.009621076984331s: None
+[2024-11-24 17:17:38,193: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[86254f95-3268-44d1-ad01-a09151df0c83]  
+[2024-11-24 17:17:38,677: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[36806120-3602-41c0-903b-cbd6a1d5f712] succeeded in 1.305106537998654s: None
+[2024-11-24 17:17:38,680: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[45ebe026-22d9-4530-a30d-1c535b0f896f]  
+[2024-11-24 17:17:39,511: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[4618d93f-8cf8-42b5-8b72-5b844aa22bf9] succeeded in 1.3170772379962727s: None
+[2024-11-24 17:17:39,512: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1fb6b08c-b4e1-4672-93cf-19191f29fa64]  
+[2024-11-24 17:17:39,760: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[30d4fa7f-85b9-4519-b73d-c2b3b8199e9b] succeeded in 1.0791010920074768s: None
+[2024-11-24 17:17:39,762: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8e6f8e80-f3d7-43a5-92ee-a78ea265e45f]  
+[2024-11-24 17:17:40,581: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ab9963dd-5b7e-41e5-8eba-dc8449efdf53] succeeded in 1.0683556429867167s: None
+[2024-11-24 17:17:40,583: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a7930f01-9a27-40e3-ab1d-6c7ed780794a]  
+[2024-11-24 17:17:40,821: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[6c4a37a9-0222-4aa2-b3b4-5e3047d5b84a] succeeded in 1.0585154660220724s: None
+[2024-11-24 17:17:40,823: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1e9264a6-d635-40df-8f79-fc34ee4faffa]  
+[2024-11-24 17:17:41,611: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3d4b40f2-dce9-472b-9a5a-87bcc2cffd40] succeeded in 1.0279972460120916s: None
+[2024-11-24 17:17:41,615: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8a6e0d94-34dd-42bf-b368-edde60d48e89]  
+[2024-11-24 17:17:42,080: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[66d71166-a0b6-40b8-a682-9fee2f19765e] succeeded in 1.2555968609813135s: None
+[2024-11-24 17:17:42,083: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[69b8af0c-cae7-49e2-8b83-7b8a0bdd9182]  
+[2024-11-24 17:17:42,601: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[86254f95-3268-44d1-ad01-a09151df0c83] succeeded in 0.9855585079931188s: None
+[2024-11-24 17:17:42,603: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0ee0b4d6-978b-4f8d-a03d-b1c50fdf0c0d]  
+[2024-11-24 17:17:43,403: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[45ebe026-22d9-4530-a30d-1c535b0f896f] succeeded in 1.319467410998186s: None
+[2024-11-24 17:17:43,405: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b09d0f1c-04e8-4121-ac98-7a0215f4169b]  
+[2024-11-24 17:17:43,661: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[1fb6b08c-b4e1-4672-93cf-19191f29fa64] succeeded in 1.057108237000648s: None
+[2024-11-24 17:17:43,663: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c34f3223-e9d6-4016-8922-0f315f5f08fa]  
+[2024-11-24 17:17:44,395: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[8e6f8e80-f3d7-43a5-92ee-a78ea265e45f] succeeded in 0.990947440994205s: None
+[2024-11-24 17:17:44,397: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[82e1e891-6766-4469-a24e-061dec4a518b]  
+[2024-11-24 17:17:44,668: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[a7930f01-9a27-40e3-ab1d-6c7ed780794a] succeeded in 1.00488073300221s: None
+[2024-11-24 17:17:44,670: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[602bd235-a72b-4863-b6b3-c14cfdba1cfd]  
+[2024-11-24 17:17:45,697: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[1e9264a6-d635-40df-8f79-fc34ee4faffa] succeeded in 1.2988339469884522s: None
+[2024-11-24 17:17:45,699: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f10723bf-fdb3-43f0-be89-98caa974e499]  
+[2024-11-24 17:17:45,707: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[8a6e0d94-34dd-42bf-b368-edde60d48e89] succeeded in 1.0366118300007656s: None
+[2024-11-24 17:17:45,711: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[74ce5f6e-da4b-4d3a-bd13-1790929696ac]  
+[2024-11-24 17:17:46,695: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[0ee0b4d6-978b-4f8d-a03d-b1c50fdf0c0d] succeeded in 0.9827430440054741s: None
+[2024-11-24 17:17:46,697: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ff8aa6e4-248e-4fe1-b987-faf808ae87df]  
+[2024-11-24 17:17:46,969: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[69b8af0c-cae7-49e2-8b83-7b8a0bdd9182] succeeded in 1.2692687140079215s: None
+[2024-11-24 17:17:46,972: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c87fb318-1edc-4fec-9e1a-e8c926de8f53]  
+[2024-11-24 17:17:47,715: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b09d0f1c-04e8-4121-ac98-7a0215f4169b] succeeded in 1.0174786819843575s: None
+[2024-11-24 17:17:47,717: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[216f5ab1-3782-42f1-a394-ecf80a7c5297]  
+[2024-11-24 17:17:47,987: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c34f3223-e9d6-4016-8922-0f315f5f08fa] succeeded in 1.0157395970018115s: None
+[2024-11-24 17:17:47,989: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e20cc056-4750-4cd3-9924-fc55b3ea6b94]  
+[2024-11-24 17:17:48,737: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[82e1e891-6766-4469-a24e-061dec4a518b] succeeded in 1.019171087013092s: None
+[2024-11-24 17:17:48,741: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fd99b837-1b13-4a04-9b4c-81c8b87ac528]  
+[2024-11-24 17:17:49,299: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[602bd235-a72b-4863-b6b3-c14cfdba1cfd] succeeded in 1.3101540110073984s: None
+[2024-11-24 17:17:49,301: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[751d646f-c734-4594-bb51-fabcf00b981b]  
+[2024-11-24 17:17:49,767: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[f10723bf-fdb3-43f0-be89-98caa974e499] succeeded in 1.0281566249905154s: None
+[2024-11-24 17:17:49,771: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a8f36ab1-d39f-4eab-ad50-eadc32c2ae7d]  
+[2024-11-24 17:17:50,629: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[74ce5f6e-da4b-4d3a-bd13-1790929696ac] succeeded in 1.3284457650152035s: None
+[2024-11-24 17:17:50,632: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c105b9a7-45fa-4ab7-bde4-704c301bdd24]  
+[2024-11-24 17:17:51,028: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ff8aa6e4-248e-4fe1-b987-faf808ae87df] succeeded in 1.2595542639901396s: None
+[2024-11-24 17:17:51,033: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e4c4a83b-9735-4e74-9e63-17eeede73113]  
+[2024-11-24 17:17:51,883: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c87fb318-1edc-4fec-9e1a-e8c926de8f53] succeeded in 1.2526428459968884s: None
+[2024-11-24 17:17:51,888: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3d79130d-3529-4dfd-ad28-bff5db17f323]  
+[2024-11-24 17:17:52,026: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[216f5ab1-3782-42f1-a394-ecf80a7c5297] succeeded in 0.9945609100104775s: None
+[2024-11-24 17:17:52,030: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[57452686-6d16-4ea7-9b67-a01499a38e45]  
+[2024-11-24 17:17:52,869: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[e20cc056-4750-4cd3-9924-fc55b3ea6b94] succeeded in 0.9816040819860063s: None
+[2024-11-24 17:17:52,872: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[16a5ad0f-e9f2-48ab-b1f7-d7be3374e9c8]  
+[2024-11-24 17:17:53,004: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[fd99b837-1b13-4a04-9b4c-81c8b87ac528] succeeded in 0.9733886489993893s: None
+[2024-11-24 17:17:53,007: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[062226b1-133c-4061-acc3-64f489f21ec1]  
+[2024-11-24 17:17:53,851: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[751d646f-c734-4594-bb51-fabcf00b981b] succeeded in 0.980633447994478s: None
+[2024-11-24 17:17:53,854: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[eea31fa1-d4bf-4abe-9ca1-968637109e09]  
+[2024-11-24 17:17:54,304: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[a8f36ab1-d39f-4eab-ad50-eadc32c2ae7d] succeeded in 1.2991210210020654s: None
+[2024-11-24 17:17:54,306: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[13ccf5d5-8b9c-46ff-9a0f-c51ed6d20497]  
+[2024-11-24 17:17:54,877: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c105b9a7-45fa-4ab7-bde4-704c301bdd24] succeeded in 1.0237417409953196s: None
+[2024-11-24 17:17:54,881: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[eda15890-70ea-4dfa-9948-53534ee372d1]  
+[2024-11-24 17:17:55,598: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e4c4a83b-9735-4e74-9e63-17eeede73113] succeeded in 1.2908260650001466s: None
+[2024-11-24 17:17:55,601: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3332cad5-89cf-4bdf-82f7-860ea97ae5d0]  
+[2024-11-24 17:17:55,868: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[3d79130d-3529-4dfd-ad28-bff5db17f323] succeeded in 0.9861613340035547s: None
+[2024-11-24 17:17:55,870: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0fbc4687-ba46-4943-88d7-090f5ece5b51]  
+[2024-11-24 17:17:56,861: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[57452686-6d16-4ea7-9b67-a01499a38e45] succeeded in 1.2588136399863288s: None
+[2024-11-24 17:17:56,868: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[caf77d42-f18d-4ab4-ade6-f798a957fc65]  
+[2024-11-24 17:17:57,188: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[16a5ad0f-e9f2-48ab-b1f7-d7be3374e9c8] succeeded in 1.3179251039982773s: None
+[2024-11-24 17:17:57,191: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ffbe18f8-41fc-4453-8c72-b4f97fbb4fd3]  
+[2024-11-24 17:17:57,883: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[062226b1-133c-4061-acc3-64f489f21ec1] succeeded in 1.0196552359848283s: None
+[2024-11-24 17:17:57,889: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[aa75104d-305d-482c-b880-98d464cc2b81]  
+[2024-11-24 17:17:58,215: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[eea31fa1-d4bf-4abe-9ca1-968637109e09] succeeded in 1.024505492998287s: None
+[2024-11-24 17:17:58,219: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e5f0ad09-deb1-4a34-82f4-447b6741a0aa]  
+[2024-11-24 17:17:58,895: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[13ccf5d5-8b9c-46ff-9a0f-c51ed6d20497] succeeded in 1.0099360019958112s: None
+[2024-11-24 17:17:58,897: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[eba93ad9-b67e-4e27-89f7-21db8db8dd87]  
+[2024-11-24 17:17:59,218: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[eda15890-70ea-4dfa-9948-53534ee372d1] succeeded in 1.0007771720120218s: None
+[2024-11-24 17:17:59,222: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0d791f15-b385-453e-ad1e-301384df6d9b]  
+[2024-11-24 17:18:00,155: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[3332cad5-89cf-4bdf-82f7-860ea97ae5d0] succeeded in 1.257676820998313s: None
+[2024-11-24 17:18:00,159: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[30e84dc7-bb69-4c05-96a1-1a1604f8d966]  
+[2024-11-24 17:18:00,259: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0fbc4687-ba46-4943-88d7-090f5ece5b51] succeeded in 1.037999068008503s: None
+[2024-11-24 17:18:00,262: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c5bc3e98-5e64-4780-b9a2-9a65b38b1371]  
+[2024-11-24 17:18:01,142: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[caf77d42-f18d-4ab4-ade6-f798a957fc65] succeeded in 0.9851004620140884s: None
+[2024-11-24 17:18:01,147: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ac7f7da7-ab7e-4da7-b466-2ed95ebb2271]  
+[2024-11-24 17:18:01,236: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ffbe18f8-41fc-4453-8c72-b4f97fbb4fd3] succeeded in 0.9732060460082721s: None
+[2024-11-24 17:18:01,238: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[59bc3f88-6c40-4c46-b145-494ec12a44f8]  
+[2024-11-24 17:18:02,169: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[aa75104d-305d-482c-b880-98d464cc2b81] succeeded in 1.0243372280092444s: None
+[2024-11-24 17:18:02,173: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5d37d436-3313-4569-83eb-28e96ad63103]  
+[2024-11-24 17:18:02,221: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[e5f0ad09-deb1-4a34-82f4-447b6741a0aa] succeeded in 0.982102682988625s: None
+[2024-11-24 17:18:02,223: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ed5770fd-41a0-46c7-bfe3-e217701c1571]  
+[2024-11-24 17:18:03,194: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[eba93ad9-b67e-4e27-89f7-21db8db8dd87] succeeded in 1.0198333629814442s: None
+[2024-11-24 17:18:03,196: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[335788d3-32af-413a-b55b-0f4701918e30]  
+[2024-11-24 17:18:03,254: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0d791f15-b385-453e-ad1e-301384df6d9b] succeeded in 1.0303510689991526s: None
+[2024-11-24 17:18:03,258: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9ed55b5b-5a7e-4ede-91fb-ae7d76f6e3ec]  
+[2024-11-24 17:18:04,166: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[30e84dc7-bb69-4c05-96a1-1a1604f8d966] succeeded in 0.9697414840047713s: None
+[2024-11-24 17:18:04,168: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4cbc127a-ccca-4359-bea9-608f9997e814]  
+[2024-11-24 17:18:04,251: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[c5bc3e98-5e64-4780-b9a2-9a65b38b1371] succeeded in 0.995104089990491s: None
+[2024-11-24 17:18:04,256: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[465f857e-7909-4de5-ae55-5b6e1042c9b5]  
+[2024-11-24 17:18:05,194: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[ac7f7da7-ab7e-4da7-b466-2ed95ebb2271] succeeded in 1.0251891720108688s: None
+[2024-11-24 17:18:05,200: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5484eb21-a77e-4df5-9434-acb230268fc6]  
+[2024-11-24 17:18:05,279: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[59bc3f88-6c40-4c46-b145-494ec12a44f8] succeeded in 1.0244880850077607s: None
+[2024-11-24 17:18:05,282: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6e6461f6-d904-4a9a-8ee4-c45d719dbdda]  
+[2024-11-24 17:18:06,220: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[5d37d436-3313-4569-83eb-28e96ad63103] succeeded in 1.0244252080156002s: None
+[2024-11-24 17:18:06,222: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[56fd307c-90f9-404c-8d19-c7ceab81f608]  
+[2024-11-24 17:18:06,304: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ed5770fd-41a0-46c7-bfe3-e217701c1571] succeeded in 1.0223502749868203s: None
+[2024-11-24 17:18:06,306: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[43158504-8a21-4a87-bc1a-59d112f0df7d]  
+[2024-11-24 17:18:07,252: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[335788d3-32af-413a-b55b-0f4701918e30] succeeded in 1.0300010269857012s: None
+[2024-11-24 17:18:07,253: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1bb080f9-d959-4dfb-ac3d-d9593e8fe084]  
+[2024-11-24 17:18:07,535: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[9ed55b5b-5a7e-4ede-91fb-ae7d76f6e3ec] succeeded in 1.2283370249788277s: None
+[2024-11-24 17:18:07,538: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[66b7cc5d-4702-4330-a936-0a1b5b4a7d38]  
+[2024-11-24 17:18:08,266: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[4cbc127a-ccca-4359-bea9-608f9997e814] succeeded in 1.0118480089877266s: None
+[2024-11-24 17:18:08,269: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4c1e57bb-934b-42c5-95db-49e544b3947c]  
+[2024-11-24 17:18:08,551: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[465f857e-7909-4de5-ae55-5b6e1042c9b5] succeeded in 1.0119777870131657s: None
+[2024-11-24 17:18:08,555: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[1496471b-91fd-4080-9d22-d8a87a371710]  
+[2024-11-24 17:18:09,336: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[5484eb21-a77e-4df5-9434-acb230268fc6] succeeded in 1.0687751680088695s: None
+[2024-11-24 17:18:09,340: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[377924bc-96aa-4fd7-9e8d-7edd8f3df1d6]  
+[2024-11-24 17:18:09,873: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[6e6461f6-d904-4a9a-8ee4-c45d719dbdda] succeeded in 1.3185950290062465s: None
+[2024-11-24 17:18:09,877: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[42930037-3d49-4c25-8e5f-a066e6ffd357]  
+[2024-11-24 17:18:10,562: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[56fd307c-90f9-404c-8d19-c7ceab81f608] succeeded in 1.2242681579955388s: None
+[2024-11-24 17:18:10,564: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c74db17a-03ed-43bf-88d2-3039230e4637]  
+[2024-11-24 17:18:10,886: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[43158504-8a21-4a87-bc1a-59d112f0df7d] succeeded in 1.0115201940061525s: None
+[2024-11-24 17:18:10,890: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7fdf7047-fd20-4b6e-ab12-f0a9a78839ae]  
+[2024-11-24 17:18:11,596: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[1bb080f9-d959-4dfb-ac3d-d9593e8fe084] succeeded in 1.0312932209926657s: None
+[2024-11-24 17:18:11,600: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2e4aa69c-53ad-4a2e-a3e0-d063824e2800]  
+[2024-11-24 17:18:11,918: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[66b7cc5d-4702-4330-a936-0a1b5b4a7d38] succeeded in 1.0275071169889998s: None
+[2024-11-24 17:18:11,920: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d4b215e3-35b4-42ae-8d61-9db781be09c2]  
+[2024-11-24 17:18:12,863: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[4c1e57bb-934b-42c5-95db-49e544b3947c] succeeded in 1.2635972920106724s: None
+[2024-11-24 17:18:12,865: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e7c94adf-a1c0-4bff-b471-858037a6a3a8]  
+[2024-11-24 17:18:13,222: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[1496471b-91fd-4080-9d22-d8a87a371710] succeeded in 1.3022685140022077s: None
+[2024-11-24 17:18:13,228: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[995d2b40-d162-4b11-8225-a957faf011db]  
+[2024-11-24 17:18:13,938: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[377924bc-96aa-4fd7-9e8d-7edd8f3df1d6] succeeded in 1.0732422319997568s: None
+[2024-11-24 17:18:13,943: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[652e0017-9924-4a2f-acaf-c1dee9081fe9]  
+[2024-11-24 17:18:14,573: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[42930037-3d49-4c25-8e5f-a066e6ffd357] succeeded in 1.3466131029999815s: None
+[2024-11-24 17:18:14,577: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[582691d7-04d3-4967-9107-cc043881ea0e]  
+[2024-11-24 17:18:15,288: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[c74db17a-03ed-43bf-88d2-3039230e4637] succeeded in 1.3485274669947103s: None
+[2024-11-24 17:18:15,292: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[13dda5dc-be8a-4df8-946c-ee761d375fbe]  
+[2024-11-24 17:18:15,573: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[7fdf7047-fd20-4b6e-ab12-f0a9a78839ae] succeeded in 0.9987183919874951s: None
+[2024-11-24 17:18:15,577: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ca59e4d3-9692-4b1c-84cb-2c56660076e0]  
+[2024-11-24 17:18:16,321: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2e4aa69c-53ad-4a2e-a3e0-d063824e2800] succeeded in 1.0311645939946175s: None
+[2024-11-24 17:18:16,326: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[890098ce-8e01-471b-8f28-fff7811472e7]  
+[2024-11-24 17:18:16,849: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[d4b215e3-35b4-42ae-8d61-9db781be09c2] succeeded in 1.2736205520050135s: None
+[2024-11-24 17:18:16,851: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[a72db5d6-dabc-4127-95ce-75bce07055dc]  
+[2024-11-24 17:18:17,681: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e7c94adf-a1c0-4bff-b471-858037a6a3a8] succeeded in 1.3554172339790966s: None
+[2024-11-24 17:18:17,683: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f442320e-999b-40f4-8917-c336e35a070b]  
+[2024-11-24 17:18:17,950: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[995d2b40-d162-4b11-8225-a957faf011db] succeeded in 1.0984252610069234s: None
+[2024-11-24 17:18:17,952: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0e161528-adca-4d5c-a03e-eebf05a7b5c2]  
+[2024-11-24 17:18:18,779: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[652e0017-9924-4a2f-acaf-c1dee9081fe9] succeeded in 1.0952369120204821s: None
+[2024-11-24 17:18:18,781: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0132acc1-4021-44a3-bc34-c974a89bef6c]  
+[2024-11-24 17:18:18,934: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[582691d7-04d3-4967-9107-cc043881ea0e] succeeded in 0.9815056159859523s: None
+[2024-11-24 17:18:18,936: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4b69d71c-5f16-4133-89a4-3133f6e535e0]  
+[2024-11-24 17:18:19,791: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[13dda5dc-be8a-4df8-946c-ee761d375fbe] succeeded in 1.0094331550062634s: None
+[2024-11-24 17:18:19,794: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[57e0edf3-872c-48ec-8331-4c9b16ba635b]  
+[2024-11-24 17:18:20,150: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ca59e4d3-9692-4b1c-84cb-2c56660076e0] succeeded in 1.2129609560070094s: None
+[2024-11-24 17:18:20,153: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b65d6f04-71e2-40d2-840c-3587be86acca]  
+[2024-11-24 17:18:20,793: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[890098ce-8e01-471b-8f28-fff7811472e7] succeeded in 0.9978358090156689s: None
+[2024-11-24 17:18:20,798: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0c62186a-8164-40ec-95a7-b9e7f0332784]  
+[2024-11-24 17:18:21,157: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[a72db5d6-dabc-4127-95ce-75bce07055dc] succeeded in 1.005318699986674s: None
+[2024-11-24 17:18:21,165: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[bfb0135f-2500-4423-af82-a1edefbe6477]  
+[2024-11-24 17:18:21,917: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[f442320e-999b-40f4-8917-c336e35a070b] succeeded in 1.1214252019999549s: None
+[2024-11-24 17:18:21,921: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[354c8a98-f565-413b-ac0d-bb25c3356ed7]  
+[2024-11-24 17:18:22,465: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0e161528-adca-4d5c-a03e-eebf05a7b5c2] succeeded in 1.3015727720048744s: None
+[2024-11-24 17:18:22,470: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[61a8a61b-3b16-4dd9-a675-02b716cc7594]  
+[2024-11-24 17:18:23,190: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[0132acc1-4021-44a3-bc34-c974a89bef6c] succeeded in 1.2685415619926061s: None
+[2024-11-24 17:18:23,193: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5b6411ab-8a20-4bc7-9d6d-dec090f9bac9]  
+[2024-11-24 17:18:23,514: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4b69d71c-5f16-4133-89a4-3133f6e535e0] succeeded in 1.0468612289987504s: None
+[2024-11-24 17:18:23,518: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fed9b8c3-3cac-403e-a1d2-b1924f4b455f]  
+[2024-11-24 17:18:24,210: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[57e0edf3-872c-48ec-8331-4c9b16ba635b] succeeded in 1.0171104879991617s: None
+[2024-11-24 17:18:24,212: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[20c4b237-f5f7-4a44-87c9-42af02dff98b]  
+[2024-11-24 17:18:24,510: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[b65d6f04-71e2-40d2-840c-3587be86acca] succeeded in 0.9937691960076336s: None
+[2024-11-24 17:18:24,514: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[90f6eba6-7157-43ce-92bc-450ed06ef33b]  
+[2024-11-24 17:18:25,221: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[0c62186a-8164-40ec-95a7-b9e7f0332784] succeeded in 1.0090538549993653s: None
+[2024-11-24 17:18:25,223: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[34219b80-b021-4b62-934c-173e0a1d9e39]  
+[2024-11-24 17:18:25,568: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[bfb0135f-2500-4423-af82-a1edefbe6477] succeeded in 1.0543351210071705s: None
+[2024-11-24 17:18:25,572: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ef31ae1f-859a-4524-adbb-32a38234573d]  
+[2024-11-24 17:18:26,473: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[354c8a98-f565-413b-ac0d-bb25c3356ed7] succeeded in 1.2499090900237206s: None
+[2024-11-24 17:18:26,481: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c77616e4-0c7e-4dde-9b9d-2d148b1c6168]  
+[2024-11-24 17:18:26,597: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[61a8a61b-3b16-4dd9-a675-02b716cc7594] succeeded in 1.0254841849964578s: None
+[2024-11-24 17:18:26,604: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[75b5c1f2-ca97-4aa5-b833-c7341b362d63]  
+[2024-11-24 17:18:27,796: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[5b6411ab-8a20-4bc7-9d6d-dec090f9bac9] succeeded in 1.3139138600090519s: None
+[2024-11-24 17:18:27,799: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[00faf97c-bd72-44a3-baef-779a66430335]  
+[2024-11-24 17:18:27,908: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[fed9b8c3-3cac-403e-a1d2-b1924f4b455f] succeeded in 1.3082044659822714s: None
+[2024-11-24 17:18:27,912: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[0d3045f6-9263-4161-a90a-dc6a97739282]  
+[2024-11-24 17:18:29,038: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[20c4b237-f5f7-4a44-87c9-42af02dff98b] succeeded in 1.2380712199956179s: None
+[2024-11-24 17:18:29,045: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[751b6f70-a837-4519-8f02-86e4e5302237]  
+[2024-11-24 17:18:29,183: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[90f6eba6-7157-43ce-92bc-450ed06ef33b] succeeded in 1.2721345910103992s: None
+[2024-11-24 17:18:29,186: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[fd9179b9-a8af-4380-a77d-ed98aa8b8d90]  
+[2024-11-24 17:18:30,046: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[34219b80-b021-4b62-934c-173e0a1d9e39] succeeded in 1.0049717299989425s: None
+[2024-11-24 17:18:30,050: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6de5df5d-38e5-411e-861e-13b07325a010]  
+[2024-11-24 17:18:30,477: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ef31ae1f-859a-4524-adbb-32a38234573d] succeeded in 1.2920229930023197s: None
+[2024-11-24 17:18:30,481: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[db6396d7-55f5-4e94-9782-1d504431ce4d]  
+[2024-11-24 17:18:31,315: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[c77616e4-0c7e-4dde-9b9d-2d148b1c6168] succeeded in 1.265499347995501s: None
+[2024-11-24 17:18:31,318: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b5d25ef6-42e2-483b-a74b-e0be55663144]  
+[2024-11-24 17:18:31,770: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[75b5c1f2-ca97-4aa5-b833-c7341b362d63] succeeded in 1.290795540990075s: None
+[2024-11-24 17:18:31,774: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3d5f7cb6-bad0-4700-a7fa-dc792bac7841]  
+[2024-11-24 17:18:32,645: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[00faf97c-bd72-44a3-baef-779a66430335] succeeded in 1.3253526429762132s: None
+[2024-11-24 17:18:32,649: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[14f6242a-2098-4124-80bf-be1c4f749bc4]  
+[2024-11-24 17:18:32,795: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[0d3045f6-9263-4161-a90a-dc6a97739282] succeeded in 1.0236165459791664s: None
+[2024-11-24 17:18:32,797: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[db2d7dcc-94b3-47f4-b86a-9c4635748f7f]  
+[2024-11-24 17:18:33,897: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[751b6f70-a837-4519-8f02-86e4e5302237] succeeded in 1.2483158840041142s: None
+[2024-11-24 17:18:33,899: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[62691cd1-c7b4-4c57-96f6-939b4f22b592]  
+[2024-11-24 17:18:34,051: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[fd9179b9-a8af-4380-a77d-ed98aa8b8d90] succeeded in 1.2542885299772024s: None
+[2024-11-24 17:18:34,056: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[26f13f69-e018-4870-9df6-e6a718616745]  
+[2024-11-24 17:18:35,172: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[6de5df5d-38e5-411e-861e-13b07325a010] succeeded in 1.27239725398249s: None
+[2024-11-24 17:18:35,174: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6ea80710-c4c8-45c6-82dc-205246d3f732]  
+[2024-11-24 17:18:35,320: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[db6396d7-55f5-4e94-9782-1d504431ce4d] succeeded in 1.2651026049861684s: None
+[2024-11-24 17:18:35,322: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6f99d501-eb42-4c1b-96a4-7e06acb2c1e9]  
+[2024-11-24 17:18:36,364: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[3d5f7cb6-bad0-4700-a7fa-dc792bac7841] succeeded in 1.0423527010134421s: None
+[2024-11-24 17:18:36,367: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[11738b81-0ded-416d-923d-05ea44447e3d]  
+[2024-11-24 17:18:36,412: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b5d25ef6-42e2-483b-a74b-e0be55663144] succeeded in 1.2382050310261548s: None
+[2024-11-24 17:18:36,415: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[d9b1390f-4bb4-4114-85ea-f0a5a0f616c2]  
+[2024-11-24 17:18:37,599: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[14f6242a-2098-4124-80bf-be1c4f749bc4] succeeded in 1.2311472759756725s: None
+[2024-11-24 17:18:37,601: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2c0be2b5-a23b-4de1-b5b0-4bf0288f52b5]  
+[2024-11-24 17:18:37,691: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[db2d7dcc-94b3-47f4-b86a-9c4635748f7f] succeeded in 1.275464992999332s: None
+[2024-11-24 17:18:37,694: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[18266cf1-2258-418e-976d-359a9e26ec3b]  
+[2024-11-24 17:18:38,688: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[26f13f69-e018-4870-9df6-e6a718616745] succeeded in 0.9959186369960662s: None
+[2024-11-24 17:18:38,691: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[690b0dd3-d019-4deb-a749-f3be7700dcfd]  
+[2024-11-24 17:18:38,850: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[62691cd1-c7b4-4c57-96f6-939b4f22b592] succeeded in 1.2485388149798382s: None
+[2024-11-24 17:18:38,855: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[56209e48-c82a-445e-98d8-d31880416617]  
+[2024-11-24 17:18:39,938: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[6ea80710-c4c8-45c6-82dc-205246d3f732] succeeded in 1.2476763039885554s: None
+[2024-11-24 17:18:39,941: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[3ed732a4-744e-4346-805d-0db83a02a78e]  
+[2024-11-24 17:18:40,078: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[6f99d501-eb42-4c1b-96a4-7e06acb2c1e9] succeeded in 1.2253797219891567s: None
+[2024-11-24 17:18:40,082: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4d969592-4fe0-42ab-af41-7301b31c98c4]  
+[2024-11-24 17:18:41,200: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[11738b81-0ded-416d-923d-05ea44447e3d] succeeded in 1.2608559410145972s: None
+[2024-11-24 17:18:41,203: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[ed8fff5c-aaf1-4c94-a37b-7684ce579d40]  
+[2024-11-24 17:18:41,347: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[d9b1390f-4bb4-4114-85ea-f0a5a0f616c2] succeeded in 1.2655401450174395s: None
+[2024-11-24 17:18:41,350: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[5198e9ef-b4ef-42ec-9b34-b56bb5476ffa]  
+[2024-11-24 17:18:42,314: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[18266cf1-2258-418e-976d-359a9e26ec3b] succeeded in 0.9653963000164367s: None
+[2024-11-24 17:18:42,319: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[54ce4f67-8bbb-4b2e-8c22-4c1e82ef5843]  
+[2024-11-24 17:18:42,505: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2c0be2b5-a23b-4de1-b5b0-4bf0288f52b5] succeeded in 1.303656113013858s: None
+[2024-11-24 17:18:42,507: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f955fc75-8a60-466c-a09c-30f9d2a74df2]  
+[2024-11-24 17:18:43,333: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[690b0dd3-d019-4deb-a749-f3be7700dcfd] succeeded in 1.013502015004633s: None
+[2024-11-24 17:18:43,334: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2d1c0804-5b30-4e65-83ab-36139c839df4]  
+[2024-11-24 17:18:43,522: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[56209e48-c82a-445e-98d8-d31880416617] succeeded in 1.0154468569962773s: None
+[2024-11-24 17:18:43,527: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[4fdab5ef-2121-4b0d-a353-12f37e898baf]  
+[2024-11-24 17:18:44,320: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[3ed732a4-744e-4346-805d-0db83a02a78e] succeeded in 0.9854942480160389s: None
+[2024-11-24 17:18:44,323: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[cb2ec43d-866d-43d9-91ff-8663b30d330b]  
+[2024-11-24 17:18:44,543: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[4d969592-4fe0-42ab-af41-7301b31c98c4] succeeded in 1.0187496730068233s: None
+[2024-11-24 17:18:44,545: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f76c7789-b567-4783-b08f-f46b3f5a7913]  
+[2024-11-24 17:18:45,548: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[5198e9ef-b4ef-42ec-9b34-b56bb5476ffa] succeeded in 1.0035589679901022s: None
+[2024-11-24 17:18:45,552: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[900755b2-a15c-40ef-ae06-ba492808a0bd]  
+[2024-11-24 17:18:45,581: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[ed8fff5c-aaf1-4c94-a37b-7684ce579d40] succeeded in 1.2595398600096814s: None
+[2024-11-24 17:18:45,586: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[c368704b-1f9c-4821-9709-9c9eeb834267]  
+[2024-11-24 17:18:46,835: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[54ce4f67-8bbb-4b2e-8c22-4c1e82ef5843] succeeded in 1.2840960460016504s: None
+[2024-11-24 17:18:46,837: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[48357a09-1063-4e7c-8902-e27973278cff]  
+[2024-11-24 17:18:46,877: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[f955fc75-8a60-466c-a09c-30f9d2a74df2] succeeded in 1.2931107809999958s: None
+[2024-11-24 17:18:46,882: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[97cf80f7-4449-4e95-95d1-aa6a01cdb849]  
+[2024-11-24 17:18:47,848: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2d1c0804-5b30-4e65-83ab-36139c839df4] succeeded in 1.0102364360063802s: None
+[2024-11-24 17:18:47,850: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[9d0622b6-2d7a-4a88-821a-e25881d3aa08]  
+[2024-11-24 17:18:47,871: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[4fdab5ef-2121-4b0d-a353-12f37e898baf] succeeded in 0.991865816002246s: None
+[2024-11-24 17:18:47,877: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[029c64e8-fef0-408b-b5ee-a69acc7bb922]  
+[2024-11-24 17:18:49,112: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[f76c7789-b567-4783-b08f-f46b3f5a7913] succeeded in 1.2371253719902597s: None
+[2024-11-24 17:18:49,114: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[dc387018-7c88-407e-8313-0eac39170e9e]  
+[2024-11-24 17:18:49,130: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[cb2ec43d-866d-43d9-91ff-8663b30d330b] succeeded in 1.2796735820011236s: None
+[2024-11-24 17:18:49,133: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[363b83c3-f46b-408c-918c-46b4e270aa60]  
+[2024-11-24 17:18:50,080: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[900755b2-a15c-40ef-ae06-ba492808a0bd] succeeded in 0.9663110779947601s: None
+[2024-11-24 17:18:50,084: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[8e69ce17-2dc9-4aac-a90e-f8298a80f39e]  
+[2024-11-24 17:18:50,455: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[c368704b-1f9c-4821-9709-9c9eeb834267] succeeded in 1.3206683589960448s: None
+[2024-11-24 17:18:50,459: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[2d0b0c13-558e-4fe1-b2b4-d8aabf4a43d6]  
+[2024-11-24 17:18:51,365: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[48357a09-1063-4e7c-8902-e27973278cff] succeeded in 1.2807338009879459s: None
+[2024-11-24 17:18:51,367: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[cfe0d771-1046-4af1-bc97-661e67067185]  
+[2024-11-24 17:18:51,841: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[97cf80f7-4449-4e95-95d1-aa6a01cdb849] succeeded in 1.3832361480162945s: None
+[2024-11-24 17:18:51,844: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[7d335c97-50ae-4c7d-a871-8c80a872a202]  
+[2024-11-24 17:18:52,608: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[9d0622b6-2d7a-4a88-821a-e25881d3aa08] succeeded in 1.2422050420136657s: None
+[2024-11-24 17:18:52,613: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[6f10e7af-5b16-449a-9920-a44e19d91699]  
+[2024-11-24 17:18:52,873: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[029c64e8-fef0-408b-b5ee-a69acc7bb922] succeeded in 1.029466046980815s: None
+[2024-11-24 17:18:52,878: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[780ed608-b764-48c7-ae27-1643aab3e622]  
+[2024-11-24 17:18:53,869: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[dc387018-7c88-407e-8313-0eac39170e9e] succeeded in 1.257420642010402s: None
+[2024-11-24 17:18:53,873: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[f64c7cf7-a136-4d0f-82fa-b07d0fee7d87]  
+[2024-11-24 17:18:54,178: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[363b83c3-f46b-408c-918c-46b4e270aa60] succeeded in 1.303298293001717s: None
+[2024-11-24 17:18:54,184: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[65f561af-ca2d-431c-9bee-73ad0958f89f]  
+[2024-11-24 17:18:55,228: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[8e69ce17-2dc9-4aac-a90e-f8298a80f39e] succeeded in 1.3565861120005138s: None
+[2024-11-24 17:18:55,232: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[801dcb9c-b520-4e10-854b-7ce08feb74da]  
+[2024-11-24 17:18:55,449: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[2d0b0c13-558e-4fe1-b2b4-d8aabf4a43d6] succeeded in 1.2667451010202058s: None
+[2024-11-24 17:18:55,453: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[97cdbed5-0607-4903-8ee6-b5fe4227fe10]  
+[2024-11-24 17:18:56,526: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[cfe0d771-1046-4af1-bc97-661e67067185] succeeded in 1.2936809079837985s: None
+[2024-11-24 17:18:56,533: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[adec89d2-c4f2-488b-b74b-6a880e02c823]  
+[2024-11-24 17:18:56,841: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[7d335c97-50ae-4c7d-a871-8c80a872a202] succeeded in 1.3875504020252265s: None
+[2024-11-24 17:18:56,845: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[44966ee1-96a6-4033-bcf5-02acb009ba01]  
+[2024-11-24 17:18:57,767: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[6f10e7af-5b16-449a-9920-a44e19d91699] succeeded in 1.2361731290002353s: None
+[2024-11-24 17:18:57,772: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[b78bc9b2-df83-4893-912a-a4863d64c750]  
+[2024-11-24 17:18:57,852: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[780ed608-b764-48c7-ae27-1643aab3e622] succeeded in 1.0063204760081135s: None
+[2024-11-24 17:18:57,857: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[62858e42-ae3a-48da-a1c3-db2d08d7ab97]  
+[2024-11-24 17:18:58,876: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[65f561af-ca2d-431c-9bee-73ad0958f89f] succeeded in 1.0180899080005474s: None
+[2024-11-24 17:18:58,883: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[e3922fa1-4294-443d-8603-64236b187f35]  
+[2024-11-24 17:18:59,057: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[f64c7cf7-a136-4d0f-82fa-b07d0fee7d87] succeeded in 1.2847894850128796s: None
+[2024-11-24 17:18:59,064: INFO/MainProcess] Received task: alerts.tasks.telegram_alert_vuln_task[df5fbb1c-e5a7-4713-b0af-e28bc6450e1d]  
+[2024-11-24 17:19:00,001: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[801dcb9c-b520-4e10-854b-7ce08feb74da] succeeded in 1.1178800789930392s: None
+[2024-11-24 17:19:00,096: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[97cdbed5-0607-4903-8ee6-b5fe4227fe10] succeeded in 1.0337107610248495s: None
+[2024-11-24 17:19:01,064: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[adec89d2-c4f2-488b-b74b-6a880e02c823] succeeded in 1.0620874669984914s: None
+[2024-11-24 17:19:01,146: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[44966ee1-96a6-4033-bcf5-02acb009ba01] succeeded in 1.0485349539958406s: None
+[2024-11-24 17:19:02,118: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[b78bc9b2-df83-4893-912a-a4863d64c750] succeeded in 1.0521908520022407s: None
+[2024-11-24 17:19:02,140: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[62858e42-ae3a-48da-a1c3-db2d08d7ab97] succeeded in 0.9906292619998567s: None
+[2024-11-24 17:19:03,403: INFO/ForkPoolWorker-1] Task alerts.tasks.telegram_alert_vuln_task[e3922fa1-4294-443d-8603-64236b187f35] succeeded in 1.2827966710028704s: None
+[2024-11-24 17:19:03,407: INFO/ForkPoolWorker-2] Task alerts.tasks.telegram_alert_vuln_task[df5fbb1c-e5a7-4713-b0af-e28bc6450e1d] succeeded in 1.2648833510174882s: None

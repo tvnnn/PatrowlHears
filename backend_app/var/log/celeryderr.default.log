@@ -1,3 +1,17 @@
+
+worker: Warm shutdown (MainProcess)
+[2024-11-21 05:39:46,636: WARNING/MainProcess] Traceback (most recent call last):
+[2024-11-21 05:39:46,639: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 300, in _run_finalizers
+    finalizer()
+[2024-11-21 05:39:46,640: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 224, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+[2024-11-21 05:39:46,640: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/multiprocessing/util.py", line 133, in _remove_temp_dir
+    rmtree(tempdir)
+[2024-11-21 05:39:46,640: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/shutil.py", line 724, in rmtree
+    onerror(os.lstat, path, sys.exc_info())
+[2024-11-21 05:39:46,641: WARNING/MainProcess] File "/root/.pyenv/versions/3.9.20/lib/python3.9/shutil.py", line 722, in rmtree
+    orig_st = os.lstat(path)
+[2024-11-21 05:39:46,641: WARNING/MainProcess] FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pymp-3gbh1xof'
 /root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
 absolutely not recommended!
 
@@ -6,9 +20,567 @@ Please specify a different user using the --uid option.
 User information: uid=0 euid=0 gid=0 egid=0
 
   warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
-[2024-11-19 09:58:25,854: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
-[2024-11-19 09:58:25,966: INFO/MainProcess] default-node@ph ready.
-[2024-11-20 00:00:00,207: INFO/MainProcess] Received task: vulns.tasks.email_daily_report_task[9b4aafe7-0967-4ecf-8582-7a42509040b1]  
-[2024-11-20 00:00:00,310: INFO/ForkPoolWorker-1] Task vulns.tasks.email_daily_report_task[9b4aafe7-0967-4ecf-8582-7a42509040b1] succeeded in 0.09053192700230284s: None
-[2024-11-20 04:00:00,012: INFO/MainProcess] Received task: celery.backend_cleanup[35d3ae9d-e3a4-4545-8788-54b8fd6cafde]   expires:[2024-11-20 16:00:00.006825+01:00]
-[2024-11-20 04:00:00,206: INFO/ForkPoolWorker-1] Task celery.backend_cleanup[35d3ae9d-e3a4-4545-8788-54b8fd6cafde] succeeded in 0.18263521199696697s: None
+[2024-11-21 05:40:05,774: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-21 05:40:05,821: INFO/MainProcess] default-node@ph ready.
+/root/.pyenv/versions/3.9.20/lib/python3.9/site-packages/celery/platforms.py:800: RuntimeWarning: You're running the worker with superuser privileges: this is
+absolutely not recommended!
+
+Please specify a different user using the --uid option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  warnings.warn(RuntimeWarning(ROOT_DISCOURAGED.format(
+[2024-11-21 18:33:54,008: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2024-11-21 18:33:54,078: INFO/MainProcess] default-node@ph ready.
+[2024-11-22 00:00:00,104: INFO/MainProcess] Received task: vulns.tasks.email_daily_report_task[22b0e1d8-b913-4c1d-a95b-3513e2656c4e]  
+[2024-11-22 00:00:00,185: INFO/ForkPoolWorker-1] Task vulns.tasks.email_daily_report_task[22b0e1d8-b913-4c1d-a95b-3513e2656c4e] succeeded in 0.07029456300006132s: None
+[2024-11-22 04:00:00,014: INFO/MainProcess] Received task: celery.backend_cleanup[e81e567f-5b5b-4ade-8b9a-06cfd86ed8a7]   expires:[2024-11-22 16:00:00.006871+01:00]
+[2024-11-22 04:00:00,052: INFO/ForkPoolWorker-1] Task celery.backend_cleanup[e81e567f-5b5b-4ade-8b9a-06cfd86ed8a7] succeeded in 0.032383849000325426s: None
+[2024-11-23 00:00:00,039: INFO/MainProcess] Received task: vulns.tasks.email_daily_report_task[e0e76f17-7738-494b-bddb-2453b25ad090]  
+[2024-11-23 00:00:00,090: INFO/ForkPoolWorker-1] Task vulns.tasks.email_daily_report_task[e0e76f17-7738-494b-bddb-2453b25ad090] succeeded in 0.0285861529991962s: None
+[2024-11-23 04:00:00,015: INFO/MainProcess] Received task: celery.backend_cleanup[60de7c15-f8c2-4e50-b184-a28befd41dfc]   expires:[2024-11-23 16:00:00.005713+01:00]
+[2024-11-23 04:00:00,031: INFO/ForkPoolWorker-1] Task celery.backend_cleanup[60de7c15-f8c2-4e50-b184-a28befd41dfc] succeeded in 0.014172231007250957s: None
+[2024-11-24 00:00:00,015: INFO/MainProcess] Received task: vulns.tasks.email_daily_report_task[bed74af2-4ee5-4827-a55f-af9236ab1a9e]  
+[2024-11-24 00:00:00,042: INFO/ForkPoolWorker-1] Task vulns.tasks.email_daily_report_task[bed74af2-4ee5-4827-a55f-af9236ab1a9e] succeeded in 0.021707773994421586s: None
+[2024-11-24 04:00:00,004: INFO/MainProcess] Received task: celery.backend_cleanup[55ef77d3-1b58-4272-9912-f41549993764]   expires:[2024-11-24 16:00:00.001000+01:00]
+[2024-11-24 04:00:00,023: INFO/ForkPoolWorker-1] Task celery.backend_cleanup[55ef77d3-1b58-4272-9912-f41549993764] succeeded in 0.01761536198318936s: None
+[2024-11-25 00:00:00,024: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[7a633d62-2ca9-44b7-aa8d-d2ae9c854388]  
+[2024-11-25 00:00:00,052: INFO/MainProcess] Received task: vulns.tasks.email_daily_report_task[b9eee6e2-b84c-4edc-9dc1-c2957b9717c9]  
+[2024-11-25 00:00:00,159: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[7a633d62-2ca9-44b7-aa8d-d2ae9c854388] succeeded in 0.09948234702460468s: None
+[2024-11-25 00:00:00,713: INFO/ForkPoolWorker-4] Task vulns.tasks.email_daily_report_task[b9eee6e2-b84c-4edc-9dc1-c2957b9717c9] succeeded in 0.5599632539669983s: None
+[2024-11-25 00:01:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ee88cfe2-50f4-417d-8cde-1eb7f49b640d]  
+[2024-11-25 00:01:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ee88cfe2-50f4-417d-8cde-1eb7f49b640d] succeeded in 0.009826680005062371s: None
+[2024-11-25 00:02:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[472f121b-5f2a-4581-993c-1c579d3a5744]  
+[2024-11-25 00:02:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[472f121b-5f2a-4581-993c-1c579d3a5744] succeeded in 0.009967198013328016s: None
+[2024-11-25 00:03:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[9f1e1f83-ea64-43ac-98f0-a6467ad9a612]  
+[2024-11-25 00:03:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[9f1e1f83-ea64-43ac-98f0-a6467ad9a612] succeeded in 0.009811341995373368s: None
+[2024-11-25 00:04:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[55a4db86-1158-4fde-b78e-835fdba69cef]  
+[2024-11-25 00:04:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[55a4db86-1158-4fde-b78e-835fdba69cef] succeeded in 0.010074869962409139s: None
+[2024-11-25 00:05:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[0e65b83b-5789-49a4-9c83-22288cfecbd3]  
+[2024-11-25 00:05:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[0e65b83b-5789-49a4-9c83-22288cfecbd3] succeeded in 0.01302664598915726s: None
+[2024-11-25 00:06:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[70841300-c277-4ca7-9df3-46ed6bdbd6c3]  
+[2024-11-25 00:06:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[70841300-c277-4ca7-9df3-46ed6bdbd6c3] succeeded in 0.009804202010855079s: None
+[2024-11-25 00:07:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ba493b03-6202-4150-822a-9d2053d2023e]  
+[2024-11-25 00:07:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ba493b03-6202-4150-822a-9d2053d2023e] succeeded in 0.009499243984464556s: None
+[2024-11-25 00:08:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f2b41ca1-ace3-43a8-93a8-52cb9cb92f33]  
+[2024-11-25 00:08:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f2b41ca1-ace3-43a8-93a8-52cb9cb92f33] succeeded in 0.009919309988617897s: None
+[2024-11-25 00:09:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6644b5b1-08ab-425d-bd84-303a43b54748]  
+[2024-11-25 00:09:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6644b5b1-08ab-425d-bd84-303a43b54748] succeeded in 0.010996593977324665s: None
+[2024-11-25 00:10:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[fb304b73-070b-47ad-bc1e-03fcbbcc905a]  
+[2024-11-25 00:10:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[fb304b73-070b-47ad-bc1e-03fcbbcc905a] succeeded in 0.011612689995672554s: None
+[2024-11-25 00:11:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[2d2e079a-1cab-412f-befa-13fcae294f7d]  
+[2024-11-25 00:11:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[2d2e079a-1cab-412f-befa-13fcae294f7d] succeeded in 0.009692459949292243s: None
+[2024-11-25 00:12:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[545929bb-15e5-4c92-a9fb-5f3124aff2e5]  
+[2024-11-25 00:12:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[545929bb-15e5-4c92-a9fb-5f3124aff2e5] succeeded in 0.010401572973933071s: None
+[2024-11-25 00:13:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[39e3228e-f9d0-4abf-bd52-b1b8dc96b9a4]  
+[2024-11-25 00:13:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[39e3228e-f9d0-4abf-bd52-b1b8dc96b9a4] succeeded in 0.01043661404401064s: None
+[2024-11-25 00:14:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d733ddc2-9939-450d-8287-5a337f15656f]  
+[2024-11-25 00:14:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d733ddc2-9939-450d-8287-5a337f15656f] succeeded in 0.011208462005015463s: None
+[2024-11-25 00:15:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[88439b9c-cf58-4ff2-b62d-1154ca890cff]  
+[2024-11-25 00:15:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[88439b9c-cf58-4ff2-b62d-1154ca890cff] succeeded in 0.010757440992165357s: None
+[2024-11-25 00:16:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b554cf04-59fd-447e-bde2-7308a9328724]  
+[2024-11-25 00:16:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b554cf04-59fd-447e-bde2-7308a9328724] succeeded in 0.012508511019404978s: None
+[2024-11-25 00:17:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[587f4609-5315-49de-9f27-688f6779271e]  
+[2024-11-25 00:17:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[587f4609-5315-49de-9f27-688f6779271e] succeeded in 0.008534787979442626s: None
+[2024-11-25 00:18:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[1d383f21-2fc5-42bc-ba08-53341ae3fb75]  
+[2024-11-25 00:18:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[1d383f21-2fc5-42bc-ba08-53341ae3fb75] succeeded in 0.008397254976443946s: None
+[2024-11-25 00:19:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[1aea5d3a-fd04-42a5-b3bd-21c5ef6f5b02]  
+[2024-11-25 00:19:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[1aea5d3a-fd04-42a5-b3bd-21c5ef6f5b02] succeeded in 0.00885782897239551s: None
+[2024-11-25 00:20:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[3b00065b-593d-449e-acd2-2e82a8a3a654]  
+[2024-11-25 00:20:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[3b00065b-593d-449e-acd2-2e82a8a3a654] succeeded in 0.00976797501789406s: None
+[2024-11-25 00:21:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8d621ece-1d41-4ad9-9f41-6353ae0c18e9]  
+[2024-11-25 00:21:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8d621ece-1d41-4ad9-9f41-6353ae0c18e9] succeeded in 0.009590144036337733s: None
+[2024-11-25 00:22:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[fd854158-9d30-4d17-95e4-0657d546a5e6]  
+[2024-11-25 00:22:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[fd854158-9d30-4d17-95e4-0657d546a5e6] succeeded in 0.010047909978311509s: None
+[2024-11-25 00:23:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[459a6290-7daf-49a4-969f-57e8facb9478]  
+[2024-11-25 00:23:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[459a6290-7daf-49a4-969f-57e8facb9478] succeeded in 0.010539584036450833s: None
+[2024-11-25 00:24:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f8974c9f-0d6f-4288-a55c-3a81b7b9b17d]  
+[2024-11-25 00:24:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f8974c9f-0d6f-4288-a55c-3a81b7b9b17d] succeeded in 0.01024077000329271s: None
+[2024-11-25 00:25:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a7fc6f34-0719-4956-b194-cde4a4366c3f]  
+[2024-11-25 00:25:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a7fc6f34-0719-4956-b194-cde4a4366c3f] succeeded in 0.010387076006736606s: None
+[2024-11-25 00:26:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[9e82250b-9cb1-428a-bf5a-dd80d1cfc404]  
+[2024-11-25 00:26:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[9e82250b-9cb1-428a-bf5a-dd80d1cfc404] succeeded in 0.011486182978842407s: None
+[2024-11-25 00:27:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[3ea8f1d4-ed2a-4fec-be7e-1904220235f8]  
+[2024-11-25 00:27:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[3ea8f1d4-ed2a-4fec-be7e-1904220235f8] succeeded in 0.012454973999410868s: None
+[2024-11-25 00:28:00,026: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8bd05ad6-bf09-4294-857d-f7f0ca71d761]  
+[2024-11-25 00:28:00,035: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8bd05ad6-bf09-4294-857d-f7f0ca71d761] succeeded in 0.008543020056094974s: None
+[2024-11-25 00:29:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[2ab8ff91-f692-495f-a599-4bd206697b50]  
+[2024-11-25 00:29:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[2ab8ff91-f692-495f-a599-4bd206697b50] succeeded in 0.009381814976222813s: None
+[2024-11-25 00:30:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a7035587-3f42-42b3-8bea-0c28b6027605]  
+[2024-11-25 00:30:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a7035587-3f42-42b3-8bea-0c28b6027605] succeeded in 0.010273015999700874s: None
+[2024-11-25 00:31:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b9b262a7-e46c-4c5b-b6f4-987150195902]  
+[2024-11-25 00:31:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b9b262a7-e46c-4c5b-b6f4-987150195902] succeeded in 0.009207257011439651s: None
+[2024-11-25 00:32:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[3e785710-9205-4ad2-8a14-91e1a26a8036]  
+[2024-11-25 00:32:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[3e785710-9205-4ad2-8a14-91e1a26a8036] succeeded in 0.008341206004843116s: None
+[2024-11-25 00:33:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[92d12741-0988-4f40-9901-1d6577ef8ccb]  
+[2024-11-25 00:33:00,013: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[92d12741-0988-4f40-9901-1d6577ef8ccb] succeeded in 0.008250896004028618s: None
+[2024-11-25 00:34:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[c8b11215-0b59-4174-9cd3-efa956e4355b]  
+[2024-11-25 00:34:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[c8b11215-0b59-4174-9cd3-efa956e4355b] succeeded in 0.009464047034271061s: None
+[2024-11-25 00:35:00,068: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[700733e8-9279-4a6a-8d55-8b88813af2c9]  
+[2024-11-25 00:35:00,083: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[700733e8-9279-4a6a-8d55-8b88813af2c9] succeeded in 0.013723888958338648s: None
+[2024-11-25 00:36:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[cfbc32e8-266c-4bfe-9903-778de2a6a922]  
+[2024-11-25 00:36:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[cfbc32e8-266c-4bfe-9903-778de2a6a922] succeeded in 0.009396239009220153s: None
+[2024-11-25 00:37:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e9824a16-d174-471d-b589-132702dcd238]  
+[2024-11-25 00:37:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e9824a16-d174-471d-b589-132702dcd238] succeeded in 0.009120572009123862s: None
+[2024-11-25 00:38:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ded8cfa3-3b3a-4869-b25f-bc6f4cb04c4f]  
+[2024-11-25 00:38:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ded8cfa3-3b3a-4869-b25f-bc6f4cb04c4f] succeeded in 0.01302223198581487s: None
+[2024-11-25 00:39:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[db90bce2-894d-4009-a855-7003bbecce27]  
+[2024-11-25 00:39:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[db90bce2-894d-4009-a855-7003bbecce27] succeeded in 0.008672636991832405s: None
+[2024-11-25 00:40:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[7962aabb-5f1f-4b75-ac20-e2874622cf0a]  
+[2024-11-25 00:40:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[7962aabb-5f1f-4b75-ac20-e2874622cf0a] succeeded in 0.007805646047927439s: None
+[2024-11-25 00:41:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d7783523-e0ee-4b1a-b8dc-964b8d689228]  
+[2024-11-25 00:41:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d7783523-e0ee-4b1a-b8dc-964b8d689228] succeeded in 0.009369363018777221s: None
+[2024-11-25 00:42:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a6b6b2fa-a9a2-48a4-b5cd-7eb87c412f35]  
+[2024-11-25 00:42:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a6b6b2fa-a9a2-48a4-b5cd-7eb87c412f35] succeeded in 0.01002261700341478s: None
+[2024-11-25 00:43:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d64d4137-96ad-482b-935c-7cbe867314c8]  
+[2024-11-25 00:43:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d64d4137-96ad-482b-935c-7cbe867314c8] succeeded in 0.01171932800207287s: None
+[2024-11-25 00:44:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[33c1ad89-ba68-4da2-a6a5-1a678f063612]  
+[2024-11-25 00:44:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[33c1ad89-ba68-4da2-a6a5-1a678f063612] succeeded in 0.011418493988458067s: None
+[2024-11-25 00:45:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b72db2f6-fac4-4cd8-a264-997e08635b5d]  
+[2024-11-25 00:45:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b72db2f6-fac4-4cd8-a264-997e08635b5d] succeeded in 0.012786709994543344s: None
+[2024-11-25 00:46:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e821c989-820e-43b4-9d8e-70e24d68747c]  
+[2024-11-25 00:46:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e821c989-820e-43b4-9d8e-70e24d68747c] succeeded in 0.011289956979453564s: None
+[2024-11-25 00:47:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d341adea-4c13-437d-9cbf-ee03f84ebde0]  
+[2024-11-25 00:47:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d341adea-4c13-437d-9cbf-ee03f84ebde0] succeeded in 0.009932519984431565s: None
+[2024-11-25 00:48:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[3cffa0bc-38dd-4bf9-a190-a378b4845430]  
+[2024-11-25 00:48:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[3cffa0bc-38dd-4bf9-a190-a378b4845430] succeeded in 0.010735307994764298s: None
+[2024-11-25 00:49:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[360526c5-390d-4c81-bce1-9741c94ab315]  
+[2024-11-25 00:49:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[360526c5-390d-4c81-bce1-9741c94ab315] succeeded in 0.013019242032896727s: None
+[2024-11-25 00:50:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8bfa984c-2d1a-450c-a0ee-4479d30230fd]  
+[2024-11-25 00:50:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8bfa984c-2d1a-450c-a0ee-4479d30230fd] succeeded in 0.009374263987410814s: None
+[2024-11-25 00:51:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[4cb4a89d-1e91-4a87-8db1-eb01dcf05f23]  
+[2024-11-25 00:51:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[4cb4a89d-1e91-4a87-8db1-eb01dcf05f23] succeeded in 0.00909732299624011s: None
+[2024-11-25 00:52:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[35e9fe98-a86d-43d6-a35e-efade3881fd8]  
+[2024-11-25 00:52:00,013: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[35e9fe98-a86d-43d6-a35e-efade3881fd8] succeeded in 0.008918594976421446s: None
+[2024-11-25 00:53:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[41c14702-0e4d-4d87-a181-a9f381ddbf03]  
+[2024-11-25 00:53:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[41c14702-0e4d-4d87-a181-a9f381ddbf03] succeeded in 0.010325126990210265s: None
+[2024-11-25 00:54:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[bffa302a-c585-49c1-aada-bf89e1e9db45]  
+[2024-11-25 00:54:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[bffa302a-c585-49c1-aada-bf89e1e9db45] succeeded in 0.01231706899125129s: None
+[2024-11-25 00:55:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[2e468eff-249a-4faa-9a3a-24e5bd285de8]  
+[2024-11-25 00:55:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[2e468eff-249a-4faa-9a3a-24e5bd285de8] succeeded in 0.011538997001480311s: None
+[2024-11-25 00:56:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ec476960-434a-493a-a3e1-b46b5f731ca8]  
+[2024-11-25 00:56:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ec476960-434a-493a-a3e1-b46b5f731ca8] succeeded in 0.009168944030534476s: None
+[2024-11-25 00:57:00,025: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e7ca5de3-6adf-46a8-818f-23c9f9b8f72b]  
+[2024-11-25 00:57:00,035: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e7ca5de3-6adf-46a8-818f-23c9f9b8f72b] succeeded in 0.009869516012258828s: None
+[2024-11-25 00:58:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[c217f042-f1ac-4860-82de-47498de59458]  
+[2024-11-25 00:58:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[c217f042-f1ac-4860-82de-47498de59458] succeeded in 0.012821796000935137s: None
+[2024-11-25 00:59:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[eb23026d-e1d3-495a-bbe6-5fbb6973ee1a]  
+[2024-11-25 00:59:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[eb23026d-e1d3-495a-bbe6-5fbb6973ee1a] succeeded in 0.009756399958860129s: None
+[2024-11-25 01:00:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a914ad8e-aab5-4d8c-8590-621cccde0404]  
+[2024-11-25 01:00:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a914ad8e-aab5-4d8c-8590-621cccde0404] succeeded in 0.008387719048187137s: None
+[2024-11-25 01:01:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[241d1e04-37a6-4935-872b-818e965ed2c4]  
+[2024-11-25 01:01:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[241d1e04-37a6-4935-872b-818e965ed2c4] succeeded in 0.01010912301717326s: None
+[2024-11-25 01:02:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[5f9a2eb3-db28-4605-9a44-807417510c48]  
+[2024-11-25 01:02:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[5f9a2eb3-db28-4605-9a44-807417510c48] succeeded in 0.010802525037433952s: None
+[2024-11-25 01:03:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[02f88cfa-f5e6-4a52-9917-2604a3665fdb]  
+[2024-11-25 01:03:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[02f88cfa-f5e6-4a52-9917-2604a3665fdb] succeeded in 0.01063453999813646s: None
+[2024-11-25 01:04:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[7c76a5ee-2833-454a-bec2-0062836ab25e]  
+[2024-11-25 01:04:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[7c76a5ee-2833-454a-bec2-0062836ab25e] succeeded in 0.008902001020032912s: None
+[2024-11-25 01:05:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[923fa61c-bd3b-41c7-a04e-971a08a5e8c2]  
+[2024-11-25 01:05:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[923fa61c-bd3b-41c7-a04e-971a08a5e8c2] succeeded in 0.009684778982773423s: None
+[2024-11-25 01:06:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[01faba2a-4edb-448c-9e40-923e4361fe07]  
+[2024-11-25 01:06:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[01faba2a-4edb-448c-9e40-923e4361fe07] succeeded in 0.010522873024456203s: None
+[2024-11-25 01:07:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a15e3803-06f8-4716-b16f-0cf75b441215]  
+[2024-11-25 01:07:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a15e3803-06f8-4716-b16f-0cf75b441215] succeeded in 0.008477961993776262s: None
+[2024-11-25 01:08:00,021: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[3cad4d50-fff2-403f-8dae-35f96c7003e8]  
+[2024-11-25 01:08:00,033: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[3cad4d50-fff2-403f-8dae-35f96c7003e8] succeeded in 0.011038691969588399s: None
+[2024-11-25 01:09:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[01017bcb-516b-4f8b-bfff-e014bc1bf137]  
+[2024-11-25 01:09:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[01017bcb-516b-4f8b-bfff-e014bc1bf137] succeeded in 0.009920689975842834s: None
+[2024-11-25 01:10:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[656ba642-1ee5-490e-9fc4-c3c1f64fbbda]  
+[2024-11-25 01:10:00,013: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[656ba642-1ee5-490e-9fc4-c3c1f64fbbda] succeeded in 0.009957651025615633s: None
+[2024-11-25 01:11:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[95443b5a-de42-41cd-a697-c966f9d16f00]  
+[2024-11-25 01:11:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[95443b5a-de42-41cd-a697-c966f9d16f00] succeeded in 0.009411981038283557s: None
+[2024-11-25 01:12:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d45a8406-cd79-4e09-a129-fb6abd4c8440]  
+[2024-11-25 01:12:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d45a8406-cd79-4e09-a129-fb6abd4c8440] succeeded in 0.008829745987895876s: None
+[2024-11-25 01:13:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8b30f1f9-8996-41dc-9a89-e84e9bffc7b4]  
+[2024-11-25 01:13:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8b30f1f9-8996-41dc-9a89-e84e9bffc7b4] succeeded in 0.0093026029644534s: None
+[2024-11-25 01:14:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d2a05b4d-3ccd-4756-b40c-1a326ed3ed61]  
+[2024-11-25 01:14:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d2a05b4d-3ccd-4756-b40c-1a326ed3ed61] succeeded in 0.009236924001015723s: None
+[2024-11-25 01:15:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[5a4206da-3cf3-404d-8cf8-3eab4f5fae5a]  
+[2024-11-25 01:15:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[5a4206da-3cf3-404d-8cf8-3eab4f5fae5a] succeeded in 0.010178908007219434s: None
+[2024-11-25 01:16:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[546e15e7-468f-43c6-be53-2ba3207f5da1]  
+[2024-11-25 01:16:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[546e15e7-468f-43c6-be53-2ba3207f5da1] succeeded in 0.008496844966430217s: None
+[2024-11-25 01:17:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[7e59ca17-d640-4f06-9bf4-753c10a25518]  
+[2024-11-25 01:17:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[7e59ca17-d640-4f06-9bf4-753c10a25518] succeeded in 0.009228293027263135s: None
+[2024-11-25 01:18:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[421b712a-a4ab-4a97-8351-ff276156a444]  
+[2024-11-25 01:18:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[421b712a-a4ab-4a97-8351-ff276156a444] succeeded in 0.014720190956722945s: None
+[2024-11-25 01:19:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[3c6e5919-5dfa-479f-baf6-a9eeebadad1b]  
+[2024-11-25 01:19:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[3c6e5919-5dfa-479f-baf6-a9eeebadad1b] succeeded in 0.01000221399590373s: None
+[2024-11-25 01:20:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[97211efa-0680-4d37-930d-5682b38ad487]  
+[2024-11-25 01:20:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[97211efa-0680-4d37-930d-5682b38ad487] succeeded in 0.014204772014636546s: None
+[2024-11-25 01:21:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8fd3b402-1a8f-4c3d-8278-6ce4917c4e7b]  
+[2024-11-25 01:21:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8fd3b402-1a8f-4c3d-8278-6ce4917c4e7b] succeeded in 0.012140373990405351s: None
+[2024-11-25 01:22:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[166ad99e-84ba-46d9-abfd-7d38ae238969]  
+[2024-11-25 01:22:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[166ad99e-84ba-46d9-abfd-7d38ae238969] succeeded in 0.008986356027889997s: None
+[2024-11-25 01:23:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[5a5ac4fa-dd5c-4e00-97bd-b3c53f4cecd1]  
+[2024-11-25 01:23:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[5a5ac4fa-dd5c-4e00-97bd-b3c53f4cecd1] succeeded in 0.010575711028650403s: None
+[2024-11-25 01:24:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[0d24ba1b-6481-499b-999f-1ba93e92a01b]  
+[2024-11-25 01:24:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[0d24ba1b-6481-499b-999f-1ba93e92a01b] succeeded in 0.009593199996743351s: None
+[2024-11-25 01:25:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[278a5efe-1ab4-4c45-b877-6bda2c9162a2]  
+[2024-11-25 01:25:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[278a5efe-1ab4-4c45-b877-6bda2c9162a2] succeeded in 0.010023543029092252s: None
+[2024-11-25 01:26:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[085e17a2-6b4a-4866-80ea-591b418d61fe]  
+[2024-11-25 01:26:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[085e17a2-6b4a-4866-80ea-591b418d61fe] succeeded in 0.010549066006205976s: None
+[2024-11-25 01:27:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[acdb1d0a-9805-4988-903b-64fd83b3a4d6]  
+[2024-11-25 01:27:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[acdb1d0a-9805-4988-903b-64fd83b3a4d6] succeeded in 0.009823911997955292s: None
+[2024-11-25 01:28:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b9563228-b1b8-4232-822a-a8beb968f7b0]  
+[2024-11-25 01:28:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b9563228-b1b8-4232-822a-a8beb968f7b0] succeeded in 0.01074105896987021s: None
+[2024-11-25 01:29:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[c00726de-ebc7-42ba-aee5-c43d0d3dfe27]  
+[2024-11-25 01:29:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[c00726de-ebc7-42ba-aee5-c43d0d3dfe27] succeeded in 0.009257827012334019s: None
+[2024-11-25 01:30:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a8261ff7-bbfb-4900-ad27-3e8a142c6465]  
+[2024-11-25 01:30:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a8261ff7-bbfb-4900-ad27-3e8a142c6465] succeeded in 0.011340652010403574s: None
+[2024-11-25 01:31:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8f50b5ac-16f5-4d95-a0fa-ab8185686460]  
+[2024-11-25 01:31:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8f50b5ac-16f5-4d95-a0fa-ab8185686460] succeeded in 0.009672248968854547s: None
+[2024-11-25 01:32:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[70d39df1-4f43-4e08-b3c5-7a16697444d7]  
+[2024-11-25 01:32:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[70d39df1-4f43-4e08-b3c5-7a16697444d7] succeeded in 0.010109332972206175s: None
+[2024-11-25 01:33:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b0ae001e-efcb-4830-bc4b-3120973306d1]  
+[2024-11-25 01:33:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b0ae001e-efcb-4830-bc4b-3120973306d1] succeeded in 0.008829919970594347s: None
+[2024-11-25 01:34:00,011: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[1e428650-a4f7-4f3f-b38b-552252a90d2a]  
+[2024-11-25 01:34:00,022: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[1e428650-a4f7-4f3f-b38b-552252a90d2a] succeeded in 0.010233561974018812s: None
+[2024-11-25 01:35:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d11f1c7e-c677-42a8-8e5c-15e075206046]  
+[2024-11-25 01:35:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d11f1c7e-c677-42a8-8e5c-15e075206046] succeeded in 0.008672958007082343s: None
+[2024-11-25 01:36:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[45f7353d-f008-4ede-b7d7-8f13d94f5408]  
+[2024-11-25 01:36:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[45f7353d-f008-4ede-b7d7-8f13d94f5408] succeeded in 0.010665624984540045s: None
+[2024-11-25 01:37:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6a3c023a-c4ab-4b43-960c-6997addb5fc2]  
+[2024-11-25 01:37:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6a3c023a-c4ab-4b43-960c-6997addb5fc2] succeeded in 0.009791360993403941s: None
+[2024-11-25 01:38:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[4b22a22b-d243-4dea-8f97-eb057e287744]  
+[2024-11-25 01:38:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[4b22a22b-d243-4dea-8f97-eb057e287744] succeeded in 0.011126465979032218s: None
+[2024-11-25 01:39:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[dbb86553-ded9-482f-bd43-95aaf430387d]  
+[2024-11-25 01:39:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[dbb86553-ded9-482f-bd43-95aaf430387d] succeeded in 0.010863812000025064s: None
+[2024-11-25 01:40:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[029571a6-8ee6-48fb-96c7-c13bdf8d03c1]  
+[2024-11-25 01:40:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[029571a6-8ee6-48fb-96c7-c13bdf8d03c1] succeeded in 0.011177948967088014s: None
+[2024-11-25 01:41:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[69a2699b-c06b-43d1-8924-b290f9c38f57]  
+[2024-11-25 01:41:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[69a2699b-c06b-43d1-8924-b290f9c38f57] succeeded in 0.008478873001877218s: None
+[2024-11-25 01:42:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6fe84722-6187-46b6-9222-8cac540d972f]  
+[2024-11-25 01:42:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6fe84722-6187-46b6-9222-8cac540d972f] succeeded in 0.011229477997403592s: None
+[2024-11-25 01:43:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b7b6ac8a-e352-4127-a2ea-6de5ce27c3e3]  
+[2024-11-25 01:43:00,013: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b7b6ac8a-e352-4127-a2ea-6de5ce27c3e3] succeeded in 0.008947141992393881s: None
+[2024-11-25 01:44:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b4c069db-989d-4a58-b0ab-8af4dc79a14c]  
+[2024-11-25 01:44:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b4c069db-989d-4a58-b0ab-8af4dc79a14c] succeeded in 0.010642807988915592s: None
+[2024-11-25 01:45:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[af12d907-9be0-4c9e-a0e8-43306a6ed2a0]  
+[2024-11-25 01:45:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[af12d907-9be0-4c9e-a0e8-43306a6ed2a0] succeeded in 0.009178655978757888s: None
+[2024-11-25 01:46:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[282e83f5-09c9-4606-bc7a-cc88646f2ada]  
+[2024-11-25 01:46:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[282e83f5-09c9-4606-bc7a-cc88646f2ada] succeeded in 0.00936857599299401s: None
+[2024-11-25 01:47:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[22a5493d-f623-4a92-aee2-b6495867199b]  
+[2024-11-25 01:47:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[22a5493d-f623-4a92-aee2-b6495867199b] succeeded in 0.011465283983852714s: None
+[2024-11-25 01:48:00,018: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[72fa7931-a606-4e63-ba85-03f592ee753d]  
+[2024-11-25 01:48:00,028: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[72fa7931-a606-4e63-ba85-03f592ee753d] succeeded in 0.009422169008757919s: None
+[2024-11-25 01:49:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d4e7e55e-72e1-447a-b388-5ff46f14f1c4]  
+[2024-11-25 01:49:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d4e7e55e-72e1-447a-b388-5ff46f14f1c4] succeeded in 0.009330183966085315s: None
+[2024-11-25 01:50:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e3d9adac-cd63-41be-8e1c-56603cfbb213]  
+[2024-11-25 01:50:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e3d9adac-cd63-41be-8e1c-56603cfbb213] succeeded in 0.009279875957872719s: None
+[2024-11-25 01:51:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[df57cf0c-662f-49dd-9cfc-7ce0b302d4a9]  
+[2024-11-25 01:51:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[df57cf0c-662f-49dd-9cfc-7ce0b302d4a9] succeeded in 0.011150371050462127s: None
+[2024-11-25 01:52:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e95aa6f5-2bd8-4737-882b-94f96bb1d449]  
+[2024-11-25 01:52:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e95aa6f5-2bd8-4737-882b-94f96bb1d449] succeeded in 0.008727164997253567s: None
+[2024-11-25 01:53:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[255f6575-0a74-4ec6-aaab-7772adecf71e]  
+[2024-11-25 01:53:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[255f6575-0a74-4ec6-aaab-7772adecf71e] succeeded in 0.008855865977238864s: None
+[2024-11-25 01:54:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[70abb34c-59ff-4e0f-ad7f-aadab14237e0]  
+[2024-11-25 01:54:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[70abb34c-59ff-4e0f-ad7f-aadab14237e0] succeeded in 0.009255759010557085s: None
+[2024-11-25 01:55:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[82a1e66c-22b8-453e-bd19-728c8ba2691c]  
+[2024-11-25 01:55:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[82a1e66c-22b8-453e-bd19-728c8ba2691c] succeeded in 0.00867760501569137s: None
+[2024-11-25 01:56:00,028: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ad35753d-749e-4960-9377-ebcf77dab1dc]  
+[2024-11-25 01:56:00,057: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ad35753d-749e-4960-9377-ebcf77dab1dc] succeeded in 0.027997518016491085s: None
+[2024-11-25 01:57:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[94e8dc8b-18a9-46b5-8ca8-147d72714b54]  
+[2024-11-25 01:57:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[94e8dc8b-18a9-46b5-8ca8-147d72714b54] succeeded in 0.010529367020353675s: None
+[2024-11-25 01:58:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6fade44f-c80f-46ac-94b5-53551e46625c]  
+[2024-11-25 01:58:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6fade44f-c80f-46ac-94b5-53551e46625c] succeeded in 0.01304374705068767s: None
+[2024-11-25 01:59:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[141f603b-d2f9-4724-aec0-d0d4ae3b0d9c]  
+[2024-11-25 01:59:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[141f603b-d2f9-4724-aec0-d0d4ae3b0d9c] succeeded in 0.014209615008439869s: None
+[2024-11-25 02:00:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a8778f76-d80b-4fba-9afe-3209898697a1]  
+[2024-11-25 02:00:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a8778f76-d80b-4fba-9afe-3209898697a1] succeeded in 0.009683876996859908s: None
+[2024-11-25 02:01:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[23f6554a-26ff-4a90-aa90-e22234b295a2]  
+[2024-11-25 02:01:00,022: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[23f6554a-26ff-4a90-aa90-e22234b295a2] succeeded in 0.014742655970621854s: None
+[2024-11-25 02:02:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a7537582-7acf-42d0-9080-a7a5b0c4212c]  
+[2024-11-25 02:02:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a7537582-7acf-42d0-9080-a7a5b0c4212c] succeeded in 0.010489963984582573s: None
+[2024-11-25 02:03:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f111b6bb-ee4f-4ba6-819c-0f55e8a6afad]  
+[2024-11-25 02:03:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f111b6bb-ee4f-4ba6-819c-0f55e8a6afad] succeeded in 0.009099709975998849s: None
+[2024-11-25 02:04:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[5b86f7d4-7aed-4cfc-a8d4-c9ac3099c5da]  
+[2024-11-25 02:04:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[5b86f7d4-7aed-4cfc-a8d4-c9ac3099c5da] succeeded in 0.00965890201041475s: None
+[2024-11-25 02:05:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f945ed28-254c-4f6e-a049-f5ba57f6d864]  
+[2024-11-25 02:05:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f945ed28-254c-4f6e-a049-f5ba57f6d864] succeeded in 0.009270598995499313s: None
+[2024-11-25 02:06:00,016: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[61076245-e31a-4841-8daf-a4ef6445196c]  
+[2024-11-25 02:06:00,031: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[61076245-e31a-4841-8daf-a4ef6445196c] succeeded in 0.013701357005629689s: None
+[2024-11-25 02:07:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[4dc9747f-cedc-42cb-85df-0fa60e493121]  
+[2024-11-25 02:07:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[4dc9747f-cedc-42cb-85df-0fa60e493121] succeeded in 0.00864777696551755s: None
+[2024-11-25 02:08:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ddaa16a4-5624-4f40-a867-0a04bf793b0a]  
+[2024-11-25 02:08:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ddaa16a4-5624-4f40-a867-0a04bf793b0a] succeeded in 0.011037388991098851s: None
+[2024-11-25 02:09:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ee64e91c-3649-4814-b307-826362841ee0]  
+[2024-11-25 02:09:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ee64e91c-3649-4814-b307-826362841ee0] succeeded in 0.009597557014785707s: None
+[2024-11-25 02:10:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e83d477f-b7b2-4c4c-bd50-f1dced6eae5c]  
+[2024-11-25 02:10:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e83d477f-b7b2-4c4c-bd50-f1dced6eae5c] succeeded in 0.010564508032985032s: None
+[2024-11-25 02:11:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6ef9b66e-8204-4889-a37c-2eab321b18da]  
+[2024-11-25 02:11:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6ef9b66e-8204-4889-a37c-2eab321b18da] succeeded in 0.011673945002257824s: None
+[2024-11-25 02:12:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[1b656016-de27-4097-816c-cc3fa6170757]  
+[2024-11-25 02:12:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[1b656016-de27-4097-816c-cc3fa6170757] succeeded in 0.009636739967390895s: None
+[2024-11-25 02:13:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[925e9c5f-da49-45bc-a16f-95f2afcbe555]  
+[2024-11-25 02:13:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[925e9c5f-da49-45bc-a16f-95f2afcbe555] succeeded in 0.009740310022607446s: None
+[2024-11-25 02:14:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[0f8378d9-d90b-476b-93cb-0f9efdd768c8]  
+[2024-11-25 02:14:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[0f8378d9-d90b-476b-93cb-0f9efdd768c8] succeeded in 0.012684467015787959s: None
+[2024-11-25 02:15:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e8684b73-9403-4b89-b067-bb4bde8c8fef]  
+[2024-11-25 02:15:00,021: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e8684b73-9403-4b89-b067-bb4bde8c8fef] succeeded in 0.010496309027075768s: None
+[2024-11-25 02:16:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[3a8e8ad0-cf6a-4041-a3ac-c1cef6303baf]  
+[2024-11-25 02:16:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[3a8e8ad0-cf6a-4041-a3ac-c1cef6303baf] succeeded in 0.008622078981716186s: None
+[2024-11-25 02:17:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a4d2f25c-15d4-4244-8449-09fa5a08242f]  
+[2024-11-25 02:17:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a4d2f25c-15d4-4244-8449-09fa5a08242f] succeeded in 0.0105123880202882s: None
+[2024-11-25 02:18:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[20623dc2-c820-45e8-9be8-30980d081570]  
+[2024-11-25 02:18:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[20623dc2-c820-45e8-9be8-30980d081570] succeeded in 0.01041660801274702s: None
+[2024-11-25 02:19:00,011: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[94805fd8-9883-48c2-ba0a-29bece1c2678]  
+[2024-11-25 02:19:00,021: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[94805fd8-9883-48c2-ba0a-29bece1c2678] succeeded in 0.009628563013393432s: None
+[2024-11-25 02:20:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d1ad89f8-7c36-479a-817b-099ec0aa6b83]  
+[2024-11-25 02:20:00,023: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d1ad89f8-7c36-479a-817b-099ec0aa6b83] succeeded in 0.01222586096264422s: None
+[2024-11-25 02:21:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[131b1507-2bff-4272-a413-a9b0fdce008d]  
+[2024-11-25 02:21:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[131b1507-2bff-4272-a413-a9b0fdce008d] succeeded in 0.011765639996156096s: None
+[2024-11-25 02:22:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[242ca373-9e55-452a-8be7-1687fbcd8a7f]  
+[2024-11-25 02:22:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[242ca373-9e55-452a-8be7-1687fbcd8a7f] succeeded in 0.013933017966337502s: None
+[2024-11-25 02:23:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[c7697865-3e73-43f2-9894-78a4cadbc724]  
+[2024-11-25 02:23:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[c7697865-3e73-43f2-9894-78a4cadbc724] succeeded in 0.008303361013531685s: None
+[2024-11-25 02:24:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[5f1fed37-ca12-480b-8194-d053cc682c31]  
+[2024-11-25 02:24:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[5f1fed37-ca12-480b-8194-d053cc682c31] succeeded in 0.010475623013917357s: None
+[2024-11-25 02:25:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[5d18cda3-770a-40d3-b4b6-6af1a01f74e3]  
+[2024-11-25 02:25:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[5d18cda3-770a-40d3-b4b6-6af1a01f74e3] succeeded in 0.00893537700176239s: None
+[2024-11-25 02:26:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[5b49a3c4-5766-4e81-ad7b-fd6801cde645]  
+[2024-11-25 02:26:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[5b49a3c4-5766-4e81-ad7b-fd6801cde645] succeeded in 0.009104085969738662s: None
+[2024-11-25 02:27:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[c109c258-3a4f-49bc-b8e5-c0f1ee170c44]  
+[2024-11-25 02:27:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[c109c258-3a4f-49bc-b8e5-c0f1ee170c44] succeeded in 0.010687803034670651s: None
+[2024-11-25 02:28:00,019: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[97c44301-80d7-43bf-a636-d6a4c07f849a]  
+[2024-11-25 02:28:00,030: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[97c44301-80d7-43bf-a636-d6a4c07f849a] succeeded in 0.009655578003730625s: None
+[2024-11-25 02:29:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e78cd6a1-4472-4880-80c2-7dc15d0996d4]  
+[2024-11-25 02:29:00,021: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e78cd6a1-4472-4880-80c2-7dc15d0996d4] succeeded in 0.012813067995011806s: None
+[2024-11-25 02:30:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a2884eca-77a8-4354-824e-ab2b3fb04ce4]  
+[2024-11-25 02:30:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a2884eca-77a8-4354-824e-ab2b3fb04ce4] succeeded in 0.010137940989807248s: None
+[2024-11-25 02:31:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[aaebf15f-e166-4edd-9dff-07df594b5c9a]  
+[2024-11-25 02:31:00,021: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[aaebf15f-e166-4edd-9dff-07df594b5c9a] succeeded in 0.010178516036830842s: None
+[2024-11-25 02:32:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[844fb00f-c415-4293-a3ec-950cf48f16ac]  
+[2024-11-25 02:32:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[844fb00f-c415-4293-a3ec-950cf48f16ac] succeeded in 0.010118186997715384s: None
+[2024-11-25 02:33:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[19abd660-cfe0-44dd-bd99-24e7377c4fbb]  
+[2024-11-25 02:33:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[19abd660-cfe0-44dd-bd99-24e7377c4fbb] succeeded in 0.013380433956626803s: None
+[2024-11-25 02:34:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6f80289c-dcc7-4ccf-9465-b92481894e67]  
+[2024-11-25 02:34:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6f80289c-dcc7-4ccf-9465-b92481894e67] succeeded in 0.008077753998804837s: None
+[2024-11-25 02:35:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[122bbb64-8f6d-480b-8dba-272c46da55ed]  
+[2024-11-25 02:35:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[122bbb64-8f6d-480b-8dba-272c46da55ed] succeeded in 0.008486768987495452s: None
+[2024-11-25 02:36:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[443ee047-be11-4944-b093-c377d7844c00]  
+[2024-11-25 02:36:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[443ee047-be11-4944-b093-c377d7844c00] succeeded in 0.008313269994687289s: None
+[2024-11-25 02:37:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[629d86e3-e847-46d7-8076-77d45381abc5]  
+[2024-11-25 02:37:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[629d86e3-e847-46d7-8076-77d45381abc5] succeeded in 0.009881158010102808s: None
+[2024-11-25 02:38:00,012: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[1f7e6f65-6243-49af-9b24-f3090789926c]  
+[2024-11-25 02:38:00,026: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[1f7e6f65-6243-49af-9b24-f3090789926c] succeeded in 0.012996499019209296s: None
+[2024-11-25 02:39:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e3c1c637-ab24-4778-b833-c078bea9cb13]  
+[2024-11-25 02:39:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e3c1c637-ab24-4778-b833-c078bea9cb13] succeeded in 0.010129558038897812s: None
+[2024-11-25 02:40:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[23585674-4e4f-482d-979c-5fba112cfa61]  
+[2024-11-25 02:40:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[23585674-4e4f-482d-979c-5fba112cfa61] succeeded in 0.010625772993080318s: None
+[2024-11-25 02:41:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8b4e37ff-d7ca-4694-8bca-aa73ca352c12]  
+[2024-11-25 02:41:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8b4e37ff-d7ca-4694-8bca-aa73ca352c12] succeeded in 0.008250046987086535s: None
+[2024-11-25 02:42:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[afa9def7-22c9-40de-abe4-4893b4d2edab]  
+[2024-11-25 02:42:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[afa9def7-22c9-40de-abe4-4893b4d2edab] succeeded in 0.01044634502613917s: None
+[2024-11-25 02:43:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[7993d5e9-d9a9-4567-a2e3-7eba1d89a7d7]  
+[2024-11-25 02:43:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[7993d5e9-d9a9-4567-a2e3-7eba1d89a7d7] succeeded in 0.0096096420311369s: None
+[2024-11-25 02:44:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[9a24c9cd-5ee4-4aee-9d2f-97d46cda0c06]  
+[2024-11-25 02:44:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[9a24c9cd-5ee4-4aee-9d2f-97d46cda0c06] succeeded in 0.0080913039855659s: None
+[2024-11-25 02:45:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[bb060821-1d79-42d5-9044-81f300a360da]  
+[2024-11-25 02:45:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[bb060821-1d79-42d5-9044-81f300a360da] succeeded in 0.008353474957402796s: None
+[2024-11-25 02:46:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[1099e944-e624-4da6-8c0d-a8acb66a92aa]  
+[2024-11-25 02:46:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[1099e944-e624-4da6-8c0d-a8acb66a92aa] succeeded in 0.012291266000829637s: None
+[2024-11-25 02:47:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d75722eb-f1c2-470e-b9ed-8cf021f19a64]  
+[2024-11-25 02:47:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d75722eb-f1c2-470e-b9ed-8cf021f19a64] succeeded in 0.010281702037900686s: None
+[2024-11-25 02:48:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[cc4b8cd5-04b5-4e03-ae04-5adb4f2deeb9]  
+[2024-11-25 02:48:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[cc4b8cd5-04b5-4e03-ae04-5adb4f2deeb9] succeeded in 0.009772307006642222s: None
+[2024-11-25 02:49:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[1c5f2da9-4c42-4611-a2a5-a0d96b835df9]  
+[2024-11-25 02:49:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[1c5f2da9-4c42-4611-a2a5-a0d96b835df9] succeeded in 0.010960874031297863s: None
+[2024-11-25 02:50:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e14679e1-139b-467f-8e53-b13a168338c6]  
+[2024-11-25 02:50:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e14679e1-139b-467f-8e53-b13a168338c6] succeeded in 0.010769486951176077s: None
+[2024-11-25 02:51:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[733f9321-d459-4184-a004-115ae9d97b0c]  
+[2024-11-25 02:51:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[733f9321-d459-4184-a004-115ae9d97b0c] succeeded in 0.011377066955901682s: None
+[2024-11-25 02:52:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e8eeb263-b3ac-4fdd-a8c9-8fac8e64a35c]  
+[2024-11-25 02:52:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e8eeb263-b3ac-4fdd-a8c9-8fac8e64a35c] succeeded in 0.01015709200873971s: None
+[2024-11-25 02:53:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[89d9568e-7a7e-4311-9b23-3de49d7f8641]  
+[2024-11-25 02:53:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[89d9568e-7a7e-4311-9b23-3de49d7f8641] succeeded in 0.010060221015010029s: None
+[2024-11-25 02:54:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ea4711e2-444d-40b5-afc7-9055ee8e494c]  
+[2024-11-25 02:54:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ea4711e2-444d-40b5-afc7-9055ee8e494c] succeeded in 0.009731382015161216s: None
+[2024-11-25 02:55:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a5f12bd8-8dba-4069-abe0-725961fcc7cb]  
+[2024-11-25 02:55:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a5f12bd8-8dba-4069-abe0-725961fcc7cb] succeeded in 0.009659781004302204s: None
+[2024-11-25 02:56:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e6c75a01-62c5-4cc3-aa91-d0407a33c99c]  
+[2024-11-25 02:56:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e6c75a01-62c5-4cc3-aa91-d0407a33c99c] succeeded in 0.009520682040601969s: None
+[2024-11-25 02:57:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[687b899d-4baf-43c2-966f-83b46824d640]  
+[2024-11-25 02:57:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[687b899d-4baf-43c2-966f-83b46824d640] succeeded in 0.010256142006255686s: None
+[2024-11-25 02:58:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[c921ebde-4fcf-4b55-8340-04b2cf6ee314]  
+[2024-11-25 02:58:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[c921ebde-4fcf-4b55-8340-04b2cf6ee314] succeeded in 0.010488932020962238s: None
+[2024-11-25 02:59:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[90c65a5f-4c68-4cf1-b47b-7c1b47a72799]  
+[2024-11-25 02:59:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[90c65a5f-4c68-4cf1-b47b-7c1b47a72799] succeeded in 0.01312554901232943s: None
+[2024-11-25 03:00:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[0b7311ca-f1cc-41a3-b7bf-7812dd71c812]  
+[2024-11-25 03:00:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[0b7311ca-f1cc-41a3-b7bf-7812dd71c812] succeeded in 0.013182549038901925s: None
+[2024-11-25 03:01:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[124ebf60-2830-4931-80b2-b3b16dad76b0]  
+[2024-11-25 03:01:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[124ebf60-2830-4931-80b2-b3b16dad76b0] succeeded in 0.009291148977354169s: None
+[2024-11-25 03:02:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[34d13811-a7ce-414c-aa06-a266e350d413]  
+[2024-11-25 03:02:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[34d13811-a7ce-414c-aa06-a266e350d413] succeeded in 0.009702797047793865s: None
+[2024-11-25 03:03:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6fa81191-f7cd-40e6-ac97-9685f7ef5333]  
+[2024-11-25 03:03:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6fa81191-f7cd-40e6-ac97-9685f7ef5333] succeeded in 0.008501567994244397s: None
+[2024-11-25 03:04:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[39d4a707-05f1-4590-88ac-84a765549203]  
+[2024-11-25 03:04:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[39d4a707-05f1-4590-88ac-84a765549203] succeeded in 0.009553651965688914s: None
+[2024-11-25 03:05:00,019: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[19aa8fb8-07eb-4246-9f52-1165f715706b]  
+[2024-11-25 03:05:00,028: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[19aa8fb8-07eb-4246-9f52-1165f715706b] succeeded in 0.008224903023801744s: None
+[2024-11-25 03:06:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[382ada8d-1607-4838-a84f-2168acee7180]  
+[2024-11-25 03:06:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[382ada8d-1607-4838-a84f-2168acee7180] succeeded in 0.008957343001384288s: None
+[2024-11-25 03:07:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[4648c182-a080-4eba-823d-59062e10a1d1]  
+[2024-11-25 03:07:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[4648c182-a080-4eba-823d-59062e10a1d1] succeeded in 0.009647647035308182s: None
+[2024-11-25 03:08:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[36a00e31-56ee-487c-af7b-94f0c95e3efd]  
+[2024-11-25 03:08:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[36a00e31-56ee-487c-af7b-94f0c95e3efd] succeeded in 0.011463815986644477s: None
+[2024-11-25 03:09:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[59dd41b2-11d2-4711-960d-d0382fb2abe1]  
+[2024-11-25 03:09:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[59dd41b2-11d2-4711-960d-d0382fb2abe1] succeeded in 0.009578490979038179s: None
+[2024-11-25 03:10:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b8b7e8e7-66af-4370-a121-77fc0fa5e58a]  
+[2024-11-25 03:10:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b8b7e8e7-66af-4370-a121-77fc0fa5e58a] succeeded in 0.010797741007991135s: None
+[2024-11-25 03:11:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8a033662-1f77-4dd5-b6ab-c6298a01921f]  
+[2024-11-25 03:11:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8a033662-1f77-4dd5-b6ab-c6298a01921f] succeeded in 0.01063215802423656s: None
+[2024-11-25 03:12:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d4e6e501-1cc5-4915-905f-c74e97617e9f]  
+[2024-11-25 03:12:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d4e6e501-1cc5-4915-905f-c74e97617e9f] succeeded in 0.011184767005033791s: None
+[2024-11-25 03:13:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[28db8b01-8c3a-40c8-8418-e49faca9a06f]  
+[2024-11-25 03:13:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[28db8b01-8c3a-40c8-8418-e49faca9a06f] succeeded in 0.013498223037458956s: None
+[2024-11-25 03:14:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[dcb24b81-4357-4cd5-b07b-4d469a4f46a5]  
+[2024-11-25 03:14:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[dcb24b81-4357-4cd5-b07b-4d469a4f46a5] succeeded in 0.009411625971551985s: None
+[2024-11-25 03:15:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[2aad4450-7fde-4eac-87b1-01599e79945a]  
+[2024-11-25 03:15:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[2aad4450-7fde-4eac-87b1-01599e79945a] succeeded in 0.00913365901215002s: None
+[2024-11-25 03:16:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[06206f57-618f-41fb-bb8d-74dcc35623de]  
+[2024-11-25 03:16:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[06206f57-618f-41fb-bb8d-74dcc35623de] succeeded in 0.01073778502177447s: None
+[2024-11-25 03:17:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[340638c7-ea91-414f-85c2-9155ff79447c]  
+[2024-11-25 03:17:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[340638c7-ea91-414f-85c2-9155ff79447c] succeeded in 0.008829021011479199s: None
+[2024-11-25 03:18:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b4a9deff-4927-4774-b04b-32a841dc4c12]  
+[2024-11-25 03:18:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b4a9deff-4927-4774-b04b-32a841dc4c12] succeeded in 0.009370282001327723s: None
+[2024-11-25 03:19:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d16e906c-6131-430e-99d6-20c5a621e9f4]  
+[2024-11-25 03:19:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d16e906c-6131-430e-99d6-20c5a621e9f4] succeeded in 0.01040311495307833s: None
+[2024-11-25 03:20:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[8c29df5c-dcae-4d43-97ec-43424a8fe8a5]  
+[2024-11-25 03:20:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[8c29df5c-dcae-4d43-97ec-43424a8fe8a5] succeeded in 0.01145305298268795s: None
+[2024-11-25 03:21:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d787b9c9-013a-4069-a006-43f69252caba]  
+[2024-11-25 03:21:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d787b9c9-013a-4069-a006-43f69252caba] succeeded in 0.008029610035009682s: None
+[2024-11-25 03:22:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b294ee12-cd38-4c0c-b34e-05e5bef2fa1a]  
+[2024-11-25 03:22:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b294ee12-cd38-4c0c-b34e-05e5bef2fa1a] succeeded in 0.009752254001796246s: None
+[2024-11-25 03:23:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f9ff4c7f-2ede-4b2c-81e4-c2b62438ec6e]  
+[2024-11-25 03:23:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f9ff4c7f-2ede-4b2c-81e4-c2b62438ec6e] succeeded in 0.00806762301363051s: None
+[2024-11-25 03:24:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[4033eef1-e5e1-416a-bfa0-3e7af322e75b]  
+[2024-11-25 03:24:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[4033eef1-e5e1-416a-bfa0-3e7af322e75b] succeeded in 0.010129854024853557s: None
+[2024-11-25 03:25:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a5ac0486-cf2c-4986-9490-9d4fa96cbab7]  
+[2024-11-25 03:25:00,021: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a5ac0486-cf2c-4986-9490-9d4fa96cbab7] succeeded in 0.010487023973837495s: None
+[2024-11-25 03:26:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[91420e42-b8d9-4580-bf9b-c64f6dc73348]  
+[2024-11-25 03:26:00,013: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[91420e42-b8d9-4580-bf9b-c64f6dc73348] succeeded in 0.009802279993891716s: None
+[2024-11-25 03:27:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[73bcdfe8-bb15-4f3c-8c00-89786ac7a056]  
+[2024-11-25 03:27:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[73bcdfe8-bb15-4f3c-8c00-89786ac7a056] succeeded in 0.009849561960436404s: None
+[2024-11-25 03:28:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f48c62e7-ebf6-4eb3-b012-ff3056635678]  
+[2024-11-25 03:28:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f48c62e7-ebf6-4eb3-b012-ff3056635678] succeeded in 0.008056694001425058s: None
+[2024-11-25 03:29:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f314fe6d-fe92-4ca6-bec4-2e2a7abc9d6a]  
+[2024-11-25 03:29:00,018: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f314fe6d-fe92-4ca6-bec4-2e2a7abc9d6a] succeeded in 0.01086211804067716s: None
+[2024-11-25 03:30:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[35c8f093-3bca-41d5-ba6e-89729c71c6d5]  
+[2024-11-25 03:30:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[35c8f093-3bca-41d5-ba6e-89729c71c6d5] succeeded in 0.008976116019766778s: None
+[2024-11-25 03:31:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[a3b4cc48-5d50-48f1-a9c4-4db7104b693e]  
+[2024-11-25 03:31:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[a3b4cc48-5d50-48f1-a9c4-4db7104b693e] succeeded in 0.00899857300100848s: None
+[2024-11-25 03:32:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[48601f3a-7a91-444a-af77-9284de1bf756]  
+[2024-11-25 03:32:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[48601f3a-7a91-444a-af77-9284de1bf756] succeeded in 0.009801361011341214s: None
+[2024-11-25 03:33:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b432071d-7b2d-468e-9696-fb1cf0350565]  
+[2024-11-25 03:33:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b432071d-7b2d-468e-9696-fb1cf0350565] succeeded in 0.008882084977813065s: None
+[2024-11-25 03:34:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[18f8fc1a-667a-47b9-91c8-9cd43a77912e]  
+[2024-11-25 03:34:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[18f8fc1a-667a-47b9-91c8-9cd43a77912e] succeeded in 0.008788694976828992s: None
+[2024-11-25 03:35:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[4f3faf5f-a862-4fe5-8f04-e50ac7fe37b5]  
+[2024-11-25 03:35:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[4f3faf5f-a862-4fe5-8f04-e50ac7fe37b5] succeeded in 0.009267379995435476s: None
+[2024-11-25 03:36:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[79a7e50d-0d3c-444d-ad68-9d0e2698b6ec]  
+[2024-11-25 03:36:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[79a7e50d-0d3c-444d-ad68-9d0e2698b6ec] succeeded in 0.009380569972563535s: None
+[2024-11-25 03:37:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f4c20909-71a2-4281-a1f8-03dd30b84c42]  
+[2024-11-25 03:37:00,015: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f4c20909-71a2-4281-a1f8-03dd30b84c42] succeeded in 0.009366339014377445s: None
+[2024-11-25 03:38:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[3fdcfe28-e9b8-44f8-bd05-86d4486d96ff]  
+[2024-11-25 03:38:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[3fdcfe28-e9b8-44f8-bd05-86d4486d96ff] succeeded in 0.010249885963276029s: None
+[2024-11-25 03:39:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[139b3521-5fae-47a7-87ab-0dc9b891d3e6]  
+[2024-11-25 03:39:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[139b3521-5fae-47a7-87ab-0dc9b891d3e6] succeeded in 0.011299805017188191s: None
+[2024-11-25 03:40:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[7dc36ad0-1766-4936-8428-545d05d2a555]  
+[2024-11-25 03:40:00,023: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[7dc36ad0-1766-4936-8428-545d05d2a555] succeeded in 0.013904213032219559s: None
+[2024-11-25 03:41:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[fc772192-d459-423f-8186-b80904080213]  
+[2024-11-25 03:41:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[fc772192-d459-423f-8186-b80904080213] succeeded in 0.0097512939828448s: None
+[2024-11-25 03:42:00,017: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6aa7107c-4871-4945-aa6a-55fce83ce384]  
+[2024-11-25 03:42:00,027: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6aa7107c-4871-4945-aa6a-55fce83ce384] succeeded in 0.009497174003627151s: None
+[2024-11-25 03:43:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[91dee15f-901b-4135-a4e7-9e42e05ddb35]  
+[2024-11-25 03:43:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[91dee15f-901b-4135-a4e7-9e42e05ddb35] succeeded in 0.009425310010556132s: None
+[2024-11-25 03:44:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[c16ba513-29c7-43ae-b04f-0529a58b6da8]  
+[2024-11-25 03:44:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[c16ba513-29c7-43ae-b04f-0529a58b6da8] succeeded in 0.009417599008884281s: None
+[2024-11-25 03:45:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[e7315f56-8b96-4313-ab42-60f4e703f05a]  
+[2024-11-25 03:45:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[e7315f56-8b96-4313-ab42-60f4e703f05a] succeeded in 0.013568879978265613s: None
+[2024-11-25 03:46:00,003: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f6f655cb-d808-4b4f-8312-11782d3ce98f]  
+[2024-11-25 03:46:00,014: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f6f655cb-d808-4b4f-8312-11782d3ce98f] succeeded in 0.009950190025847405s: None
+[2024-11-25 03:47:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[769a7f80-7e58-4427-96d4-2782ce958a49]  
+[2024-11-25 03:47:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[769a7f80-7e58-4427-96d4-2782ce958a49] succeeded in 0.01094855205155909s: None
+[2024-11-25 03:48:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[61386a25-db6b-4323-adf9-3146243063c7]  
+[2024-11-25 03:48:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[61386a25-db6b-4323-adf9-3146243063c7] succeeded in 0.009534641052596271s: None
+[2024-11-25 03:49:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[068edd0d-f81f-4802-9e93-bd7c7ed5c77b]  
+[2024-11-25 03:49:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[068edd0d-f81f-4802-9e93-bd7c7ed5c77b] succeeded in 0.009115142980590463s: None
+[2024-11-25 03:50:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[52fa7ff5-cc9c-46d4-a43a-6bccdcdd691f]  
+[2024-11-25 03:50:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[52fa7ff5-cc9c-46d4-a43a-6bccdcdd691f] succeeded in 0.009180183056741953s: None
+[2024-11-25 03:51:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[1281260a-c299-428f-8000-7eadfba052ec]  
+[2024-11-25 03:51:00,023: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[1281260a-c299-428f-8000-7eadfba052ec] succeeded in 0.014625907992012799s: None
+[2024-11-25 03:52:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[50bba867-2f4e-426d-8a31-044869c6c648]  
+[2024-11-25 03:52:00,013: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[50bba867-2f4e-426d-8a31-044869c6c648] succeeded in 0.009311795991379768s: None
+[2024-11-25 03:53:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[86b17e81-bfa8-4f0a-92e2-f9485980e849]  
+[2024-11-25 03:53:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[86b17e81-bfa8-4f0a-92e2-f9485980e849] succeeded in 0.008467398001812398s: None
+[2024-11-25 03:54:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[5bbe9de4-044f-4db9-95e7-00ad80231473]  
+[2024-11-25 03:54:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[5bbe9de4-044f-4db9-95e7-00ad80231473] succeeded in 0.008699624973814934s: None
+[2024-11-25 03:55:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[87f14c3b-45b9-40be-bedd-e64cccf95681]  
+[2024-11-25 03:55:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[87f14c3b-45b9-40be-bedd-e64cccf95681] succeeded in 0.009332650050055236s: None
+[2024-11-25 03:56:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[7035ad14-8c60-49bd-8f93-8905a96867f9]  
+[2024-11-25 03:56:00,019: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[7035ad14-8c60-49bd-8f93-8905a96867f9] succeeded in 0.013142607989721s: None
+[2024-11-25 03:57:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d8357f46-687e-4b9e-be44-99463a0d0707]  
+[2024-11-25 03:57:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d8357f46-687e-4b9e-be44-99463a0d0707] succeeded in 0.009436824009753764s: None
+[2024-11-25 03:58:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[2e7c7cd7-3db8-42f5-9b0c-c3a04a1ba26f]  
+[2024-11-25 03:58:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[2e7c7cd7-3db8-42f5-9b0c-c3a04a1ba26f] succeeded in 0.01280001102713868s: None
+[2024-11-25 03:59:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[0b720586-72f0-4770-8d50-bb6131e98cad]  
+[2024-11-25 03:59:00,112: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[0b720586-72f0-4770-8d50-bb6131e98cad] succeeded in 0.10224742698483169s: None
+[2024-11-25 04:00:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b06329a6-3229-4028-aeff-bff3d98216b6]  
+[2024-11-25 04:00:00,024: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b06329a6-3229-4028-aeff-bff3d98216b6] succeeded in 0.015224131057038903s: None
+[2024-11-25 04:00:00,028: INFO/MainProcess] Received task: celery.backend_cleanup[0e0e20e4-b203-4ce7-a028-c3d46572da41]   expires:[2024-11-25 16:00:00.021006+01:00]
+[2024-11-25 04:00:00,042: INFO/ForkPoolWorker-1] Task celery.backend_cleanup[0e0e20e4-b203-4ce7-a028-c3d46572da41] succeeded in 0.012990558054298162s: None
+[2024-11-25 04:01:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[7a310127-ac45-4059-93d9-3d2f9629b55f]  
+[2024-11-25 04:01:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[7a310127-ac45-4059-93d9-3d2f9629b55f] succeeded in 0.010422376974020153s: None
+[2024-11-25 04:02:00,013: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ded3f122-b12c-4c10-a476-81f6845cb338]  
+[2024-11-25 04:02:00,035: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ded3f122-b12c-4c10-a476-81f6845cb338] succeeded in 0.02092374599305913s: None
+[2024-11-25 04:03:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[00945305-cd63-421e-9868-085e84469286]  
+[2024-11-25 04:03:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[00945305-cd63-421e-9868-085e84469286] succeeded in 0.009994930005632341s: None
+[2024-11-25 04:04:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[2ac69ead-7eea-4c3c-9e62-148dec9aad5e]  
+[2024-11-25 04:04:00,022: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[2ac69ead-7eea-4c3c-9e62-148dec9aad5e] succeeded in 0.0115565630258061s: None
+[2024-11-25 04:05:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[9b3d2117-9ff4-45e4-a99d-ca13ed1e1eef]  
+[2024-11-25 04:05:00,024: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[9b3d2117-9ff4-45e4-a99d-ca13ed1e1eef] succeeded in 0.016666779993101954s: None
+[2024-11-25 04:06:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[9bc6dee8-ed67-47d4-8b08-42f6e75ea320]  
+[2024-11-25 04:06:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[9bc6dee8-ed67-47d4-8b08-42f6e75ea320] succeeded in 0.00979587301844731s: None
+[2024-11-25 04:07:00,013: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[714b1caf-ddc0-43a0-a6d6-e6519dba9a6c]  
+[2024-11-25 04:07:00,032: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[714b1caf-ddc0-43a0-a6d6-e6519dba9a6c] succeeded in 0.01765256200451404s: None
+[2024-11-25 04:08:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[b8101b56-796f-4529-8aab-119f288e4847]  
+[2024-11-25 04:08:00,022: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[b8101b56-796f-4529-8aab-119f288e4847] succeeded in 0.01466264302143827s: None
+[2024-11-25 04:09:00,012: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[ce94bf60-4fc7-4fd5-bdbc-f7762c0aa7c7]  
+[2024-11-25 04:09:00,030: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[ce94bf60-4fc7-4fd5-bdbc-f7762c0aa7c7] succeeded in 0.016232661029789597s: None
+[2024-11-25 04:10:00,004: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f3fd82a5-729b-45a7-8d70-eabc1a40928f]  
+[2024-11-25 04:10:00,021: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f3fd82a5-729b-45a7-8d70-eabc1a40928f] succeeded in 0.01605605101212859s: None
+[2024-11-25 04:11:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[d05f2365-adec-43b0-960a-9df37bbd0b51]  
+[2024-11-25 04:11:00,016: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[d05f2365-adec-43b0-960a-9df37bbd0b51] succeeded in 0.010203472978901118s: None
+[2024-11-25 04:12:00,361: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[9c1efa6d-e04b-4894-9354-9730d9afc56e]  
+[2024-11-25 04:12:00,405: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[9c1efa6d-e04b-4894-9354-9730d9afc56e] succeeded in 0.04186790797393769s: None
+[2024-11-25 04:13:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[424aff54-e826-47b7-8ddd-86d0b47cd11d]  
+[2024-11-25 04:13:00,022: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[424aff54-e826-47b7-8ddd-86d0b47cd11d] succeeded in 0.012062530033290386s: None
+[2024-11-25 04:14:00,007: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[bf0f0cf2-cc56-4e07-9a3d-1b3964428964]  
+[2024-11-25 04:14:00,021: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[bf0f0cf2-cc56-4e07-9a3d-1b3964428964] succeeded in 0.012625271978322417s: None
+[2024-11-25 04:15:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f88cbb9c-ed6f-4921-90dd-e5edff955099]  
+[2024-11-25 04:15:00,022: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f88cbb9c-ed6f-4921-90dd-e5edff955099] succeeded in 0.015339325997047126s: None
+[2024-11-25 04:16:00,008: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[fcaf5075-e306-40cf-83ec-d9d3446cbf09]  
+[2024-11-25 04:16:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[fcaf5075-e306-40cf-83ec-d9d3446cbf09] succeeded in 0.01082137000048533s: None
+[2024-11-25 04:17:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[6c6bb1dc-0d28-4342-b24e-def872d036c8]  
+[2024-11-25 04:17:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[6c6bb1dc-0d28-4342-b24e-def872d036c8] succeeded in 0.009839700011070818s: None
+[2024-11-25 04:18:00,009: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[88423409-d4fe-4d7b-b1a2-5f30a10ec4a1]  
+[2024-11-25 04:18:00,033: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[88423409-d4fe-4d7b-b1a2-5f30a10ec4a1] succeeded in 0.023101593949832022s: None
+[2024-11-25 04:19:00,013: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[154acc2d-dd5d-42eb-8827-f1662e32797f]  
+[2024-11-25 04:19:00,032: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[154acc2d-dd5d-42eb-8827-f1662e32797f] succeeded in 0.017110073007643223s: None
+[2024-11-25 04:20:00,024: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f9c38828-96ca-4ed3-8d67-1a459f3a5d73]  
+[2024-11-25 04:20:00,063: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f9c38828-96ca-4ed3-8d67-1a459f3a5d73] succeeded in 0.035461593011859804s: None
+[2024-11-25 04:21:06,241: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[9bfdcc54-5e6f-46b4-bb7d-987febcc32e0]  
+[2024-11-25 04:21:06,287: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[9bfdcc54-5e6f-46b4-bb7d-987febcc32e0] succeeded in 0.043330624990630895s: None
+[2024-11-25 04:22:00,039: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[de61f596-7a9b-417d-b56a-78a31bfde231]  
+[2024-11-25 04:22:00,063: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[de61f596-7a9b-417d-b56a-78a31bfde231] succeeded in 0.022086373006459326s: None
+[2024-11-25 04:23:00,012: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[48065b32-7135-4642-9fdc-ce2fb4409e57]  
+[2024-11-25 04:23:00,052: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[48065b32-7135-4642-9fdc-ce2fb4409e57] succeeded in 0.03798267396632582s: None
+[2024-11-25 04:24:00,012: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[f938308d-484c-466b-bc22-79a75376e68b]  
+[2024-11-25 04:24:00,048: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[f938308d-484c-466b-bc22-79a75376e68b] succeeded in 0.03443895501550287s: None
+[2024-11-25 04:25:00,006: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[4dd41d3a-a23f-4ab1-a4c8-fe7c2f46c8ae]  
+[2024-11-25 04:25:00,020: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[4dd41d3a-a23f-4ab1-a4c8-fe7c2f46c8ae] succeeded in 0.01266656897496432s: None
+[2024-11-25 04:26:00,010: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[67b96205-a792-442e-9bc7-e8a013b2a3e8]  
+[2024-11-25 04:26:00,027: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[67b96205-a792-442e-9bc7-e8a013b2a3e8] succeeded in 0.015688334009610116s: None
+[2024-11-25 04:27:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[08e10537-0a12-431a-aa8d-3871e64d3436]  
+[2024-11-25 04:27:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[08e10537-0a12-431a-aa8d-3871e64d3436] succeeded in 0.011800295033026487s: None

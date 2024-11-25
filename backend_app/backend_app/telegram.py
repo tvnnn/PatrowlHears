@@ -21,8 +21,11 @@ def send_message(bot_token, chat_id, message):
                 'text': message,
                 'parse_mode': 'Markdown'
             }
-        requests.post(url, json=payload)
-        return True
+        response = requests.post(url, json=payload)
+        if response.status_code == 200:
+            return True
+        else:
+            return False
     except Exception as e:
         logger.error(f"Got an error: {str(e)}")
         return False
