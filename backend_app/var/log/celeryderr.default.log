@@ -584,3 +584,5 @@ User information: uid=0 euid=0 gid=0 egid=0
 [2024-11-25 04:26:00,027: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[67b96205-a792-442e-9bc7-e8a013b2a3e8] succeeded in 0.015688334009610116s: None
 [2024-11-25 04:27:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[08e10537-0a12-431a-aa8d-3871e64d3436]  
 [2024-11-25 04:27:00,017: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[08e10537-0a12-431a-aa8d-3871e64d3436] succeeded in 0.011800295033026487s: None
+[2024-11-25 04:28:00,005: INFO/MainProcess] Received task: vulns.tasks.email_weekly_report_task[acc25b5c-951e-40ca-bbeb-1fb485f8b599]  
+[2024-11-25 04:28:00,028: INFO/ForkPoolWorker-1] Task vulns.tasks.email_weekly_report_task[acc25b5c-951e-40ca-bbeb-1fb485f8b599] succeeded in 0.02187822898849845s: None
